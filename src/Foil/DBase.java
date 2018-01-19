@@ -239,14 +239,12 @@ class PredBase implements Serializable{
 		return retStr;
 	} // method toString
 
-
-
 	public void dump(PrintWriter out){
 		if(out == null) return;
 
 		Iterator<Fact> it = facts.iterator();
 		while (it.hasNext()) {
-				out.println((Fact)it.next());
+				out.println(it.next());
 		} // while more facts
 	} // method dump
 
@@ -265,7 +263,7 @@ class PredBase implements Serializable{
 public class DBase implements Serializable{
 
 	public static final long serialVersionUID = 0;
-	Hashtable pMap = new Hashtable<String,PredBase>();
+	Hashtable<String, PredBase> pMap = new Hashtable<String,PredBase>();
 	boolean useIndex = true;
 
 	public DBase(){
@@ -328,11 +326,9 @@ public class DBase implements Serializable{
 		pb.remove(f);
 
 	} // method remove
-
-
 	/*********************************************************
-		method LGG:
-			return the cross Product LGG of entire database.
+	method LGG:
+	return the cross Product LGG of entire database.
 	*********************************************************/
 	/*
 	public Clause LGG(){
@@ -384,14 +380,6 @@ public class DBase implements Serializable{
 		else return new Boolean(false);
 	} // method evaluate
 
-
-
-	/**
-	evaluate: Function f
-		This needs to be completed.
-
-		Not supported right now.
-	*/
 /*	public Constant evaluate(Function f){
 
 		return null;
@@ -496,8 +484,8 @@ public class DBase implements Serializable{
 	public List<Fact> getFacts(){
 		List<Fact> allFacts = new ArrayList<Fact>();
 
-		Collection preds = pMap.values();
-		Iterator it = preds.iterator();
+		Collection<PredBase> preds = pMap.values();
+		Iterator<PredBase> it = preds.iterator();
 		while(it.hasNext()){
 			PredBase pb = (PredBase)it.next();
 			List<Fact> facts = pb.facts;
@@ -514,8 +502,8 @@ public class DBase implements Serializable{
 		DBase N = new DBase();
 		//Fact f = null;
 
-		Collection preds = pMap.values();
-		Iterator it = preds.iterator();
+		Collection<PredBase> preds = pMap.values();
+		Iterator<PredBase> it = preds.iterator();
 		while(it.hasNext()){
 			PredBase pb = (PredBase)it.next();
 			List<Fact> facts = pb.facts;
@@ -575,8 +563,8 @@ public class DBase implements Serializable{
 
 	public String toString(){
 		String retStr = "";
-		Collection tables = pMap.values();
-		Iterator it = tables.iterator();
+		Collection<PredBase> tables = pMap.values();
+		Iterator<PredBase> it = tables.iterator();
 
 		while(it.hasNext()){
 			PredBase pb = (PredBase)it.next();
@@ -591,8 +579,8 @@ public class DBase implements Serializable{
 	try{
 		PrintWriter out = new PrintWriter(new FileWriter(fname));
 
-		Collection preds = pMap.values();
-		Iterator it = preds.iterator();
+		Collection<PredBase> preds = pMap.values();
+		Iterator<PredBase> it = preds.iterator();
 		while(it.hasNext()){
 			((PredBase)it.next()).dump(out);
 		}// while more predicates
