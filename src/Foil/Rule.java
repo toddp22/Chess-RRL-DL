@@ -191,7 +191,7 @@ class Rule implements Serializable, Pred{
 		ArrayList<Fact> pfacts = P.getMatches(head);
 
 		// System.out.println("The positive matches are: " + pfacts);
-		int count = 0;
+		//int count = 0;
 		if (body[ac] == null) return pfacts;
 
 		Iterator<Fact> factIt = pfacts.iterator();
@@ -207,7 +207,7 @@ class Rule implements Serializable, Pred{
 				head.release();
 				continue;
 			}
-			if(P.Matches(body[ac],N)) count ++; // We have a conceptual problem here.
+			//if(P.Matches(body[ac],N)) count ++; // We have a conceptual problem here.
 												// If terms in the body are negative
 												// they need to be evaluated by the
 												// negative database.
@@ -387,7 +387,7 @@ class Rule implements Serializable, Pred{
 			return new Rule.
 
 	************************************************************/
-
+/*
 	public Rule RLGG(Rule r,DBase Pos){
 
 		if (r.body[ac] != null || body[ac] != null) return null;
@@ -404,7 +404,7 @@ class Rule implements Serializable, Pred{
 
 		return newR;
 	} // method RLGG
-
+*/
 	public void ijDeterminant(int i,int j){
 		if (head == null || body[ac] == null) return;
 		ArrayList<String> varList = head.termNames();

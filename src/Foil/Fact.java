@@ -17,9 +17,9 @@ public class Fact implements Serializable{
 	 * 
 	 */
 	private static final long serialVersionUID = -998148755361579258L;
-	public final Constant [] args;
-	public final String name;
-	public final Object value;
+	public final Constant [] args;	  // arguments of the fact for ... 
+	public final String name;		  // name of the fact
+	public final Object value;        // value of the Fact
 
 	public Fact(String name, String arg, Object v){
 		this.name = name;
@@ -168,7 +168,7 @@ public class Fact implements Serializable{
 		return (Constant)value;
 	} // method evaluate
 
-	public Predicate LGG(Fact f){
+/*	public Predicate LGG(Fact f){
 		return LGG(f,new LookupTable(),new ArrayList<String>());
 	} // method LGG
 
@@ -198,7 +198,7 @@ public class Fact implements Serializable{
 		return newP;
 
 	} // method LGG
-
+*/
 	public String toString(){
 		String temp = "" + name + "(";
 		for(int i=0;i<args.length-1;i++)

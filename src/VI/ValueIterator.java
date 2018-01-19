@@ -523,6 +523,7 @@ public class ValueIterator {
 			VI.Iterate();
 		}
 
+		System.out.println("Valid BK Moves");
 		System.out.println("Generating database");
 		DBase D = VI.getDatabase();
 		System.out.println("Dumping database");
@@ -532,7 +533,6 @@ public class ValueIterator {
 		//Predicate target = new Predicate (pname,8);
 		System.out.println("Calculating FOL");
 		//FoilImp F = new FoilImp(target,D,true);
-
 
 /*
 		int checkcount = 0;

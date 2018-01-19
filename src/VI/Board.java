@@ -30,7 +30,7 @@ public class Board {
 		
 		
 		// unique positions
-		if (state.pos[BK].equals(state.pos[WK]) || state.pos[WR].equals(state.pos[WK])) return false; // BK captures WR ok.
+		if (state.pos[BK].equals(state.pos[WK]) || state.pos[WR].equals(state.pos[WK])) return false; // BK captures WR OK.
 	//	if (state.pos[BK].equals(state.pos[WR])) return false; // i
 		// kings not adjacent.
 		if (Math.abs(state.pos[BK].row - state.pos[WK].row) <= 1 && Math.abs(state.pos[BK].col - state.pos[WK].col) <=1) return false;

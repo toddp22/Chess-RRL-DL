@@ -53,12 +53,12 @@ class Function extends Term {
 		// Double check this method.
 		// This function (if fully bound could equal the constant c as defined in database D);
 
-		if (D != null)
-		   return c.equals(D.evaluate(this));
+//		if (D != null)
+//		   return c.equals(D.evaluate(this));
 
 		return false;
 	} // method Match
-
+	
 	public boolean match (Variable v){
 		if(v.bound()) return match(v.binding);
 		else return true;
