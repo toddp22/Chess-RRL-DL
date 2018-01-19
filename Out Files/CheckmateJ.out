@@ -1,0 +1,15 @@
+CheckmateJ(0, 0, 1, 2, 2, 0) CheckmateJ(0, 0, 1, 2, 3, 0) CheckmateJ(0, 0, 2, 1, 0, 2) CheckmateJ(0, 0, 2, 1, 0, 3) 
+CheckmateJ(0, 3, 1, 1, 2, 3) CheckmateJ(0, 3, 1, 1, 3, 3) CheckmateJ(0, 3, 2, 2, 0, 0) CheckmateJ(0, 3, 2, 2, 0, 1) 
+CheckmateJ(3, 0, 1, 1, 3, 2) CheckmateJ(3, 0, 1, 1, 3, 3) CheckmateJ(3, 0, 2, 2, 0, 0) CheckmateJ(3, 0, 2, 2, 1, 0) 
+CheckmateJ(3, 3, 1, 2, 3, 0) CheckmateJ(3, 3, 1, 2, 3, 1) CheckmateJ(3, 3, 2, 1, 0, 3) CheckmateJ(3, 3, 2, 1, 1, 3) 
+CheckmateJ(0, 0, 0, 2, 2, 0) CheckmateJ(0, 0, 0, 2, 3, 0) CheckmateJ(0, 3, 0, 1, 2, 3) CheckmateJ(0, 3, 0, 1, 3, 3) 
+CheckmateJ(3, 0, 3, 2, 0, 0) CheckmateJ(3, 0, 3, 2, 1, 0) CheckmateJ(3, 3, 3, 1, 0, 3) CheckmateJ(3, 3, 3, 1, 1, 3) 
+CheckmateJ(0, 0, 2, 0, 0, 2) CheckmateJ(0, 0, 2, 0, 0, 3) CheckmateJ(0, 3, 2, 3, 0, 0) CheckmateJ(0, 3, 2, 3, 0, 1) 
+CheckmateJ(3, 0, 1, 0, 3, 2) CheckmateJ(3, 0, 1, 0, 3, 3) CheckmateJ(3, 3, 1, 3, 3, 0) CheckmateJ(3, 3, 1, 3, 3, 1) 
+CheckmateJ(0, 1, 2, 1, 0, 3) CheckmateJ(0, 2, 2, 2, 0, 0) CheckmateJ(1, 0, 1, 2, 3, 0) CheckmateJ(1, 3, 1, 1, 3, 3) 
+CheckmateJ(2, 0, 2, 2, 0, 0) CheckmateJ(2, 3, 2, 1, 0, 3) CheckmateJ(3, 1, 1, 1, 3, 3) CheckmateJ(3, 2, 1, 2, 3, 0) 
+BestRule is: 
+CheckmateJ(BK,WK,WR) -: [InCheck(*), Corner(BK), Relative21(BK,WK), ~Adjacent(WK,WR), ~Adjacent(BK,WR)]
+                        [InCheck(*), ~Adjacent(BK,WR), Equal(BKR,WKR), ~Corner(WK), Corner(BK)]
+                        [Equal(BKC,WKC), Equal(BKR,WRR), ~Adjacent(BK,WR), ~Equal(BKC,WRC), ~Corner(WK), Corner(BK)]
+                        [~Edge(WK), Corner(WR), ~Relative21(BK,WK), ~Relative21(WK,WR), InCheck(*)]

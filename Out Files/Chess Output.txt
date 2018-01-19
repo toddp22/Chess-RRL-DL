@@ -1,0 +1,267 @@
+Calculating FOIL
+Opening Rule File
+java.io.FileInputStream@173a10f
+Added Old Rules
+InCheck(*)
+Target Predicate: mate2WJ(BK,WK,WR)
+BestRule is: 
+mate2WJ(BK,WK,WR) -: [~Edge(WK), Adjacent(WK,WR), ~Relative21(BK,WK), Edge(WR)]
+                     [Edge(BK), Relative21(BK,WK), ~Corner(BK), Corner(WR), ~Edge(WK)]
+                     [Edge(BK), ~Corner(BK), ~Edge(WR), ~Edge(WK)]
+                     [Edge(BK), ~Equal(BKR,WRR), Relative21(BK,WK), ~Adjacent(WK,WR), ~Corner(BK), ~Edge(WK)]
+                     [Edge(BK), ~Equal(BKR,WRR), Corner(WR), ~Relative21(WK,WR), Relative21(BK,WK), Adjacent(WK,WR)]
+                     [Edge(BK), ~Equal(BKR,WRR), Corner(WR), ~Relative21(WK,WR), Diagonal(BK,WR), Equal(WKR,WRR)]
+                     [Edge(BK), ~Equal(BKR,WRR), ~Diagonal(BK,WR), ~Corner(BK), ~Corner(WK), ~Relative21(WK,WR), ~Diagonal(BK,WK), ~Diagonal(WK,WR), ~Corner(WR), Adjacent(WK,WR)]
+                     [Edge(BK), ~Equal(BKR,WRR), ~Adjacent(WK,WR), ~Equal(BKC,WKC), ~Equal(BKR,WKR), ~Corner(BK), ~Diagonal(BK,WR), ~Edge(WR)]
+                     [Edge(BK), ~Equal(BKR,WRR), ~Adjacent(WK,WR), ~Equal(BKC,WKC), ~Equal(BKR,WKR), ~Corner(BK), ~Corner(WK), ~Adjacent(BK,WR), ~Relative21(WK,WR), ~Relative21(BK,WK)]
+                     [Edge(BK), ~Equal(BKR,WRR), ~Adjacent(WK,WR), Relative21(BK,WK), ~Corner(BK), ~Edge(WR)]
+                     [Edge(BK), ~Equal(BKR,WRR), ~Adjacent(WK,WR), ~Equal(BKC,WKC), ~Equal(BKR,WKR), ~Adjacent(BK,WR), ~Relative21(BK,WR), Edge(WK), ~Corner(WK), ~Relative21(BK,WK)]
+                     [Edge(BK), ~Equal(BKR,WRR), Relative21(BK,WK), ~Adjacent(WK,WR), ~Corner(BK), ~Adjacent(BK,WR), Diagonal(BK,WR)]
+                     [Edge(BK), ~Equal(BKR,WRR), Corner(WR), Relative21(BK,WK), ~Relative21(WK,WR), ~Equal(WKR,WRR), ~Equal(WKC,WRC)]
+                     [Edge(BK), ~Equal(BKR,WRR), ~Diagonal(BK,WK), ~Diagonal(BK,WR), Edge(WR), Edge(WK), ~Equal(WKC,WRC), ~Equal(WKR,WRR), Adjacent(WK,WR), Relative21(BK,WR)]
+                     [Edge(BK), ~Equal(BKR,WRR), ~Diagonal(BK,WK), ~Diagonal(BK,WR), Edge(WR), ~Equal(BKC,WKC), ~Equal(BKR,WKR), ~Adjacent(WK,WR), ~Relative21(BK,WK), ~Relative21(BK,WR), ~Corner(WR)]
+                     [Edge(BK), ~Equal(BKR,WRR), ~Diagonal(BK,WK), ~Diagonal(BK,WR), Edge(WR), ~Equal(BKC,WKC), ~Equal(BKR,WKR), ~Adjacent(WK,WR), ~Corner(BK), Relative21(WK,WR)]
+                     [Edge(BK), ~Equal(BKR,WRR), ~Diagonal(BK,WK), ~Relative21(WK,WR), Corner(WR), Adjacent(WK,WR), Equal(BKR,WKR)]
+                     [Edge(BK), ~Equal(BKR,WRR), ~Diagonal(BK,WK), ~Relative21(WK,WR), ~Adjacent(WK,WR), Corner(WK), Corner(BK), ~Relative21(BK,WR), ~Equal(WKR,WRR), ~Equal(WKC,WRC)]
+                     [Edge(BK), Adjacent(BK,WR), ~Edge(WR), ~Corner(BK), ~Adjacent(WK,WR), ~Relative21(WK,WR)]
+                     [Edge(BK), Adjacent(WK,WR), ~Edge(WK), ~Diagonal(WK,WR), Adjacent(BK,WR)]
+                     [Edge(BK), ~Equal(BKR,WRR), Corner(WR), Corner(WK), Corner(BK)]
+                     [Edge(BK), ~Equal(BKR,WRR), ~Diagonal(BK,WR), ~Relative21(WK,WR), ~Diagonal(BK,WK), ~Corner(BK), ~Corner(WK), Equal(BKC,WKC), Adjacent(WK,WR)]
+                     [Edge(BK), ~Equal(BKR,WRR), ~Diagonal(BK,WR), Relative21(BK,WK), ~Diagonal(WK,WR), Adjacent(WK,WR)]
+                     [Edge(BK), ~Corner(BK), Relative21(BK,WR), ~Adjacent(WK,WR), Relative21(BK,WK)]
+                     [~Relative21(BK,WK), ~Diagonal(BK,WK), ~Equal(BKC,WKC), ~Equal(BKR,WKR), Corner(WR), ~Equal(BKR,WRR), Corner(BK)]
+                     [~Relative21(BK,WK), ~Diagonal(BK,WK), ~Equal(BKC,WKC), Diagonal(WK,WR), ~Diagonal(BK,WR), ~Corner(WK), ~Relative21(BK,WR), ~Equal(BKR,WKR)]
+                     [~Corner(BK), Edge(BK), ~Edge(WR), Equal(BKR,WKR), ~Corner(WK)]
+                     [Corner(WK), Corner(WR), Edge(BK), ~Equal(BKR,WKR), ~Equal(BKC,WKC), ~Equal(BKR,WRR)]
+                     [Relative21(BK,WR), Corner(WK), Edge(BK), Edge(WR), ~Adjacent(WK,WR), ~Equal(BKR,WKR), ~Equal(BKC,WKC), ~Equal(WKR,WRR), ~Equal(WKC,WRC)]
+                     [Equal(BKC,WKC), Adjacent(BK,WR), Relative21(WK,WR), ~Corner(BK), ~Edge(WR)]
+
+
+
+
+Clause: [~Edge(WK), Adjacent(WK,WR), ~Relative21(BK,WK), Edge(WR)]
+Target Predicate: mate2T(BK,WK,WR)
+BestRule is: 
+mate2T(BK,WK,WR) -: [~Edge(WK), ~Diagonal(BK,WK), ~Edge(WR), Relative21(BK,WR)]
+                    [~Edge(WK), Relative21(BK,WK), ~Adjacent(WK,WR), ~Adjacent(BK,WR)]
+                    [Diagonal(WK,WR), ~Edge(WR), ~Corner(BK)]
+                    [Diagonal(WK,WR), Equal(BKR,WKR), ~Relative21(BK,WR), ~Corner(WR), ~Adjacent(BK,WR)]
+                    [Equal(BKC,WKC), Diagonal(WK,WR), ~Relative21(BK,WR), ~Corner(WR), ~Adjacent(BK,WR)]
+
+
+
+Clause: [Edge(BK), Relative21(BK,WK), ~Corner(BK), Corner(WR), ~Edge(WK)]
+Target Predicate: mate2T(BK,WK,WR)
+BestRule is: 
+mate2T(BK,WK,WR) -: [Relative21(BK,WR), ~Adjacent(WK,WR)]
+                    [Relative21(WK,WR), Relative21(BK,WK), Corner(WR), ~Equal(BKR,WRR), ~Equal(BKC,WRC)]
+
+
+
+Clause: [Edge(BK), ~Corner(BK), ~Edge(WR), ~Edge(WK)]
+Target Predicate: mate2T(BK,WK,WR)
+BestRule is: 
+mate2T(BK,WK,WR) -: [Adjacent(WK,WR), ~Relative21(BK,WK), ~Edge(WK), ~Adjacent(BK,WR)]
+                    [Diagonal(WK,WR), ~Edge(WK), ~Relative21(BK,WK), ~Edge(WR)]
+
+
+
+Clause: [Edge(BK), ~Equal(BKR,WRR), Relative21(BK,WK), ~Adjacent(WK,WR), ~Corner(BK), ~Edge(WK)]
+Target Predicate: mate2T(BK,WK,WR)
+BestRule is: 
+mate2T(BK,WK,WR) -: [Corner(WR), Relative21(WK,WR)]
+                    [Relative21(BK,WR), Relative21(BK,WK), Equal(WKR,WRR)]
+                    [Equal(WKC,WRC), Relative21(BK,WR), Relative21(BK,WK)]
+
+
+
+Clause: [Edge(BK), ~Equal(BKR,WRR), Corner(WR), ~Relative21(WK,WR), Relative21(BK,WK), Adjacent(WK,WR)]
+Target Predicate: mate2T(BK,WK,WR)
+BestRule is: 
+mate2T(BK,WK,WR) -: [Relative21(WK,WR)]
+
+
+
+Clause: [Edge(BK), ~Equal(BKR,WRR), Corner(WR), ~Relative21(WK,WR), Diagonal(BK,WR), Equal(WKR,WRR)]
+Target Predicate: mate2T(BK,WK,WR)
+BestRule is: 
+mate2T(BK,WK,WR) -: [Relative21(BK,WK)]
+
+
+
+Clause: [Edge(BK), ~Equal(BKR,WRR), ~Diagonal(BK,WR), ~Corner(BK), ~Corner(WK), ~Relative21(WK,WR), ~Diagonal(BK,WK), ~Diagonal(WK,WR), ~Corner(WR), Adjacent(WK,WR)]
+Target Predicate: mate2T(BK,WK,WR)
+BestRule is: 
+mate2T(BK,WK,WR) -: [~Edge(WK), ~Relative21(BK,WK)]
+                    [Relative21(WK,WR), Corner(WR)]
+                    [Relative21(WK,WR), Relative21(BK,WK)]
+
+
+
+Clause: [Edge(BK), ~Equal(BKR,WRR), ~Adjacent(WK,WR), ~Equal(BKC,WKC), ~Equal(BKR,WKR), ~Corner(BK), ~Diagonal(BK,WR), ~Edge(WR)]
+Target Predicate: mate2T(BK,WK,WR)
+BestRule is: 
+mate2T(BK,WK,WR) -: [~Corner(WK), ~Adjacent(BK,WR), Relative21(WK,WR)]
+                    [~Edge(WK)]
+                    [Relative21(BK,WR), Relative21(BK,WK)]
+
+
+
+Clause: [Edge(BK), ~Equal(BKR,WRR), ~Adjacent(WK,WR), ~Equal(BKC,WKC), ~Equal(BKR,WKR), ~Corner(BK), ~Corner(WK), ~Adjacent(BK,WR), ~Relative21(WK,WR), ~Relative21(BK,WK)]
+Target Predicate: mate2T(BK,WK,WR)
+BestRule is: 
+mate2T(BK,WK,WR) -: [~Edge(WK), Relative21(BK,WK)]
+
+
+
+Clause: [Edge(BK), ~Equal(BKR,WRR), ~Adjacent(WK,WR), Relative21(BK,WK), ~Corner(BK), ~Edge(WR)]
+Target Predicate: mate2T(BK,WK,WR)
+BestRule is: 
+mate2T(BK,WK,WR) -: [Relative21(BK,WR), ~Edge(WR)]
+
+
+
+Clause: [Edge(BK), ~Equal(BKR,WRR), ~Adjacent(WK,WR), ~Equal(BKC,WKC), ~Equal(BKR,WKR), ~Adjacent(BK,WR), ~Relative21(BK,WR), Edge(WK), ~Corner(WK), ~Relative21(BK,WK)]
+Target Predicate: mate2T(BK,WK,WR)
+BestRule is: 
+mate2T(BK,WK,WR) -: [Relative21(BK,WK)]
+
+
+
+Clause: [Edge(BK), ~Equal(BKR,WRR), Relative21(BK,WK), ~Adjacent(WK,WR), ~Corner(BK), ~Adjacent(BK,WR), Diagonal(BK,WR)]
+Target Predicate: mate2T(BK,WK,WR)
+BestRule is: 
+mate2T(BK,WK,WR) -: [Relative21(BK,WR), ~Edge(WR)]
+
+
+
+Clause: [Edge(BK), ~Equal(BKR,WRR), Corner(WR), Relative21(BK,WK), ~Relative21(WK,WR), ~Equal(WKR,WRR), ~Equal(WKC,WRC)]
+Target Predicate: mate2T(BK,WK,WR)
+BestRule is: 
+mate2T(BK,WK,WR) -: [Relative21(WK,WR), Relative21(BK,WK), Corner(WR)]
+                    [Relative21(WK,WR), Relative21(BK,WK)]
+
+
+
+Clause: [Edge(BK), ~Equal(BKR,WRR), ~Diagonal(BK,WK), ~Diagonal(BK,WR), Edge(WR), Edge(WK), ~Equal(WKC,WRC), ~Equal(WKR,WRR), Adjacent(WK,WR), Relative21(BK,WR)]
+Target Predicate: mate2T(BK,WK,WR)
+BestRule is: 
+mate2T(BK,WK,WR) -: [Relative21(BK,WK)]
+
+
+
+Clause: [Edge(BK), ~Equal(BKR,WRR), ~Diagonal(BK,WK), ~Diagonal(BK,WR), Edge(WR), ~Equal(BKC,WKC), ~Equal(BKR,WKR), ~Adjacent(WK,WR), ~Relative21(BK,WK), ~Relative21(BK,WR), ~Corner(WR)]
+Target Predicate: mate2T(BK,WK,WR)
+BestRule is: 
+mate2T(BK,WK,WR) -: [~Corner(WK), Relative21(BK,WK)]
+                    [~Edge(WK)]
+
+
+
+Clause: [Edge(BK), ~Equal(BKR,WRR), ~Diagonal(BK,WK), ~Diagonal(BK,WR), Edge(WR), ~Equal(BKC,WKC), ~Equal(BKR,WKR), ~Adjacent(WK,WR), ~Corner(BK), Relative21(WK,WR)]
+Target Predicate: mate2T(BK,WK,WR)
+BestRule is: 
+mate2T(BK,WK,WR) -: [Relative21(BK,WK), Relative21(BK,WR)]
+
+
+
+Clause: [Edge(BK), ~Equal(BKR,WRR), ~Diagonal(BK,WK), ~Relative21(WK,WR), Corner(WR), Adjacent(WK,WR), Equal(BKR,WKR)]
+Target Predicate: mate2T(BK,WK,WR)
+BestRule is: 
+mate2T(BK,WK,WR) -: [Relative21(BK,WK), Relative21(WK,WR)]
+
+
+
+Clause: [Edge(BK), ~Equal(BKR,WRR), ~Diagonal(BK,WK), ~Relative21(WK,WR), ~Adjacent(WK,WR), Corner(WK), Corner(BK), ~Relative21(BK,WR), ~Equal(WKR,WRR), ~Equal(WKC,WRC)]
+Target Predicate: mate2T(BK,WK,WR)
+BestRule is: 
+mate2T(BK,WK,WR) -: [Relative21(BK,WK)]
+
+
+
+Clause: [Edge(BK), Adjacent(BK,WR), ~Edge(WR), ~Corner(BK), ~Adjacent(WK,WR), ~Relative21(WK,WR)]
+Target Predicate: mate2T(BK,WK,WR)
+BestRule is: 
+mate2T(BK,WK,WR) -: [~Edge(WK), ~Relative21(BK,WK)]
+
+
+
+Clause: [Edge(BK), Adjacent(WK,WR), ~Edge(WK), ~Diagonal(WK,WR), Adjacent(BK,WR)]
+Target Predicate: mate2T(BK,WK,WR)
+BestRule is: 
+mate2T(BK,WK,WR) -: [Edge(WR), Relative21(WK,WR)]
+
+
+
+Clause: [Edge(BK), ~Equal(BKR,WRR), Corner(WR), Corner(WK), Corner(BK)]
+Target Predicate: mate2T(BK,WK,WR)
+BestRule is: 
+mate2T(BK,WK,WR) -: [Relative21(BK,WK)]
+
+
+
+Clause: [Edge(BK), ~Equal(BKR,WRR), ~Diagonal(BK,WR), ~Relative21(WK,WR), ~Diagonal(BK,WK), ~Corner(BK), ~Corner(WK), Equal(BKC,WKC), Adjacent(WK,WR)]
+Target Predicate: mate2T(BK,WK,WR)
+BestRule is: 
+mate2T(BK,WK,WR) -: [Relative21(BK,WK), ~Equal(WKC,WRC)]
+                    [~Edge(WK), Relative21(BK,WR)]
+
+
+
+Clause: [Edge(BK), ~Equal(BKR,WRR), ~Diagonal(BK,WR), Relative21(BK,WK), ~Diagonal(WK,WR), Adjacent(WK,WR)]
+Target Predicate: mate2T(BK,WK,WR)
+BestRule is: 
+mate2T(BK,WK,WR) -: [Relative21(WK,WR)]
+
+
+
+Clause: [Edge(BK), ~Corner(BK), Relative21(BK,WR), ~Adjacent(WK,WR), Relative21(BK,WK)]
+Target Predicate: mate2T(BK,WK,WR)
+BestRule is: 
+mate2T(BK,WK,WR) -: [~Edge(WK)]
+
+
+
+Clause: [~Relative21(BK,WK), ~Diagonal(BK,WK), ~Equal(BKC,WKC), ~Equal(BKR,WKR), Corner(WR), ~Equal(BKR,WRR), Corner(BK)]
+Target Predicate: mate2T(BK,WK,WR)
+BestRule is: 
+mate2T(BK,WK,WR) -: [Relative21(BK,WK)]
+
+
+
+Clause: [~Relative21(BK,WK), ~Diagonal(BK,WK), ~Equal(BKC,WKC), Diagonal(WK,WR), ~Diagonal(BK,WR), ~Corner(WK), ~Relative21(BK,WR), ~Equal(BKR,WKR)]
+Target Predicate: mate2T(BK,WK,WR)
+BestRule is: 
+mate2T(BK,WK,WR) -: [Relative21(BK,WK)]
+
+
+
+Clause: [~Corner(BK), Edge(BK), ~Edge(WR), Equal(BKR,WKR), ~Corner(WK)]
+Target Predicate: mate2T(BK,WK,WR)
+BestRule is: 
+mate2T(BK,WK,WR) -: [~Edge(WK), ~Relative21(BK,WK)]
+                    [Equal(WKC,WRC), Relative21(BK,WK)]
+
+
+
+Clause: [Corner(WK), Corner(WR), Edge(BK), ~Equal(BKR,WKR), ~Equal(BKC,WKC), ~Equal(BKR,WRR)]
+Target Predicate: mate2T(BK,WK,WR)
+BestRule is: 
+mate2T(BK,WK,WR) -: [Relative21(BK,WK)]
+
+
+
+Clause: [Relative21(BK,WR), Corner(WK), Edge(BK), Edge(WR), ~Adjacent(WK,WR), ~Equal(BKR,WKR), ~Equal(BKC,WKC), ~Equal(WKR,WRR), ~Equal(WKC,WRC)]
+Target Predicate: mate2T(BK,WK,WR)
+BestRule is: 
+mate2T(BK,WK,WR) -: [Relative21(BK,WK)]
+
+
+
+Clause: [Equal(BKC,WKC), Adjacent(BK,WR), Relative21(WK,WR), ~Corner(BK), ~Edge(WR)]
+Target Predicate: mate2T(BK,WK,WR)
+BestRule is: 
+mate2T(BK,WK,WR) -: [~Edge(WK), ~Relative21(BK,WK)]
+
+
+

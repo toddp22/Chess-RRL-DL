@@ -1,0 +1,27 @@
+BestRule is: 
+Checkmate(BK,WK,WR) -: [InCheck(*), Corner(BK), ~Adjacent(BK,WR), Diagonal(WK,WR), ~Adjacent(WK,WR), ~Corner(WK)]
+Checkmate(0, 0, 0, 2, 2, 0) Checkmate(0, 0, 1, 2, 3, 0) Checkmate(0, 0, 2, 0, 0, 2) Checkmate(0, 0, 2, 1, 0, 3)
+Checkmate(0, 3, 0, 1, 2, 3) Checkmate(0, 3, 1, 1, 3, 3) Checkmate(0, 3, 2, 2, 0, 0) Checkmate(0, 3, 2, 3, 0, 1)
+Checkmate(3, 0, 1, 0, 3, 2) Checkmate(3, 0, 1, 1, 3, 3) Checkmate(3, 0, 2, 2, 0, 0) Checkmate(3, 0, 3, 2, 1, 0)
+Checkmate(3, 3, 1, 2, 3, 0) Checkmate(3, 3, 1, 3, 3, 1) Checkmate(3, 3, 2, 1, 0, 3) Checkmate(3, 3, 3, 1, 1, 3)
+
+BestRule is:
+Checkmate(BK,WK,WR) -: ...[InCheck(*), ~Edge(WK), ~Adjacent(BK,WR), ~Adjacent(WK,WR), ~Diagonal(BK,WK), Corner(BK)]
+Checkmate(0, 0, 1, 2, 2, 0) Checkmate(0, 0, 2, 1, 0, 2) Checkmate(0, 3, 1, 1, 2, 3) Checkmate(0, 3, 2, 2, 0, 1)
+Checkmate(3, 0, 1, 1, 3, 2) Checkmate(3, 0, 2, 2, 1, 0) Checkmate(3, 3, 1, 2, 3, 1) Checkmate(3, 3, 2, 1, 1, 3)
+
+BestRule is:
+Checkmate(BK,WK,WR) -: ...[Corner(WR), InCheck(*), Equal(BKR,WKR), ~Adjacent(BK,WR), ~Edge(WK)]
+Checkmate(1, 0, 1, 2, 3, 0) Checkmate(1, 3, 1, 1, 3, 3) Checkmate(2, 0, 2, 2, 0, 0) Checkmate(2, 3, 2, 1, 0, 3) BestRule is: 
+Checkmate(BK,WK,WR) -: ...[Corner(WR), Equal(BKC,WKC), InCheck(*), ~Adjacent(BK,WR), ~Edge(WK)]
+Checkmate(0, 1, 2, 1, 0, 3) Checkmate(0, 2, 2, 2, 0, 0) Checkmate(3, 1, 1, 1, 3, 3) Checkmate(3, 2, 1, 2, 3, 0) BestRule is: 
+Checkmate(BK,WK,WR) -: ...[Corner(WR), Corner(BK), InCheck(*), Equal(BKR,WKR), ~Corner(WK)]
+Checkmate(0, 0, 0, 2, 3, 0) Checkmate(0, 3, 0, 1, 3, 3) Checkmate(3, 0, 3, 2, 0, 0) Checkmate(3, 3, 3, 1, 0, 3) BestRule is: 
+Checkmate(BK,WK,WR) -: ...[Equal(BKC,WKC), Corner(WR), InCheck(*), Corner(BK), ~Corner(WK)]
+Checkmate(0, 0, 2, 0, 0, 3) Checkmate(0, 3, 2, 3, 0, 0) Checkmate(3, 0, 1, 0, 3, 3) Checkmate(3, 3, 1, 3, 3, 0) BestRule is: 
+Checkmate(BK,WK,WR) -: [InCheck(*), Corner(BK), ~Adjacent(BK,WR), Diagonal(WK,WR), ~Adjacent(WK,WR), ~Corner(WK)]
+                       [InCheck(*), ~Edge(WK), ~Adjacent(BK,WR), ~Adjacent(WK,WR), ~Diagonal(BK,WK), Corner(BK)]
+                       [Corner(WR), InCheck(*), Equal(BKR,WKR), ~Adjacent(BK,WR), ~Edge(WK)]
+                       [Corner(WR), Equal(BKC,WKC), InCheck(*), ~Adjacent(BK,WR), ~Edge(WK)]
+                       [Corner(WR), Corner(BK), InCheck(*), Equal(BKR,WKR), ~Corner(WK)]
+                       [Equal(BKC,WKC), Corner(WR), InCheck(*), Corner(BK), ~Corner(WK)]

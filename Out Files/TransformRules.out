@@ -1,0 +1,42 @@
+r1 = mate2BJ(BK,WK,WR) -: [~Edge(WK), Adjacent(WK,WR), Corner(BK), ~Diagonal(BK,WK), ~Adjacent(BK,WR)]
+                     [~Edge(WK), ~Adjacent(BK,WR), Diagonal(BK,WR), ~Corner(BK)]
+                     [~Edge(WK), Corner(WR), Adjacent(WK,WR)]
+                     [~Edge(WK), ~Diagonal(BK,WR), Diagonal(BK,WK), ~Diagonal(WK,WR), ~Adjacent(BK,WR), ~Adjacent(WK,WR)]
+                     [~Edge(WK), ~Diagonal(BK,WR), Adjacent(WK,WR), Adjacent(BK,WR), Corner(BK)]
+                     [~Edge(WK), ~Corner(BK), ~Diagonal(WK,WR), InCheck(*), Equal(WKR,WRR), Adjacent(BK,WR)]
+                     [~Edge(WK), ~Corner(BK), ~Adjacent(BK,WR), Corner(WR), ~Diagonal(WK,WR), InCheck(*)]
+                     [Corner(BK), ~Edge(WR), ~Diagonal(BK,WR), ~Adjacent(WK,WR), ~Diagonal(BK,WK)]
+                     [~Edge(WK), Equal(BKC,WKC), Equal(BKC,WRC), ~Equal(BKR,WRR)]
+                     [~Edge(WK), ~Equal(BKC,WRC), ~Diagonal(BK,WR), ~InCheck(*), Equal(BKR,WKR), ~Adjacent(WK,WR)]
+                     [Corner(BK), ~InCheck(*), ~Corner(WK), Equal(BKR,WKR), ~Adjacent(WK,WR), Equal(WKC,WRC)]
+                     [~Edge(WK), ~Equal(BKC,WRC), ~Diagonal(BK,WR), ~InCheck(*), Equal(BKR,WRR)]
+                     [~Edge(WK), ~Equal(BKC,WRC), ~Diagonal(BK,WR), ~Equal(BKR,WRR), ~Edge(WR), Corner(BK)]
+                     [Equal(BKC,WKC), Corner(BK), ~Corner(WK), ~Equal(BKR,WRR), ~Adjacent(WK,WR), Equal(WKR,WRR)]
+                     [~Edge(WK), ~Corner(BK), ~Equal(BKC,WRC), Edge(WR), ~Diagonal(BK,WR), ~Equal(WKR,WRR), ~Equal(BKR,WRR), ~Equal(WKC,WRC), Equal(BKC,WKC), ~Adjacent(WK,WR)]
+                     [Corner(BK), Corner(WR), Adjacent(WK,WR), Equal(BKR,WKR)]
+                     [Corner(BK), Equal(BKC,WKC), ~Corner(WK), Corner(WR), ~Equal(BKR,WRR)]
+                     [~Edge(WK), ~Corner(BK), Diagonal(WK,WR), ~Adjacent(BK,WR), ~InCheck(*), ~Equal(BKR,WKR), ~Equal(BKC,WKC)]
+                     [Corner(BK), Equal(BKR,WKR), ~Corner(WK), Diagonal(BK,WR), Corner(WR)]
+                     [Corner(BK), Equal(BKR,WKR), ~Corner(WK), ~Equal(BKC,WRC), ~Adjacent(WK,WR)]
+                     [~Edge(WK), Equal(WKC,WRC), InCheck(*), ~Corner(BK), Edge(WR)]
+                     [Equal(BKC,WKC), Corner(BK), ~Corner(WK), ~Equal(BKR,WRR), ~Adjacent(WK,WR)]
+
+
+
+
+
+r2 = mate1WJ(BK,WK,WR) -: [Corner(BK), ~Edge(WK), ~Diagonal(BK,WK), Diagonal(WK,WR)]
+                     [Corner(BK), ~Adjacent(WK,WR), ~Corner(WK), Equal(BKR,WKR), ~Equal(BKR,WRR)]
+                     [~Edge(WK), ~Adjacent(WK,WR), ~Equal(BKR,WRR), Corner(BK)]
+                     [Equal(BKC,WKC), ~Adjacent(WK,WR), ~Corner(WK), Corner(BK), ~Equal(BKR,WRR)]
+                     [~Edge(WK), ~Adjacent(WK,WR), ~Equal(BKR,WRR), Equal(BKR,WKR)]
+                     [~Edge(WK), Equal(BKC,WKC), ~Adjacent(WK,WR), ~Equal(BKR,WRR)]
+                     [~Edge(WK), ~Edge(WR), ~Adjacent(BK,WR), Diagonal(BK,WR)]
+
+
+
+
+
+val = 0.9
+turn = 0 (white)
+target = mate2T

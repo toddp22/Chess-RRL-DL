@@ -1,0 +1,4 @@
+InCheck(BK,WK,WR) -: [Equal(BKR,WRR), ~Equal(BKC,WRC), ~Equal(BKR,WKR)]
+                     [Equal(BKC,WRC), ~Equal(BKR,WRR), ~Equal(BKC,WKC)]
+                     [Adjacent(BK,WR), ~Diagonal(BK,WR)]
+                     [Relative20(BK,WR)]

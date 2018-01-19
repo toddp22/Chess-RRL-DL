@@ -1,0 +1,403 @@
+BestRule is: 
+mate2(BK,WK,WR) -: [InCheck(*), Adjacent(WK,WR), Edge(WR), Edge(WK)]
+mate2(0, 0, 0, 2, 0, 1) mate2(0, 0, 0, 3, 0, 2) mate2(0, 0, 1, 3, 0, 2) mate2(0, 0, 1, 3, 0, 3) mate2(0, 0, 2, 0, 1, 0) mate2(0, 0, 3, 0, 2, 0) mate2(0, 0, 3, 1, 2, 0) mate2(0, 0, 3, 1, 3, 0) mate2(0, 1, 0, 3, 0, 2) mate2(0, 1, 1, 3, 0, 2) mate2(0, 1, 1, 3, 0, 3) mate2(0, 1, 2, 0, 3, 1) mate2(0, 1, 3, 0, 3, 1) mate2(0, 1, 3, 2, 3, 1) mate2(0, 2, 0, 0, 0, 1) mate2(0, 2, 1, 0, 0, 0) mate2(0, 2, 1, 0, 0, 1) mate2(0, 2, 2, 3, 3, 2) mate2(0, 2, 3, 1, 3, 2) mate2(0, 2, 3, 3, 3, 2) mate2(0, 3, 0, 0, 0, 1) mate2(0, 3, 0, 1, 0, 2) mate2(0, 3, 1, 0, 0, 0) mate2(0, 3, 1, 0, 0, 1) mate2(0, 3, 2, 3, 1, 3) mate2(0, 3, 3, 2, 2, 3) mate2(0, 3, 3, 2, 3, 3) mate2(0, 3, 3, 3, 2, 3) mate2(1, 0, 0, 2, 1, 3) mate2(1, 0, 0, 3, 1, 3) mate2(1, 0, 2, 3, 1, 3) mate2(1, 0, 3, 0, 2, 0) mate2(1, 0, 3, 1, 2, 0) mate2(1, 0, 3, 1, 3, 0) mate2(1, 1, 0, 3, 1, 3) mate2(1, 1, 2, 3, 1, 3) mate2(1, 1, 3, 0, 3, 1) mate2(1, 1, 3, 2, 3, 1) mate2(1, 2, 0, 0, 1, 0) mate2(1, 2, 2, 0, 1, 0) mate2(1, 2, 3, 1, 3, 2) mate2(1, 2, 3, 3, 3, 2) mate2(1, 3, 0, 0, 1, 0) mate2(1, 3, 0, 1, 1, 0) mate2(1, 3, 2, 0, 1, 0) mate2(1, 3, 3, 2, 2, 3) mate2(1, 3, 3, 2, 3, 3) mate2(1, 3, 3, 3, 2, 3) mate2(2, 0, 0, 0, 1, 0) mate2(2, 0, 0, 1, 0, 0) mate2(2, 0, 0, 1, 1, 0) mate2(2, 0, 1, 3, 2, 3) mate2(2, 0, 3, 2, 2, 3) mate2(2, 0, 3, 3, 2, 3) mate2(2, 1, 0, 0, 0, 1) mate2(2, 1, 0, 2, 0, 1) mate2(2, 1, 1, 3, 2, 3) mate2(2, 1, 3, 3, 2, 3) mate2(2, 2, 0, 1, 0, 2) mate2(2, 2, 0, 3, 0, 2) mate2(2, 2, 1, 0, 2, 0) mate2(2, 2, 3, 0, 2, 0) mate2(2, 3, 0, 2, 0, 3) mate2(2, 3, 0, 2, 1, 3) mate2(2, 3, 0, 3, 1, 3) mate2(2, 3, 1, 0, 2, 0) mate2(2, 3, 3, 0, 2, 0) mate2(2, 3, 3, 1, 2, 0) mate2(3, 0, 0, 0, 1, 0) mate2(3, 0, 0, 1, 0, 0) mate2(3, 0, 0, 1, 1, 0) mate2(3, 0, 1, 0, 2, 0) mate2(3, 0, 2, 3, 3, 2) mate2(3, 0, 2, 3, 3, 3) mate2(3, 0, 3, 2, 3, 1) mate2(3, 0, 3, 3, 3, 2) mate2(3, 1, 0, 0, 0, 1) mate2(3, 1, 0, 2, 0, 1) mate2(3, 1, 1, 0, 0, 1) mate2(3, 1, 2, 3, 3, 2) mate2(3, 1, 2, 3, 3, 3) mate2(3, 1, 3, 3, 3, 2) mate2(3, 2, 0, 1, 0, 2) mate2(3, 2, 0, 3, 0, 2) mate2(3, 2, 1, 3, 0, 2) mate2(3, 2, 2, 0, 3, 0) mate2(3, 2, 2, 0, 3, 1) mate2(3, 2, 3, 0, 3, 1) mate2(3, 3, 0, 2, 0, 3) mate2(3, 3, 0, 2, 1, 3) mate2(3, 3, 0, 3, 1, 3) mate2(3, 3, 1, 3, 2, 3) mate2(3, 3, 2, 0, 3, 0) mate2(3, 3, 2, 0, 3, 1) mate2(3, 3, 3, 0, 3, 1) mate2(3, 3, 3, 1, 3, 2) BestRule is: 
+mate2(BK,WK,WR) -: ...[InCheck(*), Adjacent(WK,WR), Adjacent(BK,WR), ~Corner(WK)]
+mate2(0, 0, 1, 2, 0, 1) mate2(0, 0, 2, 1, 1, 0) mate2(0, 1, 2, 0, 1, 1) mate2(0, 1, 2, 1, 1, 1) mate2(0, 1, 2, 2, 1, 1) mate2(0, 2, 2, 1, 1, 2) mate2(0, 2, 2, 2, 1, 2) mate2(0, 2, 2, 3, 1, 2) mate2(0, 3, 1, 1, 0, 2) mate2(0, 3, 2, 2, 1, 3) mate2(1, 0, 0, 2, 1, 1) mate2(1, 0, 1, 2, 1, 1) mate2(1, 0, 2, 2, 1, 1) mate2(1, 1, 1, 3, 1, 2) mate2(1, 1, 2, 3, 1, 2) mate2(1, 1, 3, 1, 2, 1) mate2(1, 1, 3, 2, 2, 1) mate2(1, 2, 1, 0, 1, 1) mate2(1, 2, 2, 0, 1, 1) mate2(1, 2, 3, 1, 2, 2) mate2(1, 2, 3, 2, 2, 2) mate2(1, 3, 0, 1, 1, 2) mate2(1, 3, 1, 1, 1, 2) mate2(1, 3, 2, 1, 1, 2) mate2(2, 0, 1, 2, 2, 1) mate2(2, 0, 2, 2, 2, 1) mate2(2, 0, 3, 2, 2, 1) mate2(2, 1, 0, 1, 1, 1) mate2(2, 1, 0, 2, 1, 1) mate2(2, 1, 1, 3, 2, 2) mate2(2, 1, 2, 3, 2, 2) mate2(2, 2, 0, 1, 1, 2) mate2(2, 2, 0, 2, 1, 2) mate2(2, 2, 1, 0, 2, 1) mate2(2, 2, 2, 0, 2, 1) mate2(2, 3, 1, 1, 2, 2) mate2(2, 3, 2, 1, 2, 2) mate2(2, 3, 3, 1, 2, 2) mate2(3, 0, 1, 1, 2, 0) mate2(3, 0, 2, 2, 3, 1) mate2(3, 1, 1, 0, 2, 1) mate2(3, 1, 1, 1, 2, 1) mate2(3, 1, 1, 2, 2, 1) mate2(3, 2, 1, 1, 2, 2) mate2(3, 2, 1, 2, 2, 2) mate2(3, 2, 1, 3, 2, 2) mate2(3, 3, 1, 2, 2, 3) mate2(3, 3, 2, 1, 3, 2) BestRule is: 
+mate2(BK,WK,WR) -: ...[InCheck(*), ~Adjacent(BK,WR), ~Diagonal(WK,WR), Equal(BKR,WRR), ~Equal(BKC,WKC), Edge(WK), ~Adjacent(WK,WR)]
+mate2(0, 0, 2, 3, 0, 2) mate2(0, 0, 2, 3, 0, 3) mate2(0, 0, 3, 1, 0, 2) mate2(0, 0, 3, 1, 0, 3) mate2(0, 0, 3, 2, 0, 2) mate2(0, 0, 3, 2, 0, 3) mate2(0, 0, 3, 3, 0, 2) mate2(0, 0, 3, 3, 0, 3) mate2(0, 1, 2, 0, 0, 3) mate2(0, 1, 2, 3, 0, 3) mate2(0, 1, 3, 2, 0, 3) mate2(0, 1, 3, 3, 0, 3) mate2(0, 2, 2, 0, 0, 0) mate2(0, 2, 2, 3, 0, 0) mate2(0, 2, 3, 0, 0, 0) mate2(0, 2, 3, 1, 0, 0) mate2(0, 3, 2, 0, 0, 0) mate2(0, 3, 2, 0, 0, 1) mate2(0, 3, 3, 0, 0, 0) mate2(0, 3, 3, 0, 0, 1) mate2(0, 3, 3, 1, 0, 0) mate2(0, 3, 3, 1, 0, 1) mate2(0, 3, 3, 2, 0, 0) mate2(0, 3, 3, 2, 0, 1) mate2(1, 0, 3, 1, 1, 2) mate2(1, 0, 3, 2, 1, 2) mate2(1, 0, 3, 2, 1, 3) mate2(1, 0, 3, 3, 1, 2) mate2(1, 0, 3, 3, 1, 3) mate2(1, 1, 3, 0, 1, 3) mate2(1, 1, 3, 2, 1, 3) mate2(1, 1, 3, 3, 1, 3) mate2(1, 2, 3, 0, 1, 0) mate2(1, 2, 3, 1, 1, 0) mate2(1, 2, 3, 3, 1, 0) mate2(1, 3, 3, 0, 1, 0) mate2(1, 3, 3, 0, 1, 1) mate2(1, 3, 3, 1, 1, 0) mate2(1, 3, 3, 1, 1, 1) mate2(1, 3, 3, 2, 1, 1) mate2(2, 0, 0, 1, 2, 2) mate2(2, 0, 0, 2, 2, 2) mate2(2, 0, 0, 2, 2, 3) mate2(2, 0, 0, 3, 2, 2) mate2(2, 0, 0, 3, 2, 3) mate2(2, 1, 0, 0, 2, 3) mate2(2, 1, 0, 2, 2, 3) mate2(2, 1, 0, 3, 2, 3) mate2(2, 2, 0, 0, 2, 0) mate2(2, 2, 0, 1, 2, 0) mate2(2, 2, 0, 3, 2, 0) mate2(2, 3, 0, 0, 2, 0) mate2(2, 3, 0, 0, 2, 1) mate2(2, 3, 0, 1, 2, 0) mate2(2, 3, 0, 1, 2, 1) mate2(2, 3, 0, 2, 2, 1) mate2(3, 0, 0, 1, 3, 2) mate2(3, 0, 0, 1, 3, 3) mate2(3, 0, 0, 2, 3, 2) mate2(3, 0, 0, 2, 3, 3) mate2(3, 0, 0, 3, 3, 2) mate2(3, 0, 0, 3, 3, 3) mate2(3, 0, 1, 3, 3, 2) mate2(3, 0, 1, 3, 3, 3) mate2(3, 1, 0, 2, 3, 3) mate2(3, 1, 0, 3, 3, 3) mate2(3, 1, 1, 0, 3, 3) mate2(3, 1, 1, 3, 3, 3) mate2(3, 2, 0, 0, 3, 0) mate2(3, 2, 0, 1, 3, 0) mate2(3, 2, 1, 0, 3, 0) mate2(3, 2, 1, 3, 3, 0) mate2(3, 3, 0, 0, 3, 0) mate2(3, 3, 0, 0, 3, 1) mate2(3, 3, 0, 1, 3, 0) mate2(3, 3, 0, 1, 3, 1) mate2(3, 3, 0, 2, 3, 0) mate2(3, 3, 0, 2, 3, 1) mate2(3, 3, 1, 0, 3, 0) mate2(3, 3, 1, 0, 3, 1) BestRule is: 
+mate2(BK,WK,WR) -: ...[Edge(WK), InCheck(*), ~Edge(WR), ~Corner(WK), Adjacent(WK,WR), ~Equal(WKC,WRC)]
+mate2(0, 1, 2, 0, 2, 1) mate2(0, 1, 3, 2, 2, 1) mate2(0, 2, 2, 3, 2, 2) mate2(0, 2, 3, 1, 2, 2) mate2(1, 0, 1, 3, 1, 2) mate2(1, 0, 2, 3, 1, 2) mate2(1, 3, 1, 0, 1, 1) mate2(1, 3, 2, 0, 1, 1) mate2(2, 0, 1, 3, 2, 2) mate2(2, 0, 2, 3, 2, 2) mate2(2, 3, 1, 0, 2, 1) mate2(2, 3, 2, 0, 2, 1) mate2(3, 1, 0, 2, 1, 1) mate2(3, 1, 1, 0, 1, 1) mate2(3, 2, 0, 1, 1, 2) mate2(3, 2, 1, 3, 1, 2) BestRule is: 
+mate2(BK,WK,WR) -: ...[Edge(WK), InCheck(*), ~Corner(WR), Equal(BKR,WRR), ~Edge(BK), ~Corner(WK)]
+mate2(1, 1, 1, 3, 1, 0) mate2(1, 1, 2, 3, 1, 0) mate2(1, 1, 3, 1, 1, 0) mate2(1, 1, 3, 1, 1, 2) mate2(1, 1, 3, 1, 1, 3) mate2(1, 1, 3, 2, 1, 0) mate2(1, 1, 3, 2, 1, 2) mate2(1, 2, 1, 0, 1, 3) mate2(1, 2, 2, 0, 1, 3) mate2(1, 2, 3, 1, 1, 1) mate2(1, 2, 3, 1, 1, 3) mate2(1, 2, 3, 2, 1, 0) mate2(1, 2, 3, 2, 1, 1) mate2(1, 2, 3, 2, 1, 3) mate2(2, 1, 0, 1, 2, 0) mate2(2, 1, 0, 1, 2, 2) mate2(2, 1, 0, 1, 2, 3) mate2(2, 1, 0, 2, 2, 0) mate2(2, 1, 0, 2, 2, 2) mate2(2, 1, 1, 3, 2, 0) mate2(2, 1, 2, 3, 2, 0) mate2(2, 2, 0, 1, 2, 1) mate2(2, 2, 0, 1, 2, 3) mate2(2, 2, 0, 2, 2, 0) mate2(2, 2, 0, 2, 2, 1) mate2(2, 2, 0, 2, 2, 3) mate2(2, 2, 1, 0, 2, 3) mate2(2, 2, 2, 0, 2, 3) BestRule is: 
+mate2(BK,WK,WR) -: ...[Edge(WK), ~Equal(BKR,WRR), ~Corner(WR), Adjacent(WK,WR), ~Equal(BKR,WKR), Equal(WKC,WRC), ~Diagonal(BK,WR)]
+mate2(0, 0, 1, 3, 2, 3) mate2(0, 0, 2, 3, 1, 3) mate2(0, 0, 3, 1, 2, 1) mate2(0, 0, 3, 3, 2, 3) mate2(0, 1, 2, 3, 1, 3) mate2(0, 1, 3, 0, 2, 0) mate2(0, 1, 3, 1, 2, 1) mate2(0, 1, 3, 2, 2, 2) mate2(0, 2, 2, 0, 1, 0) mate2(0, 2, 3, 1, 2, 1) mate2(0, 2, 3, 2, 2, 2) mate2(0, 2, 3, 3, 2, 3) mate2(0, 3, 1, 0, 2, 0) mate2(0, 3, 2, 0, 1, 0) mate2(0, 3, 3, 0, 2, 0) mate2(0, 3, 3, 2, 2, 2) mate2(1, 0, 3, 2, 2, 2) mate2(1, 0, 3, 3, 2, 3) mate2(1, 1, 3, 3, 2, 3) mate2(1, 2, 3, 0, 2, 0) mate2(1, 3, 3, 0, 2, 0) mate2(1, 3, 3, 1, 2, 1) mate2(2, 0, 0, 2, 1, 2) mate2(2, 0, 0, 3, 1, 3) mate2(2, 1, 0, 3, 1, 3) mate2(2, 2, 0, 0, 1, 0) mate2(2, 3, 0, 0, 1, 0) mate2(2, 3, 0, 1, 1, 1) mate2(3, 0, 0, 1, 1, 1) mate2(3, 0, 0, 3, 1, 3) mate2(3, 0, 1, 3, 2, 3) mate2(3, 0, 2, 3, 1, 3) mate2(3, 1, 0, 0, 1, 0) mate2(3, 1, 0, 1, 1, 1) mate2(3, 1, 0, 2, 1, 2) mate2(3, 1, 1, 3, 2, 3) mate2(3, 2, 0, 1, 1, 1) mate2(3, 2, 0, 2, 1, 2) mate2(3, 2, 0, 3, 1, 3) mate2(3, 2, 1, 0, 2, 0) mate2(3, 3, 0, 0, 1, 0) mate2(3, 3, 0, 2, 1, 2) mate2(3, 3, 1, 0, 2, 0) mate2(3, 3, 2, 0, 1, 0) BestRule is: 
+mate2(BK,WK,WR) -: ...[Edge(WK), ~Equal(BKR,WRR), ~Equal(WKC,WRC), ~Adjacent(BK,WR), Corner(BK), ~Edge(WR), ~Equal(BKC,WKC), ~Corner(WK)]
+mate2(0, 0, 0, 2, 2, 1) mate2(0, 0, 1, 3, 1, 2) mate2(0, 0, 1, 3, 2, 1) mate2(0, 0, 1, 3, 2, 2) mate2(0, 0, 2, 3, 1, 2) mate2(0, 0, 2, 3, 2, 1) mate2(0, 0, 2, 3, 2, 2) mate2(0, 0, 3, 1, 1, 2) mate2(0, 0, 3, 1, 2, 2) mate2(0, 0, 3, 2, 2, 1) mate2(0, 3, 0, 1, 2, 2) mate2(0, 3, 1, 0, 1, 1) mate2(0, 3, 1, 0, 2, 1) mate2(0, 3, 1, 0, 2, 2) mate2(0, 3, 2, 0, 1, 1) mate2(0, 3, 2, 0, 2, 1) mate2(0, 3, 2, 0, 2, 2) mate2(0, 3, 3, 1, 2, 2) mate2(0, 3, 3, 2, 1, 1) mate2(0, 3, 3, 2, 2, 1) mate2(3, 0, 0, 1, 1, 2) mate2(3, 0, 0, 1, 2, 2) mate2(3, 0, 0, 2, 1, 1) mate2(3, 0, 1, 3, 1, 1) mate2(3, 0, 1, 3, 1, 2) mate2(3, 0, 1, 3, 2, 2) mate2(3, 0, 2, 3, 1, 1) mate2(3, 0, 2, 3, 1, 2) mate2(3, 0, 2, 3, 2, 2) mate2(3, 0, 3, 2, 1, 1) mate2(3, 3, 0, 1, 1, 2) mate2(3, 3, 0, 2, 1, 1) mate2(3, 3, 0, 2, 2, 1) mate2(3, 3, 1, 0, 1, 1) mate2(3, 3, 1, 0, 1, 2) mate2(3, 3, 1, 0, 2, 1) mate2(3, 3, 2, 0, 1, 1) mate2(3, 3, 2, 0, 1, 2) mate2(3, 3, 2, 0, 2, 1) mate2(3, 3, 3, 1, 1, 2) BestRule is: 
+mate2(BK,WK,WR) -: ...[InCheck(*), Edge(WK), ~Equal(BKC,WKC), ~Adjacent(BK,WR), ~Equal(BKR,WKR), Corner(WR), ~Equal(WKR,WRR)]
+mate2(0, 0, 1, 3, 3, 0) mate2(0, 0, 2, 3, 3, 0) mate2(0, 1, 3, 0, 0, 3) mate2(0, 2, 3, 3, 0, 0) mate2(0, 3, 1, 0, 3, 3) mate2(0, 3, 2, 0, 3, 3) mate2(1, 0, 0, 2, 3, 0) mate2(1, 0, 0, 3, 3, 0) mate2(1, 0, 2, 3, 3, 0) mate2(1, 3, 0, 0, 3, 3) mate2(1, 3, 0, 1, 3, 3) mate2(1, 3, 2, 0, 3, 3) mate2(2, 0, 1, 3, 0, 0) mate2(2, 0, 3, 2, 0, 0) mate2(2, 0, 3, 3, 0, 0) mate2(2, 3, 1, 0, 0, 3) mate2(2, 3, 3, 0, 0, 3) mate2(2, 3, 3, 1, 0, 3) mate2(3, 0, 1, 3, 0, 0) mate2(3, 0, 2, 3, 0, 0) mate2(3, 1, 0, 0, 3, 3) mate2(3, 2, 0, 3, 3, 0) mate2(3, 3, 1, 0, 0, 3) mate2(3, 3, 2, 0, 0, 3) BestRule is: 
+mate2(BK,WK,WR) -: ...[~Corner(WR), ~Equal(BKR,WRR), Edge(WK), Equal(BKC,WKC), ~Corner(BK), ~Corner(WK), Edge(BK)]
+mate2(0, 1, 3, 1, 1, 0) mate2(0, 1, 3, 1, 1, 1) mate2(0, 1, 3, 1, 1, 2) mate2(0, 1, 3, 1, 1, 3) mate2(0, 1, 3, 1, 2, 0) mate2(0, 1, 3, 1, 2, 2) mate2(0, 1, 3, 1, 2, 3) mate2(0, 1, 3, 1, 3, 2) mate2(0, 2, 3, 2, 1, 0) mate2(0, 2, 3, 2, 1, 1) mate2(0, 2, 3, 2, 1, 2) mate2(0, 2, 3, 2, 1, 3) mate2(0, 2, 3, 2, 2, 0) mate2(0, 2, 3, 2, 2, 1) mate2(0, 2, 3, 2, 2, 3) mate2(0, 2, 3, 2, 3, 1) mate2(3, 1, 0, 1, 0, 2) mate2(3, 1, 0, 1, 1, 0) mate2(3, 1, 0, 1, 1, 2) mate2(3, 1, 0, 1, 1, 3) mate2(3, 1, 0, 1, 2, 0) mate2(3, 1, 0, 1, 2, 1) mate2(3, 1, 0, 1, 2, 2) mate2(3, 1, 0, 1, 2, 3) mate2(3, 2, 0, 2, 0, 1) mate2(3, 2, 0, 2, 1, 0) mate2(3, 2, 0, 2, 1, 1) mate2(3, 2, 0, 2, 1, 3) mate2(3, 2, 0, 2, 2, 0) mate2(3, 2, 0, 2, 2, 1) mate2(3, 2, 0, 2, 2, 2) mate2(3, 2, 0, 2, 2, 3) BestRule is: 
+mate2(BK,WK,WR) -: ...[InCheck(*), ~Corner(WR), Diagonal(BK,WK), Equal(BKR,WRR), Corner(WK)]
+mate2(0, 0, 3, 3, 0, 1) mate2(0, 3, 3, 0, 0, 2) mate2(1, 1, 3, 3, 1, 0) mate2(1, 1, 3, 3, 1, 2) mate2(1, 2, 3, 0, 1, 1) mate2(1, 2, 3, 0, 1, 3) mate2(2, 1, 0, 3, 2, 0) mate2(2, 1, 0, 3, 2, 2) mate2(2, 2, 0, 0, 2, 1) mate2(2, 2, 0, 0, 2, 3) mate2(3, 0, 0, 3, 3, 1) mate2(3, 3, 0, 0, 3, 2) BestRule is: 
+mate2(BK,WK,WR) -: ...[~Equal(BKR,WRR), Edge(WK), ~Equal(WKC,WRC), Edge(WR), Equal(WKR,WRR), ~Corner(WR), Adjacent(WK,WR), ~Corner(WK)]
+mate2(0, 0, 3, 1, 3, 2) mate2(0, 0, 3, 2, 3, 1) mate2(0, 3, 3, 1, 3, 2) mate2(0, 3, 3, 2, 3, 1) mate2(1, 0, 0, 2, 0, 1) mate2(1, 0, 3, 1, 3, 2) mate2(1, 0, 3, 2, 3, 1) mate2(1, 1, 3, 1, 3, 2) mate2(1, 2, 3, 2, 3, 1) mate2(1, 3, 0, 1, 0, 2) mate2(1, 3, 3, 1, 3, 2) mate2(1, 3, 3, 2, 3, 1) mate2(2, 0, 0, 1, 0, 2) mate2(2, 0, 0, 2, 0, 1) mate2(2, 0, 3, 2, 3, 1) mate2(2, 1, 0, 1, 0, 2) mate2(2, 2, 0, 2, 0, 1) mate2(2, 3, 0, 1, 0, 2) mate2(2, 3, 0, 2, 0, 1) mate2(2, 3, 3, 1, 3, 2) mate2(3, 0, 0, 1, 0, 2) mate2(3, 0, 0, 2, 0, 1) mate2(3, 3, 0, 1, 0, 2) mate2(3, 3, 0, 2, 0, 1) BestRule is: 
+mate2(BK,WK,WR) -: ...[InCheck(*), ~Corner(WR), Edge(WK), Edge(BK), ~Equal(BKC,WKC), ~Corner(BK), Adjacent(BK,WR), ~Equal(WKC,WRC), ~Corner(WK), ~Equal(BKR,WRR), ~Equal(WKR,WRR)]
+mate2(0, 1, 2, 3, 1, 1) mate2(0, 1, 3, 2, 1, 1) mate2(0, 2, 2, 0, 1, 2) mate2(0, 2, 3, 1, 1, 2) mate2(1, 0, 0, 2, 2, 0) mate2(1, 0, 1, 3, 2, 0) mate2(1, 0, 3, 2, 2, 0) mate2(1, 3, 0, 1, 2, 3) mate2(1, 3, 1, 0, 2, 3) mate2(1, 3, 3, 1, 2, 3) mate2(2, 0, 0, 2, 1, 0) mate2(2, 0, 2, 3, 1, 0) mate2(2, 0, 3, 2, 1, 0) mate2(2, 3, 0, 1, 1, 3) mate2(2, 3, 2, 0, 1, 3) mate2(2, 3, 3, 1, 1, 3) mate2(3, 1, 0, 2, 2, 1) mate2(3, 1, 1, 3, 2, 1) mate2(3, 2, 0, 1, 2, 2) mate2(3, 2, 1, 0, 2, 2) BestRule is: 
+mate2(BK,WK,WR) -: ...[Corner(WK), ~Equal(BKR,WRR), Adjacent(WK,WR), Edge(WR), ~Equal(WKR,WRR)]
+mate2(0, 0, 0, 3, 1, 3) mate2(0, 1, 0, 3, 1, 3) mate2(0, 1, 3, 3, 2, 3) mate2(0, 2, 0, 0, 1, 0) mate2(0, 2, 3, 0, 2, 0) mate2(0, 3, 0, 0, 1, 0) mate2(1, 1, 3, 0, 2, 0) mate2(1, 2, 3, 3, 2, 3) mate2(2, 1, 0, 0, 1, 0) mate2(2, 2, 0, 3, 1, 3) mate2(3, 0, 3, 3, 2, 3) mate2(3, 1, 0, 3, 1, 3) mate2(3, 1, 3, 3, 2, 3) mate2(3, 2, 0, 0, 1, 0) mate2(3, 2, 3, 0, 2, 0) mate2(3, 3, 3, 0, 2, 0) BestRule is: 
+mate2(BK,WK,WR) -: ...[InCheck(*), ~Adjacent(BK,WR), ~Diagonal(WK,WR), Equal(WKC,WRC), ~Edge(WK)]
+mate2(0, 0, 1, 2, 0, 2) mate2(0, 0, 2, 2, 0, 2) mate2(0, 3, 1, 1, 0, 1) mate2(0, 3, 2, 1, 0, 1) mate2(1, 0, 2, 2, 1, 2) mate2(1, 3, 2, 1, 1, 1) mate2(2, 0, 1, 2, 2, 2) mate2(2, 3, 1, 1, 2, 1) mate2(3, 0, 1, 2, 3, 2) mate2(3, 0, 2, 2, 3, 2) mate2(3, 3, 1, 1, 3, 1) mate2(3, 3, 2, 1, 3, 1) BestRule is: 
+mate2(BK,WK,WR) -: ...[~Equal(BKR,WRR), Edge(WK), ~Equal(WKC,WRC), Edge(WR), ~Edge(BK), Corner(WK), ~Equal(BKC,WRC), Diagonal(WK,WR)]
+mate2(1, 1, 0, 3, 3, 0) mate2(1, 1, 3, 0, 0, 3) mate2(1, 1, 3, 3, 0, 0) mate2(1, 2, 0, 0, 3, 3) mate2(1, 2, 3, 0, 0, 3) mate2(1, 2, 3, 3, 0, 0) mate2(2, 1, 0, 0, 3, 3) mate2(2, 1, 0, 3, 3, 0) mate2(2, 1, 3, 3, 0, 0) mate2(2, 2, 0, 0, 3, 3) mate2(2, 2, 0, 3, 3, 0) mate2(2, 2, 3, 0, 0, 3) BestRule is: 
+mate2(BK,WK,WR) -: ...[~Equal(BKR,WRR), Edge(WK), ~Equal(WKC,WRC), Edge(WR), ~Edge(BK), ~Equal(BKC,WRC), ~Corner(WR), Equal(WKR,WRR)]
+mate2(1, 1, 0, 3, 0, 2) mate2(1, 1, 2, 3, 2, 0) mate2(1, 1, 3, 0, 3, 2) mate2(1, 1, 3, 3, 3, 2) mate2(1, 2, 0, 0, 0, 1) mate2(1, 2, 2, 0, 2, 3) mate2(1, 2, 3, 0, 3, 1) mate2(1, 2, 3, 3, 3, 1) mate2(2, 1, 0, 0, 0, 2) mate2(2, 1, 0, 3, 0, 2) mate2(2, 1, 1, 3, 1, 0) mate2(2, 1, 3, 3, 3, 2) mate2(2, 2, 0, 0, 0, 1) mate2(2, 2, 0, 3, 0, 1) mate2(2, 2, 1, 0, 1, 3) mate2(2, 2, 3, 0, 3, 1) BestRule is: 
+mate2(BK,WK,WR) -: ...[InCheck(*), Edge(WK), ~Equal(BKC,WKC), ~Adjacent(BK,WR), Equal(WKR,WRR), Edge(WR), ~Corner(WK)]
+mate2(0, 0, 2, 3, 2, 0) mate2(0, 0, 3, 2, 3, 0) mate2(0, 3, 2, 0, 2, 3) mate2(0, 3, 3, 1, 3, 3) mate2(1, 0, 3, 2, 3, 0) mate2(1, 3, 3, 1, 3, 3) mate2(2, 0, 0, 2, 0, 0) mate2(2, 3, 0, 1, 0, 3) mate2(3, 0, 0, 2, 0, 0) mate2(3, 0, 1, 3, 1, 0) mate2(3, 3, 0, 1, 0, 3) mate2(3, 3, 1, 0, 1, 3) BestRule is: 
+mate2(BK,WK,WR) -: ...[~Equal(BKR,WRR), ~Corner(WR), Corner(BK), ~Adjacent(BK,WR), Diagonal(BK,WR), ~Corner(WK)]
+mate2(0, 0, 0, 2, 2, 2) mate2(0, 0, 1, 2, 2, 2) mate2(0, 0, 2, 0, 2, 2) mate2(0, 0, 2, 1, 2, 2) mate2(0, 0, 3, 2, 2, 2) mate2(0, 3, 0, 1, 2, 1) mate2(0, 3, 1, 1, 2, 1) mate2(0, 3, 2, 2, 2, 1) mate2(0, 3, 2, 3, 2, 1) mate2(0, 3, 3, 1, 2, 1) mate2(3, 0, 0, 2, 1, 2) mate2(3, 0, 1, 0, 1, 2) mate2(3, 0, 1, 1, 1, 2) mate2(3, 0, 2, 2, 1, 2) mate2(3, 0, 3, 2, 1, 2) mate2(3, 3, 0, 1, 1, 1) mate2(3, 3, 1, 2, 1, 1) mate2(3, 3, 1, 3, 1, 1) mate2(3, 3, 2, 1, 1, 1) mate2(3, 3, 3, 1, 1, 1) BestRule is: 
+mate2(BK,WK,WR) -: ...[InCheck(*), Corner(WK), Diagonal(WK,WR), Corner(WR)]
+mate2(0, 0, 0, 3, 3, 0) mate2(0, 0, 3, 0, 0, 3) mate2(0, 1, 3, 3, 0, 0) mate2(0, 2, 3, 0, 0, 3) mate2(0, 3, 0, 0, 3, 3) mate2(0, 3, 3, 3, 0, 0) mate2(1, 0, 3, 3, 0, 0) mate2(1, 3, 3, 0, 0, 3) mate2(2, 0, 0, 3, 3, 0) mate2(2, 3, 0, 0, 3, 3) mate2(3, 0, 0, 0, 3, 3) mate2(3, 0, 3, 3, 0, 0) mate2(3, 1, 0, 3, 3, 0) mate2(3, 2, 0, 0, 3, 3) mate2(3, 3, 0, 3, 3, 0) mate2(3, 3, 3, 0, 0, 3) BestRule is: 
+mate2(BK,WK,WR) -: ...[~Corner(WR), ~Equal(BKR,WRR), Edge(WK), Edge(WR), Corner(BK), ~Diagonal(WK,WR), ~Corner(WK), Equal(BKC,WKC)]
+mate2(0, 0, 2, 0, 1, 3) mate2(0, 0, 2, 0, 2, 3) mate2(0, 0, 2, 0, 3, 2) mate2(0, 3, 2, 3, 1, 0) mate2(0, 3, 2, 3, 2, 0) mate2(0, 3, 2, 3, 3, 1) mate2(3, 0, 1, 0, 0, 2) mate2(3, 0, 1, 0, 1, 3) mate2(3, 0, 1, 0, 2, 3) mate2(3, 3, 1, 3, 0, 1) mate2(3, 3, 1, 3, 1, 0) mate2(3, 3, 1, 3, 2, 0) BestRule is: 
+mate2(BK,WK,WR) -: ...[~Corner(WR), InCheck(*), Edge(WK), Edge(BK), ~Equal(BKC,WKC), Equal(BKR,WRR), ~Edge(WR), ~Equal(WKC,WRC), ~Corner(WK)]
+mate2(1, 0, 1, 3, 1, 1) mate2(1, 0, 2, 3, 1, 1) mate2(1, 0, 3, 2, 1, 1) mate2(1, 3, 1, 0, 1, 2) mate2(1, 3, 2, 0, 1, 2) mate2(1, 3, 3, 1, 1, 2) mate2(2, 0, 0, 2, 2, 1) mate2(2, 0, 1, 3, 2, 1) mate2(2, 0, 2, 3, 2, 1) mate2(2, 3, 0, 1, 2, 2) mate2(2, 3, 1, 0, 2, 2) mate2(2, 3, 2, 0, 2, 2) BestRule is: 
+mate2(BK,WK,WR) -: ...[~Equal(BKR,WRR), ~Corner(WR), Corner(WK), Equal(WKR,WRR), Equal(BKC,WKC), ~Corner(BK)]
+mate2(1, 0, 3, 0, 3, 1) mate2(1, 0, 3, 0, 3, 2) mate2(1, 3, 3, 3, 3, 1) mate2(1, 3, 3, 3, 3, 2) mate2(2, 0, 0, 0, 0, 1) mate2(2, 0, 0, 0, 0, 2) mate2(2, 3, 0, 3, 0, 1) mate2(2, 3, 0, 3, 0, 2) BestRule is: 
+mate2(BK,WK,WR) -: ...[~Equal(BKR,WRR), ~Corner(WR), Corner(WK), Equal(WKR,WRR), Equal(BKC,WRC), ~Adjacent(BK,WR)]
+mate2(0, 1, 3, 3, 3, 1) mate2(0, 2, 3, 0, 3, 2) mate2(1, 1, 3, 3, 3, 1) mate2(1, 2, 3, 0, 3, 2) mate2(2, 1, 0, 3, 0, 1) mate2(2, 2, 0, 0, 0, 2) mate2(3, 1, 0, 3, 0, 1) mate2(3, 2, 0, 0, 0, 2) BestRule is: 
+mate2(BK,WK,WR) -: ...[~Equal(BKR,WRR), ~Corner(WR), Edge(WK), Corner(WK), Corner(BK), Equal(WKC,WRC)]
+mate2(0, 0, 0, 3, 2, 3) mate2(0, 0, 3, 0, 1, 0) mate2(0, 0, 3, 3, 1, 3) mate2(0, 3, 0, 0, 2, 0) mate2(0, 3, 3, 0, 1, 0) mate2(0, 3, 3, 3, 1, 3) mate2(3, 0, 0, 0, 2, 0) mate2(3, 0, 0, 3, 2, 3) mate2(3, 0, 3, 3, 1, 3) mate2(3, 3, 0, 0, 2, 0) mate2(3, 3, 0, 3, 2, 3) mate2(3, 3, 3, 0, 1, 0) BestRule is: 
+mate2(BK,WK,WR) -: ...[~Equal(BKR,WRR), ~Equal(WKC,WRC), Edge(WK), Corner(WK), ~Edge(BK), Diagonal(BK,WR), Edge(WR), ~Adjacent(BK,WR)]
+mate2(1, 1, 3, 0, 3, 3) mate2(1, 2, 3, 3, 3, 0) mate2(2, 1, 0, 0, 0, 3) mate2(2, 2, 0, 3, 0, 0) BestRule is: 
+mate2(BK,WK,WR) -: ...[~Equal(BKR,WRR), ~Equal(WKC,WRC), Edge(WK), ~Equal(WKR,WRR), ~Edge(BK), ~Equal(BKC,WRC), ~Corner(WR), Equal(BKC,WKC), Adjacent(WK,WR)]
+mate2(1, 1, 3, 1, 2, 0) mate2(1, 1, 3, 1, 2, 2) mate2(1, 2, 3, 2, 2, 1) mate2(1, 2, 3, 2, 2, 3) mate2(2, 1, 0, 1, 1, 0) mate2(2, 1, 0, 1, 1, 2) mate2(2, 2, 0, 2, 1, 1) mate2(2, 2, 0, 2, 1, 3) BestRule is: 
+mate2(BK,WK,WR) -: ...[~Equal(BKR,WRR), ~Equal(WKC,WRC), Edge(WK), ~Adjacent(WK,WR), ~Adjacent(BK,WR), Equal(BKC,WKC), ~Corner(WK)]
+mate2(0, 0, 2, 0, 1, 2) mate2(0, 0, 2, 0, 3, 3) mate2(0, 1, 3, 1, 3, 3) mate2(0, 2, 3, 2, 3, 0) mate2(0, 3, 2, 3, 1, 1) mate2(0, 3, 2, 3, 3, 0) mate2(1, 1, 3, 1, 0, 3) mate2(1, 1, 3, 1, 2, 3) mate2(1, 1, 3, 1, 3, 3) mate2(1, 2, 3, 2, 0, 0) mate2(1, 2, 3, 2, 2, 0) mate2(1, 2, 3, 2, 3, 0) mate2(2, 1, 0, 1, 0, 3) mate2(2, 1, 0, 1, 1, 3) mate2(2, 1, 0, 1, 3, 3) mate2(2, 2, 0, 2, 0, 0) mate2(2, 2, 0, 2, 1, 0) mate2(2, 2, 0, 2, 3, 0) mate2(3, 0, 1, 0, 0, 3) mate2(3, 0, 1, 0, 2, 2) mate2(3, 1, 0, 1, 0, 3) mate2(3, 2, 0, 2, 0, 0) mate2(3, 3, 1, 3, 0, 0) mate2(3, 3, 1, 3, 2, 1) BestRule is: 
+mate2(BK,WK,WR) -: ...[~Corner(WR), ~Equal(BKR,WRR), Corner(WK), Adjacent(WK,WR), Diagonal(BK,WK), Equal(WKR,WRR)]
+mate2(0, 0, 3, 3, 3, 2) mate2(0, 3, 3, 0, 3, 1) mate2(3, 0, 0, 3, 0, 2) mate2(3, 3, 0, 0, 0, 1) BestRule is: 
+mate2(BK,WK,WR) -: ...[~Corner(WR), ~Equal(BKR,WRR), Edge(WK), ~Equal(WKR,WRR), ~Equal(WKC,WRC), ~Adjacent(BK,WR), ~Edge(WR), Diagonal(BK,WR), Equal(BKR,WKR)]
+mate2(0, 0, 0, 3, 2, 2) mate2(0, 3, 0, 0, 2, 1) mate2(3, 0, 3, 3, 1, 2) mate2(3, 3, 3, 0, 1, 1) BestRule is: 
+mate2(BK,WK,WR) -: ...[~Corner(WR), ~Equal(BKR,WRR), Edge(WK), ~Equal(WKR,WRR), ~Equal(BKR,WKR), ~Equal(BKC,WKC), Corner(BK), ~Corner(WK), Equal(BKC,WRC), ~Adjacent(BK,WR)]
+mate2(0, 0, 1, 3, 2, 0) mate2(0, 0, 3, 2, 2, 0) mate2(0, 3, 1, 0, 2, 3) mate2(0, 3, 3, 1, 2, 3) mate2(3, 0, 0, 2, 1, 0) mate2(3, 0, 2, 3, 1, 0) mate2(3, 3, 0, 1, 1, 3) mate2(3, 3, 2, 0, 1, 3) BestRule is: 
+mate2(BK,WK,WR) -: ...[~Corner(WR), ~Equal(BKR,WRR), Corner(WK), Adjacent(WK,WR), ~Equal(BKC,WKC), ~Equal(BKR,WKR), Diagonal(BK,WR), Equal(WKR,WRR)]
+mate2(1, 0, 3, 3, 3, 2) mate2(1, 3, 3, 0, 3, 1) mate2(2, 0, 0, 3, 0, 2) mate2(2, 3, 0, 0, 0, 1) BestRule is: 
+mate2(BK,WK,WR) -: ...[~Corner(WR), ~Equal(BKR,WRR), Corner(WK), ~Edge(WR), ~Adjacent(BK,WR), Diagonal(BK,WR)]
+mate2(0, 0, 3, 0, 2, 2) mate2(0, 0, 3, 3, 2, 2) mate2(0, 3, 3, 0, 2, 1) mate2(0, 3, 3, 3, 2, 1) mate2(3, 0, 0, 3, 1, 2) mate2(3, 3, 0, 3, 1, 1) BestRule is: 
+mate2(BK,WK,WR) -: ...[~Corner(WR), ~Equal(BKR,WRR), ~Equal(WKR,WRR), ~Equal(BKR,WKR), Adjacent(WK,WR), ~Equal(BKC,WKC), ~Diagonal(BK,WR), Corner(BK), ~Diagonal(BK,WK), ~Edge(WK)]
+mate2(0, 0, 1, 2, 2, 1) mate2(0, 0, 1, 2, 2, 3) mate2(0, 0, 2, 1, 1, 2) mate2(0, 0, 2, 1, 3, 1) mate2(0, 0, 2, 1, 3, 2) mate2(0, 3, 1, 1, 2, 0) mate2(0, 3, 1, 1, 2, 2) mate2(0, 3, 2, 2, 1, 1) mate2(0, 3, 2, 2, 3, 1) mate2(0, 3, 2, 2, 3, 2) mate2(3, 0, 1, 1, 0, 1) mate2(3, 0, 1, 1, 0, 2) mate2(3, 0, 1, 1, 2, 2) mate2(3, 0, 2, 2, 1, 1) mate2(3, 0, 2, 2, 1, 3) mate2(3, 3, 1, 2, 0, 1) mate2(3, 3, 1, 2, 0, 2) mate2(3, 3, 1, 2, 2, 1) mate2(3, 3, 2, 1, 1, 0) mate2(3, 3, 2, 1, 1, 2) BestRule is: 
+mate2(BK,WK,WR) -: ...[InCheck(*), ~Corner(WR), Corner(WK), ~Diagonal(BK,WK), ~Equal(BKC,WKC), Edge(BK), ~Equal(BKR,WKR), Edge(WR), ~Equal(BKR,WRR)]
+mate2(1, 0, 0, 3, 2, 0) mate2(1, 0, 3, 3, 2, 0) mate2(1, 3, 0, 0, 2, 3) mate2(1, 3, 3, 0, 2, 3) mate2(2, 0, 0, 3, 1, 0) mate2(2, 0, 3, 3, 1, 0) mate2(2, 3, 0, 0, 1, 3) mate2(2, 3, 3, 0, 1, 3) BestRule is: 
+mate2(BK,WK,WR) -: ...[InCheck(*), ~Corner(WR), Edge(WK), Equal(BKR,WRR), ~Equal(BKC,WKC), Diagonal(WK,WR), Edge(BK), Corner(BK)]
+mate2(0, 0, 2, 3, 0, 1) mate2(0, 3, 2, 0, 0, 2) mate2(3, 0, 1, 3, 3, 1) mate2(3, 3, 1, 0, 3, 2) BestRule is: 
+mate2(BK,WK,WR) -: ...[InCheck(*), Adjacent(WK,WR), Corner(BK)]
+mate2(0, 0, 1, 2, 0, 3) mate2(0, 0, 2, 1, 2, 0) mate2(0, 0, 2, 1, 3, 0) mate2(0, 3, 1, 1, 0, 0) mate2(0, 3, 2, 2, 2, 3) mate2(0, 3, 2, 2, 3, 3) mate2(3, 0, 1, 1, 0, 0) mate2(3, 0, 1, 1, 1, 0) mate2(3, 0, 2, 2, 3, 3) mate2(3, 3, 1, 2, 0, 3) mate2(3, 3, 1, 2, 1, 3) mate2(3, 3, 2, 1, 3, 0) BestRule is: 
+mate2(BK,WK,WR) -: ...[Edge(WK), ~Equal(BKC,WRC), ~Equal(WKC,WRC), ~Equal(BKC,WKC), ~Diagonal(BK,WR), Diagonal(WK,WR), ~Equal(BKR,WKR), Edge(BK), Equal(BKR,WRR), Corner(WK), Adjacent(BK,WR)]
+mate2(1, 0, 3, 3, 1, 1) mate2(1, 3, 3, 0, 1, 2) mate2(2, 0, 0, 3, 2, 1) mate2(2, 3, 0, 0, 2, 2) BestRule is: 
+mate2(BK,WK,WR) -: ...[~Equal(BKR,WRR), Edge(WK), ~Equal(WKC,WRC), ~Equal(WKR,WRR), ~Diagonal(BK,WR), Diagonal(WK,WR), ~Equal(BKR,WKR), ~Equal(BKC,WKC), ~Equal(BKC,WRC)]
+mate2(0, 0, 3, 1, 1, 3) mate2(0, 0, 3, 2, 2, 3) mate2(0, 1, 3, 3, 2, 2) mate2(0, 2, 1, 0, 2, 1) mate2(0, 2, 2, 0, 3, 1) mate2(0, 2, 3, 0, 2, 1) mate2(0, 3, 1, 0, 3, 2) mate2(0, 3, 2, 0, 3, 1) mate2(0, 3, 3, 1, 2, 0) mate2(0, 3, 3, 2, 1, 0) mate2(1, 0, 3, 1, 2, 2) mate2(1, 0, 3, 2, 2, 3) mate2(1, 0, 3, 3, 2, 2) mate2(1, 1, 3, 2, 2, 3) mate2(1, 2, 2, 0, 3, 1) mate2(1, 2, 3, 1, 2, 0) mate2(1, 3, 3, 0, 2, 1) mate2(1, 3, 3, 1, 2, 0) mate2(1, 3, 3, 2, 2, 1) mate2(2, 0, 0, 1, 1, 2) mate2(2, 0, 0, 2, 1, 3) mate2(2, 0, 0, 3, 1, 2) mate2(2, 1, 0, 2, 1, 3) mate2(2, 2, 0, 1, 1, 0) mate2(2, 2, 1, 0, 0, 1) mate2(2, 3, 0, 1, 1, 0) mate2(2, 3, 0, 2, 1, 1) mate2(3, 0, 0, 1, 2, 3) mate2(3, 0, 0, 2, 1, 3) mate2(3, 1, 0, 3, 1, 2) mate2(3, 2, 1, 0, 0, 1) mate2(3, 2, 2, 0, 1, 1) mate2(3, 3, 0, 1, 1, 0) mate2(3, 3, 0, 2, 2, 0) mate2(3, 3, 1, 0, 0, 1) mate2(3, 3, 2, 0, 0, 2) BestRule is: 
+mate2(BK,WK,WR) -: ...[Adjacent(BK,WR), Edge(WK), ~Corner(WR), Edge(WR), ~Equal(WKR,WRR), Diagonal(BK,WR), ~Edge(BK), Corner(WK), ~Diagonal(BK,WK)]
+mate2(1, 1, 0, 3, 2, 0) mate2(1, 1, 3, 0, 0, 2) mate2(1, 2, 0, 0, 2, 3) mate2(1, 2, 3, 3, 0, 1) mate2(2, 1, 0, 0, 3, 2) mate2(2, 1, 3, 3, 1, 0) mate2(2, 2, 0, 3, 3, 1) mate2(2, 2, 3, 0, 1, 3) BestRule is: 
+mate2(BK,WK,WR) -: ...[InCheck(*), ~Corner(WR), Edge(WK), ~Equal(BKC,WKC), Equal(BKR,WRR), ~Adjacent(BK,WR), Edge(WR)]
+mate2(1, 0, 3, 1, 1, 3) mate2(1, 3, 3, 2, 1, 0) mate2(2, 0, 0, 1, 2, 3) mate2(2, 3, 0, 2, 2, 0) BestRule is: 
+mate2(BK,WK,WR) -: ...[Adjacent(BK,WR), Edge(WK), ~Corner(WR), Equal(WKC,WRC), Corner(WK)]
+mate2(0, 1, 3, 0, 1, 0) mate2(0, 2, 3, 3, 1, 3) mate2(1, 1, 3, 0, 1, 0) mate2(1, 2, 3, 3, 1, 3) mate2(2, 1, 0, 0, 2, 0) mate2(2, 2, 0, 3, 2, 3) mate2(3, 1, 0, 0, 2, 0) mate2(3, 2, 0, 3, 2, 3) BestRule is: 
+mate2(BK,WK,WR) -: ...[~Equal(BKR,WRR), Edge(WK), ~Equal(WKC,WRC), ~Adjacent(WK,WR), ~Adjacent(BK,WR), Corner(WR), ~Corner(BK), Equal(BKR,WKR)]
+mate2(0, 1, 0, 3, 3, 0) mate2(0, 2, 0, 0, 3, 3) mate2(1, 0, 1, 3, 3, 0) mate2(1, 1, 1, 3, 3, 0) mate2(1, 2, 1, 0, 3, 3) mate2(1, 3, 1, 0, 3, 3) mate2(2, 0, 2, 3, 0, 0) mate2(2, 1, 2, 3, 0, 0) mate2(2, 2, 2, 0, 0, 3) mate2(2, 3, 2, 0, 0, 3) mate2(3, 1, 3, 3, 0, 0) mate2(3, 2, 3, 0, 0, 3) BestRule is: 
+mate2(BK,WK,WR) -: ...[Adjacent(BK,WR), Edge(WK), ~Corner(WR), Edge(WR), ~Corner(WK), ~Equal(WKR,WRR), Corner(BK), ~Equal(BKR,WRR), Equal(BKR,WKR)]
+mate2(0, 0, 0, 2, 1, 0) mate2(0, 3, 0, 1, 1, 3) mate2(3, 0, 3, 2, 2, 0) mate2(3, 3, 3, 1, 2, 3) BestRule is: 
+mate2(BK,WK,WR) -: ...[Adjacent(BK,WR), Edge(WK), ~Corner(WR), ~Edge(BK), ~Equal(BKC,WRC), ~Equal(WKR,WRR), ~Diagonal(WK,WR), Equal(BKR,WKR)]
+mate2(1, 1, 1, 3, 2, 0) mate2(1, 2, 1, 0, 2, 3) mate2(2, 1, 2, 3, 1, 0) mate2(2, 2, 2, 0, 1, 3) BestRule is: 
+mate2(BK,WK,WR) -: ...[Adjacent(BK,WR), Edge(WK), ~Corner(WR), Equal(WKC,WRC), Adjacent(WK,WR), ~Edge(BK)]
+mate2(1, 1, 3, 2, 2, 2) mate2(1, 2, 3, 1, 2, 1) mate2(2, 1, 0, 2, 1, 2) mate2(2, 2, 0, 1, 1, 1) BestRule is: 
+mate2(BK,WK,WR) -: ...[InCheck(*), ~Corner(WR), Corner(WK), Adjacent(WK,WR)]
+mate2(0, 1, 3, 0, 2, 1) mate2(0, 2, 3, 3, 2, 2) mate2(1, 0, 0, 3, 1, 2) mate2(1, 1, 0, 3, 1, 2) mate2(1, 1, 3, 0, 2, 1) mate2(1, 2, 3, 3, 2, 2) mate2(2, 0, 3, 3, 2, 2) mate2(2, 1, 3, 3, 2, 2) mate2(2, 2, 0, 3, 1, 2) mate2(2, 2, 3, 0, 2, 1) mate2(2, 3, 3, 0, 2, 1) mate2(3, 2, 0, 3, 1, 2) BestRule is: 
+mate2(BK,WK,WR) -: ...[~Equal(BKR,WRR), ~Equal(WKC,WRC), Edge(WK), ~Adjacent(WK,WR), ~Adjacent(BK,WR), Equal(WKR,WRR), Corner(WR), ~Corner(WK)]
+mate2(0, 0, 3, 1, 3, 3) mate2(0, 1, 3, 2, 3, 0) mate2(0, 2, 3, 1, 3, 3) mate2(0, 3, 3, 2, 3, 0) mate2(1, 0, 3, 1, 3, 3) mate2(1, 1, 3, 2, 3, 0) mate2(1, 2, 3, 1, 3, 3) mate2(1, 3, 3, 2, 3, 0) mate2(2, 0, 0, 1, 0, 3) mate2(2, 1, 0, 2, 0, 0) mate2(2, 2, 0, 1, 0, 3) mate2(2, 3, 0, 2, 0, 0) mate2(3, 0, 0, 1, 0, 3) mate2(3, 1, 0, 2, 0, 0) mate2(3, 2, 0, 1, 0, 3) mate2(3, 3, 0, 2, 0, 0) BestRule is: 
+mate2(BK,WK,WR) -: ...[~Corner(WR), ~Equal(BKR,WRR), Edge(WK), ~Adjacent(WK,WR), Corner(BK), ~Corner(WK), ~Equal(WKR,WRR), ~Equal(BKR,WKR), Equal(BKC,WRC), Diagonal(WK,WR)]
+mate2(0, 0, 3, 2, 1, 0) mate2(0, 3, 3, 1, 1, 3) mate2(3, 0, 0, 2, 2, 0) mate2(3, 3, 0, 1, 2, 3) BestRule is: 
+mate2(BK,WK,WR) -: ...[~Corner(WR), ~Equal(BKR,WRR), Corner(WK), ~Equal(WKC,WRC), Equal(BKR,WKR), ~Adjacent(BK,WR), Corner(BK), Equal(BKC,WRC)]
+mate2(0, 0, 0, 3, 2, 0) mate2(0, 3, 0, 0, 2, 3) mate2(3, 0, 3, 3, 1, 0) mate2(3, 3, 3, 0, 1, 3) BestRule is: 
+mate2(BK,WK,WR) -: ...[Adjacent(BK,WR), Edge(WK), ~Corner(WR), Edge(WR), ~Equal(BKC,WRC), ~Equal(WKR,WRR), ~Equal(BKC,WKC), Adjacent(WK,WR), ~Equal(BKR,WKR)]
+mate2(0, 1, 2, 0, 1, 0) mate2(0, 2, 2, 3, 1, 3) mate2(3, 1, 1, 0, 2, 0) mate2(3, 2, 1, 3, 2, 3) BestRule is: 
+mate2(BK,WK,WR) -: ...[~Corner(WR), ~Equal(BKR,WRR), Corner(WK), ~Edge(WR), ~Diagonal(WK,WR), ~Edge(BK), Equal(BKC,WRC)]
+mate2(1, 1, 3, 3, 2, 1) mate2(1, 2, 3, 0, 2, 2) mate2(2, 1, 0, 3, 1, 1) BestRule is: 
+mate2(BK,WK,WR) -: ...[~Corner(WR), ~Equal(BKC,WRC), Edge(WK), ~Adjacent(WK,WR), Corner(BK), ~Equal(BKC,WKC), ~Corner(WK), ~Diagonal(WK,WR), ~Adjacent(BK,WR), ~Edge(WR)]
+mate2(0, 0, 3, 2, 1, 2) mate2(0, 3, 3, 1, 1, 1) mate2(3, 0, 0, 2, 2, 2) mate2(3, 3, 0, 1, 2, 1) BestRule is: 
+mate2(BK,WK,WR) -: ...[~Corner(WR), ~Equal(BKC,WRC), Corner(WK), ~Equal(WKC,WRC), ~Diagonal(WK,WR), Diagonal(BK,WK), ~Corner(BK)]
+mate2(1, 1, 3, 3, 2, 0) mate2(1, 2, 3, 0, 0, 1) mate2(1, 2, 3, 0, 2, 3) mate2(2, 1, 0, 3, 1, 0) mate2(2, 2, 0, 0, 1, 3) mate2(2, 2, 0, 0, 3, 1) BestRule is: 
+mate2(BK,WK,WR) -: ...[~Corner(WR), ~Equal(BKC,WRC), Edge(WK), ~Adjacent(WK,WR), Corner(BK), ~Equal(BKC,WKC), ~Corner(WK), ~Equal(WKC,WRC), ~Diagonal(WK,WR), ~Equal(WKR,WRR)]
+mate2(0, 0, 0, 2, 2, 3) mate2(0, 0, 1, 3, 0, 1) mate2(0, 0, 2, 3, 1, 1) mate2(0, 0, 3, 1, 2, 3) mate2(0, 0, 3, 2, 0, 1) mate2(0, 0, 3, 2, 1, 1) mate2(0, 0, 3, 2, 1, 3) mate2(0, 3, 0, 1, 2, 0) mate2(0, 3, 0, 1, 3, 2) mate2(0, 3, 1, 0, 0, 2) mate2(0, 3, 1, 0, 3, 1) mate2(0, 3, 2, 0, 3, 2) mate2(0, 3, 3, 1, 1, 0) mate2(0, 3, 3, 1, 1, 2) mate2(0, 3, 3, 2, 2, 0) mate2(3, 0, 0, 1, 1, 3) mate2(3, 0, 0, 2, 2, 1) mate2(3, 0, 0, 2, 2, 3) mate2(3, 0, 0, 2, 3, 1) mate2(3, 0, 1, 3, 2, 1) mate2(3, 0, 2, 3, 3, 1) mate2(3, 0, 3, 2, 1, 3) mate2(3, 3, 0, 1, 2, 0) mate2(3, 3, 0, 1, 2, 2) mate2(3, 3, 0, 2, 1, 0) mate2(3, 3, 1, 0, 0, 2) mate2(3, 3, 2, 0, 0, 1) mate2(3, 3, 2, 0, 3, 2) mate2(3, 3, 3, 1, 0, 2) mate2(3, 3, 3, 1, 1, 0) BestRule is: 
+mate2(BK,WK,WR) -: ...[InCheck(*), Diagonal(BK,WK), ~Edge(WK), ~Equal(BKR,WRR)]
+mate2(0, 0, 2, 2, 1, 0) mate2(0, 0, 2, 2, 2, 0) mate2(0, 0, 2, 2, 3, 0) mate2(0, 3, 2, 1, 1, 3) mate2(0, 3, 2, 1, 2, 3) mate2(0, 3, 2, 1, 3, 3) mate2(3, 0, 1, 2, 0, 0) mate2(3, 0, 1, 2, 1, 0) mate2(3, 0, 1, 2, 2, 0) mate2(3, 3, 1, 1, 0, 3) mate2(3, 3, 1, 1, 1, 3) mate2(3, 3, 1, 1, 2, 3) BestRule is: 
+mate2(BK,WK,WR) -: ...[Corner(WK), ~Equal(WKC,WRC), ~Equal(BKC,WRC), ~Diagonal(BK,WR), Corner(WR), ~Equal(WKR,WRR)]
+mate2(1, 0, 3, 0, 0, 3) mate2(1, 3, 3, 3, 0, 0) mate2(2, 0, 0, 0, 3, 3) mate2(2, 3, 0, 3, 3, 0) BestRule is: 
+mate2(BK,WK,WR) -: ...[Corner(WK), ~Equal(WKC,WRC), ~Equal(BKC,WRC), ~Diagonal(BK,WR), ~Adjacent(WK,WR), Equal(WKR,WRR), ~Edge(BK)]
+mate2(1, 1, 3, 3, 3, 0) mate2(1, 2, 3, 0, 3, 3) mate2(2, 1, 0, 3, 0, 0) mate2(2, 2, 0, 0, 0, 3) BestRule is: 
+mate2(BK,WK,WR) -: ...[Adjacent(BK,WR), Edge(WK), ~Corner(WR), ~Corner(BK), Equal(BKR,WRR), Corner(WK), Edge(BK), ~Equal(BKC,WKC)]
+mate2(0, 1, 3, 0, 0, 2) mate2(0, 2, 3, 0, 0, 1) mate2(0, 2, 3, 3, 0, 1) mate2(1, 0, 0, 3, 1, 1) mate2(2, 0, 3, 3, 2, 1) mate2(2, 3, 3, 0, 2, 2) mate2(3, 1, 0, 0, 3, 2) mate2(3, 2, 0, 0, 3, 1) mate2(3, 2, 0, 3, 3, 1) BestRule is: 
+mate2(BK,WK,WR) -: ...[~Equal(BKR,WRR), ~Corner(WR), Corner(WK), ~Edge(WR), ~Diagonal(WK,WR), ~Equal(BKR,WKR), ~Corner(BK), Equal(BKC,WKC)]
+mate2(1, 0, 3, 0, 2, 2) mate2(1, 3, 3, 3, 2, 1) mate2(2, 3, 0, 3, 1, 1) BestRule is: 
+mate2(BK,WK,WR) -: ...[~Equal(BKR,WRR), ~Corner(WR), Corner(WK), ~Equal(WKC,WRC), Equal(BKR,WKR), ~Adjacent(BK,WR), ~Equal(BKC,WRC), Diagonal(WK,WR), ~Adjacent(WK,WR)]
+mate2(0, 0, 0, 3, 2, 1) mate2(0, 3, 0, 0, 2, 2) mate2(3, 0, 3, 3, 1, 1) mate2(3, 3, 3, 0, 1, 2) BestRule is: 
+mate2(BK,WK,WR) -: ...[~Equal(BKR,WRR), ~Corner(WR), Corner(WK), ~Equal(WKC,WRC), ~Adjacent(BK,WR), ~Adjacent(WK,WR), Equal(WKR,WRR), Equal(BKC,WKC)]
+mate2(0, 0, 3, 0, 3, 2) mate2(0, 3, 3, 3, 3, 1) mate2(3, 0, 0, 0, 0, 2) mate2(3, 3, 0, 3, 0, 1) BestRule is: 
+mate2(BK,WK,WR) -: ...[Adjacent(BK,WR), Edge(WK), Equal(BKR,WKR), Corner(WR), ~Equal(BKR,WRR)]
+mate2(1, 0, 1, 3, 0, 0) mate2(1, 1, 1, 3, 0, 0) mate2(1, 2, 1, 0, 0, 3) mate2(1, 3, 1, 0, 0, 3) mate2(2, 0, 2, 3, 3, 0) mate2(2, 1, 2, 3, 3, 0) mate2(2, 2, 2, 0, 3, 3) mate2(2, 3, 2, 0, 3, 3) BestRule is: 
+mate2(BK,WK,WR) -: ...[~Corner(WR), ~Equal(BKR,WRR), Corner(WK), ~Equal(WKC,WRC), Equal(BKR,WKR), Edge(WR), ~Corner(BK), ~Equal(BKC,WRC), ~Adjacent(BK,WR)]
+mate2(0, 1, 0, 3, 2, 0) mate2(0, 2, 0, 0, 2, 3) mate2(0, 2, 0, 0, 3, 1) mate2(3, 1, 3, 3, 1, 0) mate2(3, 2, 3, 0, 0, 1) mate2(3, 2, 3, 0, 1, 3) BestRule is: 
+mate2(BK,WK,WR) -: ...[~Corner(WR), ~Equal(BKR,WRR), Corner(WK), ~Edge(WR), ~Diagonal(WK,WR), ~Equal(BKC,WKC), ~Equal(BKR,WKR), Diagonal(BK,WR)]
+mate2(0, 1, 3, 3, 1, 2) mate2(1, 0, 3, 3, 2, 1) mate2(1, 1, 3, 0, 2, 2) mate2(1, 2, 0, 0, 2, 1) mate2(1, 2, 3, 3, 2, 1) mate2(1, 3, 3, 0, 2, 2) mate2(2, 0, 0, 3, 1, 1) mate2(2, 2, 0, 3, 1, 1) mate2(2, 2, 3, 0, 1, 1) mate2(3, 1, 0, 3, 2, 2) BestRule is: 
+mate2(BK,WK,WR) -: ...[~Corner(WR), ~Equal(BKR,WRR), Diagonal(BK,WK), ~Adjacent(BK,WR), ~Edge(WK), ~Edge(WR)]
+mate2(0, 0, 2, 2, 1, 2) mate2(0, 0, 2, 2, 2, 1) mate2(0, 3, 2, 1, 1, 1) mate2(0, 3, 2, 1, 2, 2) mate2(3, 0, 1, 2, 1, 1) mate2(3, 0, 1, 2, 2, 2) mate2(3, 3, 1, 1, 1, 2) mate2(3, 3, 1, 1, 2, 1) BestRule is: 
+mate2(BK,WK,WR) -: ...[InCheck(*), Edge(WK), ~Corner(WR), ~Diagonal(WK,WR), ~Adjacent(BK,WR), Corner(BK), Equal(BKR,WRR)]
+mate2(0, 0, 3, 0, 0, 2) mate2(0, 3, 3, 3, 0, 1) mate2(3, 0, 0, 0, 3, 2) mate2(3, 3, 0, 3, 3, 1) BestRule is: 
+mate2(BK,WK,WR) -: ...[~Equal(BKR,WRR), ~Corner(WR), Edge(WK), ~Adjacent(WK,WR), ~Diagonal(BK,WR), ~Corner(BK), ~Equal(WKC,WRC), Edge(BK), Edge(WR), Equal(WKR,WRR), ~Corner(WK)]
+mate2(0, 1, 2, 3, 2, 0) mate2(0, 2, 2, 0, 2, 3) mate2(1, 0, 2, 3, 2, 0) mate2(1, 3, 2, 0, 2, 3) mate2(2, 0, 1, 3, 1, 0) mate2(2, 3, 1, 0, 1, 3) mate2(3, 1, 1, 3, 1, 0) mate2(3, 2, 1, 0, 1, 3) BestRule is: 
+mate2(BK,WK,WR) -: ...[Adjacent(BK,WR), Edge(WK), ~Corner(WR), Equal(WKC,WRC), ~Edge(WR), ~Equal(BKR,WRR), ~Corner(BK), ~Adjacent(WK,WR)]
+mate2(0, 1, 3, 2, 1, 2) mate2(0, 2, 3, 1, 1, 1) mate2(3, 1, 0, 2, 2, 2) mate2(3, 2, 0, 1, 2, 1) BestRule is: 
+mate2(BK,WK,WR) -: ...[InCheck(*), ~Corner(BK), ~Adjacent(BK,WR), ~Diagonal(WK,WR), Corner(WR), ~Equal(WKR,WRR)]
+mate2(0, 1, 2, 2, 0, 3) mate2(0, 1, 3, 1, 0, 3) mate2(0, 2, 2, 1, 0, 0) mate2(0, 2, 3, 2, 0, 0) mate2(1, 0, 2, 2, 3, 0) mate2(1, 3, 2, 1, 3, 3) mate2(2, 0, 1, 2, 0, 0) mate2(2, 3, 1, 1, 0, 3) mate2(3, 1, 0, 1, 3, 3) mate2(3, 1, 1, 2, 3, 3) mate2(3, 2, 0, 2, 3, 0) mate2(3, 2, 1, 1, 3, 0) BestRule is: 
+mate2(BK,WK,WR) -: ...[~Corner(WR), ~Equal(BKR,WRR), Corner(WK), ~Diagonal(BK,WR), ~Edge(WR), ~Adjacent(WK,WR), ~Adjacent(BK,WR), ~Equal(BKC,WKC), ~Equal(BKR,WKR), Equal(BKC,WRC)]
+mate2(0, 1, 3, 3, 2, 1) mate2(0, 2, 3, 0, 2, 2) mate2(3, 1, 0, 3, 1, 1) BestRule is: 
+mate2(BK,WK,WR) -: ...[~Corner(WR), ~Equal(BKR,WRR), Corner(WK), ~Diagonal(BK,WR), Equal(WKR,WRR)]
+mate2(0, 0, 3, 3, 3, 1) mate2(0, 1, 3, 3, 3, 2) mate2(0, 2, 3, 3, 3, 1) mate2(0, 3, 3, 3, 3, 2) mate2(1, 0, 0, 3, 0, 2) mate2(1, 0, 3, 3, 3, 1) mate2(1, 1, 0, 3, 0, 1) mate2(2, 0, 0, 3, 0, 1) mate2(2, 0, 3, 3, 3, 2) mate2(2, 1, 3, 3, 3, 1) mate2(3, 0, 0, 3, 0, 1) mate2(3, 1, 0, 3, 0, 2) mate2(3, 2, 0, 3, 0, 1) mate2(3, 3, 0, 3, 0, 2) BestRule is: 
+mate2(BK,WK,WR) -: ...[Adjacent(BK,WR), Edge(WK), ~Corner(WR), Edge(WR), ~Corner(WK), ~Equal(WKR,WRR), Diagonal(BK,WR), Diagonal(WK,WR), ~Equal(BKR,WKR)]
+mate2(0, 1, 3, 2, 1, 0) mate2(0, 2, 3, 1, 1, 3) mate2(1, 3, 2, 0, 0, 2) mate2(2, 3, 1, 0, 3, 2) mate2(3, 1, 0, 2, 2, 0) mate2(3, 2, 0, 1, 2, 3) BestRule is: 
+mate2(BK,WK,WR) -: ...[Adjacent(BK,WR), Edge(WK), ~Corner(WR), ~Diagonal(BK,WR), ~Corner(WK), ~Equal(WKR,WRR), Edge(BK), ~Equal(BKR,WRR)]
+mate2(0, 0, 2, 3, 1, 0) mate2(0, 0, 3, 1, 1, 0) mate2(0, 3, 2, 0, 1, 3) mate2(0, 3, 3, 2, 1, 3) mate2(3, 0, 0, 1, 2, 0) mate2(3, 3, 0, 2, 2, 3) BestRule is: 
+mate2(BK,WK,WR) -: ...[~Equal(BKC,WRC), ~Equal(WKC,WRC), Edge(WK), ~Equal(WKR,WRR), ~Corner(BK), Edge(WR), ~Corner(WK), ~Equal(BKC,WKC), ~Diagonal(WK,WR), Adjacent(BK,WR), Equal(BKR,WRR), Diagonal(BK,WK), Corner(WR)]
+mate2(0, 1, 2, 3, 0, 0) mate2(0, 2, 2, 0, 0, 3) mate2(3, 1, 1, 3, 3, 0) mate2(3, 2, 1, 0, 3, 3) BestRule is: 
+mate2(BK,WK,WR) -: ...[~Corner(WR), ~Equal(BKR,WRR), ~Equal(WKR,WRR), ~Corner(BK), ~Equal(WKC,WRC), Edge(WR), Edge(WK), ~Adjacent(BK,WR), Equal(BKC,WKC)]
+mate2(1, 0, 3, 0, 0, 2) mate2(1, 0, 3, 0, 2, 3) mate2(1, 3, 3, 3, 0, 1) mate2(1, 3, 3, 3, 2, 0) mate2(2, 0, 0, 0, 3, 2) mate2(2, 3, 0, 3, 3, 1) BestRule is: 
+mate2(BK,WK,WR) -: ...[~Equal(BKR,WRR), ~Corner(WR), ~Equal(WKR,WRR), ~Corner(BK), ~Equal(WKC,WRC), Edge(WR), Edge(WK), ~Corner(WK), Diagonal(BK,WR), ~Adjacent(BK,WR), ~Equal(BKR,WKR)]
+mate2(0, 1, 3, 2, 2, 3) mate2(0, 2, 3, 1, 2, 0) mate2(1, 3, 2, 0, 3, 1) mate2(2, 3, 1, 0, 0, 1) mate2(3, 1, 0, 2, 1, 3) mate2(3, 2, 0, 1, 1, 0) BestRule is: 
+mate2(BK,WK,WR) -: ...[Adjacent(BK,WR), Edge(WK), ~Corner(WR), ~Corner(BK), Adjacent(WK,WR), Edge(BK), Equal(WKR,WRR)]
+mate2(0, 1, 1, 3, 1, 2) mate2(0, 2, 1, 0, 1, 1) mate2(3, 1, 2, 3, 2, 2) mate2(3, 2, 2, 0, 2, 1) BestRule is: 
+mate2(BK,WK,WR) -: ...[~Equal(BKR,WRR), ~Corner(WR), ~Equal(WKR,WRR), ~Corner(BK), Equal(BKC,WRC), Equal(BKR,WKR), ~Edge(WK)]
+mate2(1, 0, 1, 2, 2, 0) mate2(1, 3, 1, 1, 2, 3) mate2(2, 0, 2, 2, 1, 0) mate2(2, 3, 2, 1, 1, 3) BestRule is: 
+mate2(BK,WK,WR) -: ...[~Equal(BKC,WRC), ~Equal(WKC,WRC), Corner(WK), Corner(WR), ~Equal(BKC,WKC), ~Adjacent(BK,WR)]
+mate2(0, 1, 3, 3, 3, 0) mate2(0, 2, 3, 0, 3, 3) mate2(0, 2, 3, 3, 3, 0) mate2(3, 1, 0, 3, 0, 0) mate2(3, 2, 0, 0, 0, 3) mate2(3, 2, 0, 3, 0, 0) BestRule is: 
+mate2(BK,WK,WR) -: ...[~Corner(WR), ~Equal(BKC,WRC), ~Equal(WKR,WRR), Diagonal(BK,WK), ~Diagonal(BK,WR), Corner(BK), Diagonal(WK,WR)]
+mate2(0, 0, 2, 2, 1, 3) mate2(0, 3, 2, 1, 1, 0) mate2(0, 3, 2, 1, 3, 2) mate2(3, 0, 1, 2, 2, 3) mate2(3, 3, 1, 1, 0, 2) mate2(3, 3, 1, 1, 2, 0) BestRule is: 
+mate2(BK,WK,WR) -: ...[Adjacent(BK,WR), Edge(WK), ~Corner(WR), ~Edge(BK), ~Equal(WKR,WRR), Diagonal(BK,WR), ~Corner(WK), ~Equal(BKR,WKR), ~Equal(BKC,WKC), ~Equal(WKC,WRC)]
+mate2(1, 1, 3, 2, 2, 0) mate2(1, 2, 2, 0, 0, 1) mate2(1, 2, 3, 1, 2, 3) mate2(2, 1, 0, 2, 1, 0) mate2(2, 2, 0, 1, 1, 3) mate2(2, 2, 1, 0, 3, 1) BestRule is: 
+mate2(BK,WK,WR) -: ...[~Corner(WR), InCheck(*), ~Corner(BK), Diagonal(WK,WR), ~Edge(WK), Equal(BKR,WRR)]
+mate2(1, 0, 2, 2, 1, 3) mate2(1, 3, 2, 1, 1, 0) mate2(2, 0, 1, 2, 2, 3) mate2(2, 3, 1, 1, 2, 0) BestRule is: 
+mate2(BK,WK,WR) -: ...[Adjacent(BK,WR), Edge(WK), Equal(BKR,WKR), Corner(WK)]
+mate2(0, 0, 0, 3, 0, 1) mate2(0, 0, 0, 3, 1, 0) mate2(0, 0, 0, 3, 1, 1) mate2(0, 1, 0, 3, 0, 0) mate2(0, 1, 0, 3, 1, 0) mate2(0, 1, 0, 3, 1, 1) mate2(0, 1, 0, 3, 1, 2) mate2(0, 2, 0, 0, 1, 3) mate2(0, 3, 0, 0, 1, 3) mate2(3, 0, 3, 3, 2, 1) mate2(3, 0, 3, 3, 3, 1) mate2(3, 1, 3, 3, 2, 1) mate2(3, 1, 3, 3, 2, 2) mate2(3, 1, 3, 3, 3, 0) BestRule is: 
+mate2(BK,WK,WR) -: ...[~Equal(BKR,WRR), ~Corner(WR), ~Equal(WKR,WRR), ~Corner(BK), Equal(BKC,WRC), ~Adjacent(BK,WR), Edge(WR)]
+mate2(0, 2, 0, 0, 3, 2) mate2(0, 2, 1, 0, 3, 2) mate2(0, 2, 2, 0, 3, 2) mate2(0, 2, 2, 1, 3, 2) mate2(0, 2, 2, 2, 3, 2) mate2(1, 2, 0, 0, 3, 2) mate2(1, 2, 1, 0, 3, 2) mate2(1, 2, 2, 0, 3, 2) mate2(2, 2, 1, 0, 0, 2) mate2(2, 2, 2, 0, 0, 2) mate2(2, 2, 3, 0, 0, 2) mate2(3, 2, 1, 0, 0, 2) mate2(3, 2, 1, 1, 0, 2) mate2(3, 2, 1, 2, 0, 2) mate2(3, 2, 2, 0, 0, 2) mate2(3, 2, 3, 0, 0, 2) BestRule is: 
+mate2(BK,WK,WR) -: ...[~Equal(BKC,WRC), ~Corner(WR), ~Equal(WKR,WRR), ~Corner(BK), ~Equal(BKR,WKR), Adjacent(WK,WR), Adjacent(BK,WR), Edge(WR)]
+mate2(0, 1, 2, 1, 1, 0) mate2(0, 2, 2, 2, 1, 3) mate2(3, 1, 1, 1, 2, 0) mate2(3, 2, 1, 2, 2, 3) BestRule is: 
+mate2(BK,WK,WR) -: ...[~Equal(BKC,WRC), ~Corner(WR), ~Equal(WKR,WRR), Edge(WK), ~Adjacent(WK,WR), ~Diagonal(BK,WR), ~Equal(BKC,WKC), Diagonal(BK,WK), Corner(BK)]
+mate2(0, 0, 3, 3, 1, 2) mate2(0, 0, 3, 3, 2, 1) mate2(0, 3, 3, 0, 2, 2) mate2(3, 0, 0, 3, 1, 1) mate2(3, 0, 0, 3, 2, 2) BestRule is: 
+mate2(BK,WK,WR) -: ...[~Equal(BKC,WRC), ~Corner(WR), ~Equal(WKR,WRR), ~Corner(BK), Edge(WK), ~Diagonal(BK,WR), ~Adjacent(WK,WR), ~Corner(WK), ~Equal(WKC,WRC), ~Equal(BKR,WRR), ~Equal(BKR,WKR)]
+mate2(0, 1, 1, 3, 2, 0) mate2(0, 1, 3, 2, 1, 3) mate2(0, 1, 3, 2, 2, 0) mate2(0, 2, 1, 0, 2, 3) mate2(0, 2, 1, 0, 3, 1) mate2(0, 2, 3, 1, 1, 0) mate2(0, 2, 3, 1, 2, 3) mate2(1, 0, 3, 1, 0, 2) mate2(1, 0, 3, 1, 2, 3) mate2(1, 3, 2, 0, 0, 1) mate2(1, 3, 2, 0, 3, 2) mate2(1, 3, 3, 2, 0, 1) mate2(1, 3, 3, 2, 2, 0) mate2(2, 0, 0, 1, 1, 3) mate2(2, 0, 0, 1, 3, 2) mate2(2, 3, 0, 2, 1, 0) mate2(2, 3, 0, 2, 3, 1) mate2(2, 3, 1, 0, 0, 2) mate2(2, 3, 1, 0, 3, 1) mate2(3, 1, 0, 2, 1, 0) mate2(3, 1, 0, 2, 2, 3) mate2(3, 1, 2, 3, 1, 0) mate2(3, 2, 0, 1, 1, 3) mate2(3, 2, 0, 1, 2, 0) mate2(3, 2, 2, 0, 0, 1) mate2(3, 2, 2, 0, 1, 3) BestRule is: 
+mate2(BK,WK,WR) -: ...[Adjacent(BK,WR), Edge(WK), ~Edge(BK), Diagonal(WK,WR), Diagonal(BK,WK)]
+mate2(1, 1, 3, 3, 2, 2) mate2(1, 2, 3, 0, 2, 1) mate2(2, 1, 0, 3, 1, 2) BestRule is: 
+mate2(BK,WK,WR) -: ...[Adjacent(BK,WR), Edge(WK), ~Corner(WR), Equal(WKC,WRC)]
+mate2(0, 0, 3, 1, 0, 1) mate2(0, 2, 3, 1, 0, 1) mate2(0, 3, 3, 2, 1, 2) mate2(1, 0, 3, 1, 0, 1) mate2(1, 1, 3, 1, 0, 1) mate2(1, 2, 3, 1, 0, 1) mate2(1, 3, 3, 2, 1, 2) mate2(1, 3, 3, 2, 2, 2) mate2(2, 0, 0, 1, 3, 1) mate2(2, 1, 0, 1, 3, 1) mate2(2, 2, 0, 1, 3, 1) mate2(2, 3, 0, 2, 1, 2) mate2(2, 3, 0, 2, 2, 2) mate2(3, 0, 0, 1, 3, 1) mate2(3, 2, 0, 1, 3, 1) mate2(3, 3, 0, 2, 2, 2) BestRule is: 
+mate2(BK,WK,WR) -: ...[~Equal(BKC,WRC), ~Equal(WKC,WRC), Corner(WK), Equal(BKC,WKC), Adjacent(BK,WR)]
+mate2(0, 0, 3, 0, 0, 1) mate2(0, 3, 3, 3, 1, 2) mate2(1, 0, 3, 0, 0, 1) mate2(1, 3, 3, 3, 1, 2) mate2(1, 3, 3, 3, 2, 2) mate2(2, 0, 0, 0, 3, 1) mate2(2, 3, 0, 3, 1, 2) mate2(2, 3, 0, 3, 2, 2) mate2(3, 0, 0, 0, 3, 1) mate2(3, 3, 0, 3, 2, 2) BestRule is: 
+mate2(BK,WK,WR) -: ...[~Equal(BKC,WRC), ~Equal(WKC,WRC), Edge(WK), Corner(WR), ~Equal(BKC,WKC), ~Diagonal(BK,WR), Corner(BK)]
+mate2(0, 0, 0, 2, 0, 3) mate2(0, 3, 0, 1, 0, 0) mate2(3, 0, 3, 2, 3, 3) mate2(3, 3, 3, 1, 3, 0) BestRule is: 
+mate2(BK,WK,WR) -: ...[~Equal(BKR,WRR), Corner(WK), ~Equal(WKC,WRC), Corner(WR), Equal(BKC,WRC)]
+mate2(0, 0, 3, 3, 3, 0) mate2(1, 0, 0, 3, 0, 0) mate2(1, 0, 3, 3, 3, 0) mate2(2, 0, 0, 3, 0, 0) mate2(2, 0, 3, 3, 3, 0) mate2(3, 0, 0, 3, 0, 0) BestRule is: 
+mate2(BK,WK,WR) -: ...[~Equal(BKC,WRC), ~Equal(WKC,WRC), Corner(WK), ~Adjacent(BK,WR), ~Equal(WKR,WRR), ~Equal(BKC,WKC), ~Diagonal(BK,WK), ~Adjacent(WK,WR), ~Edge(WR)]
+mate2(0, 2, 0, 0, 2, 1) mate2(0, 2, 3, 3, 2, 1) mate2(1, 3, 0, 0, 2, 1) mate2(2, 3, 3, 0, 1, 1) mate2(3, 2, 0, 3, 1, 1) mate2(3, 2, 3, 0, 1, 1) BestRule is: 
+mate2(BK,WK,WR) -: ...[~Equal(BKC,WRC), ~Equal(WKC,WRC), Edge(WR), ~Corner(BK), Edge(WK), ~Equal(WKR,WRR), Corner(WR), ~Equal(BKC,WKC)]
+mate2(0, 1, 1, 3, 0, 0) mate2(0, 1, 1, 3, 3, 0) mate2(0, 1, 2, 3, 3, 0) mate2(0, 2, 1, 0, 0, 3) mate2(0, 2, 1, 0, 3, 3) mate2(0, 2, 2, 0, 3, 3) mate2(1, 0, 3, 1, 0, 3) mate2(1, 1, 2, 3, 0, 0) mate2(1, 1, 2, 3, 3, 0) mate2(1, 2, 2, 0, 0, 3) mate2(1, 2, 2, 0, 3, 3) mate2(1, 3, 3, 2, 0, 0) mate2(2, 0, 0, 1, 3, 3) mate2(2, 1, 1, 3, 0, 0) mate2(2, 1, 1, 3, 3, 0) mate2(2, 2, 1, 0, 0, 3) mate2(2, 2, 1, 0, 3, 3) mate2(2, 3, 0, 2, 3, 0) mate2(3, 1, 1, 3, 0, 0) mate2(3, 1, 2, 3, 0, 0) mate2(3, 1, 2, 3, 3, 0) mate2(3, 2, 1, 0, 0, 3) mate2(3, 2, 2, 0, 0, 3) mate2(3, 2, 2, 0, 3, 3) BestRule is: 
+mate2(BK,WK,WR) -: ...[~Corner(WR), ~Equal(BKC,WRC), Edge(WR), Adjacent(WK,WR), ~Edge(WK), ~Diagonal(WK,WR), Corner(BK), ~Diagonal(BK,WK)]
+mate2(0, 0, 1, 2, 1, 3) mate2(0, 3, 1, 1, 1, 0) mate2(3, 0, 2, 2, 2, 3) mate2(3, 3, 2, 1, 2, 0) BestRule is: 
+mate2(BK,WK,WR) -: ...[~Corner(WR), ~Equal(BKC,WRC), Diagonal(WK,WR), ~Corner(BK), ~Equal(BKC,WKC), ~Corner(WK), ~Diagonal(BK,WR), ~Edge(WK), ~Equal(BKR,WKR)]
+mate2(0, 1, 2, 2, 1, 3) mate2(0, 2, 2, 1, 1, 0) mate2(1, 3, 2, 1, 3, 2) mate2(2, 3, 1, 1, 0, 2) mate2(3, 1, 1, 2, 2, 3) mate2(3, 2, 1, 1, 2, 0) BestRule is: 
+mate2(BK,WK,WR) -: ...[~Corner(WR), Adjacent(BK,WR), ~Corner(BK), ~Diagonal(BK,WR), ~Equal(WKC,WRC), Diagonal(WK,WR), ~Adjacent(WK,WR)]
+mate2(0, 1, 3, 3, 1, 1) mate2(0, 2, 2, 3, 0, 1) mate2(1, 2, 0, 0, 2, 2) mate2(1, 2, 2, 0, 0, 2) mate2(1, 2, 3, 3, 1, 1) mate2(2, 2, 0, 3, 2, 1) mate2(2, 2, 1, 0, 3, 2) mate2(2, 2, 3, 0, 1, 2) mate2(3, 1, 0, 3, 2, 1) mate2(3, 2, 1, 3, 3, 1) BestRule is: 
+mate2(BK,WK,WR) -: ...[~Corner(WR), ~Equal(BKC,WRC), Diagonal(BK,WK), Adjacent(BK,WR), ~Adjacent(WK,WR), Edge(BK)]
+mate2(0, 0, 2, 2, 0, 1) mate2(0, 0, 3, 3, 1, 1) mate2(0, 1, 2, 3, 1, 0) mate2(0, 2, 2, 0, 0, 1) mate2(0, 2, 2, 0, 1, 3) mate2(3, 0, 0, 3, 2, 1) mate2(3, 0, 1, 2, 3, 1) mate2(3, 1, 1, 3, 2, 0) mate2(3, 2, 1, 0, 2, 3) mate2(3, 2, 1, 0, 3, 1) BestRule is: 
+mate2(BK,WK,WR) -: ...[Adjacent(WK,WR), Equal(WKC,WRC), ~Equal(BKR,WKR), ~Diagonal(BK,WR), Corner(BK), Equal(BKC,WKC)]
+mate2(0, 0, 2, 0, 3, 0) mate2(0, 3, 2, 3, 3, 3) mate2(3, 0, 1, 0, 0, 0) mate2(3, 3, 1, 3, 0, 3) BestRule is: 
+mate2(BK,WK,WR) -: ...[~Corner(WR), ~Equal(BKR,WRR), Corner(WK), ~Adjacent(BK,WR), ~Equal(WKR,WRR), Corner(BK), Equal(BKR,WKR)]
+mate2(0, 0, 0, 3, 1, 2) mate2(0, 3, 0, 0, 3, 1) mate2(0, 3, 0, 0, 3, 2) mate2(3, 0, 3, 3, 2, 2) mate2(3, 3, 3, 0, 0, 1) mate2(3, 3, 3, 0, 0, 2) BestRule is: 
+mate2(BK,WK,WR) -: ...[Adjacent(WK,WR), ~Corner(BK), ~Edge(WK), ~Diagonal(WK,WR), Edge(WR), ~Equal(BKC,WRC)]
+mate2(0, 2, 2, 1, 3, 1) mate2(1, 3, 1, 1, 0, 1) mate2(1, 3, 2, 1, 3, 1) mate2(2, 0, 1, 2, 1, 3) mate2(2, 0, 2, 2, 2, 3) mate2(2, 3, 1, 1, 0, 1) mate2(2, 3, 1, 1, 1, 0) mate2(2, 3, 2, 1, 2, 0) mate2(2, 3, 2, 1, 3, 1) mate2(3, 1, 1, 1, 1, 0) mate2(3, 1, 1, 2, 1, 3) mate2(3, 2, 1, 1, 0, 1) mate2(3, 2, 1, 1, 1, 0) mate2(3, 2, 1, 2, 1, 3) BestRule is: 
+mate2(BK,WK,WR) -: ...[~Equal(BKR,WRR), Corner(WK), ~Equal(BKR,WKR), ~Equal(WKC,WRC), Edge(WR), ~Equal(WKR,WRR), ~Adjacent(BK,WR), ~Equal(BKC,WKC), Diagonal(BK,WR)]
+mate2(0, 1, 3, 0, 2, 3) mate2(0, 2, 3, 3, 2, 0) mate2(1, 3, 0, 0, 3, 1) mate2(2, 3, 3, 0, 0, 1) BestRule is: 
+mate2(BK,WK,WR) -: ...[Adjacent(BK,WR), ~Edge(BK), Equal(BKR,WKR)]
+mate2(1, 2, 1, 0, 0, 1) mate2(1, 2, 1, 0, 0, 2) mate2(1, 2, 1, 0, 2, 1) mate2(1, 2, 1, 0, 2, 2) mate2(2, 2, 2, 0, 1, 1) mate2(2, 2, 2, 0, 1, 2) mate2(2, 2, 2, 0, 3, 1) mate2(2, 2, 2, 0, 3, 2) BestRule is: 
+mate2(BK,WK,WR) -: ...[~Equal(BKR,WRR), Corner(WK), ~Equal(BKR,WKR), ~Equal(WKC,WRC), Edge(WR), ~Edge(BK), ~Equal(BKC,WRC), ~Diagonal(BK,WK)]
+mate2(1, 1, 0, 3, 0, 0) mate2(1, 1, 3, 0, 2, 3) mate2(1, 2, 0, 0, 3, 1) mate2(1, 2, 3, 3, 2, 0) mate2(2, 1, 3, 3, 3, 0) mate2(2, 2, 3, 0, 0, 1) BestRule is: 
+mate2(BK,WK,WR) -: ...[InCheck(*), ~Edge(WR), ~Adjacent(BK,WR), Equal(WKC,WRC)]
+mate2(1, 0, 0, 2, 1, 2) mate2(2, 0, 3, 2, 2, 2) mate2(2, 3, 3, 1, 2, 1) BestRule is: 
+mate2(BK,WK,WR) -: ...[~Equal(BKR,WRR), Edge(WK), ~Corner(WR), ~Adjacent(WK,WR), ~Diagonal(BK,WR), Equal(WKC,WRC), Edge(BK), Edge(WR)]
+mate2(0, 1, 3, 3, 1, 3) mate2(0, 2, 3, 0, 1, 0) mate2(0, 3, 0, 1, 3, 1) mate2(1, 3, 3, 1, 0, 1) mate2(2, 3, 0, 1, 3, 1) mate2(3, 1, 0, 3, 2, 3) mate2(3, 2, 0, 0, 2, 0) mate2(3, 3, 3, 1, 0, 1) BestRule is: 
+mate2(BK,WK,WR) -: ...[Adjacent(BK,WR), ~Corner(WR), ~Corner(BK), Diagonal(BK,WK), Adjacent(WK,WR), ~Corner(WK)]
+mate2(0, 1, 2, 3, 1, 2) mate2(1, 3, 3, 1, 2, 2) mate2(2, 3, 0, 1, 1, 2) mate2(3, 1, 1, 3, 2, 2) BestRule is: 
+mate2(BK,WK,WR) -: ...[InCheck(*), ~Edge(WR), ~Adjacent(WK,WR), ~Adjacent(BK,WR), ~Corner(WK)]
+mate2(0, 2, 1, 0, 2, 2) mate2(0, 2, 2, 0, 2, 2) mate2(3, 2, 1, 0, 1, 2) mate2(3, 2, 2, 0, 1, 2) BestRule is: 
+mate2(BK,WK,WR) -: ...[Adjacent(BK,WR), ~Corner(WR), ~Corner(BK), ~Diagonal(WK,WR), ~Diagonal(BK,WR), ~Equal(WKC,WRC), ~Equal(BKR,WKR), ~Edge(WR), ~Equal(BKR,WRR), ~Diagonal(BK,WK)]
+mate2(0, 1, 1, 3, 1, 1) mate2(0, 2, 3, 3, 1, 2) mate2(1, 2, 2, 0, 2, 2) mate2(2, 2, 1, 0, 1, 2) mate2(3, 1, 2, 3, 2, 1) mate2(3, 2, 0, 3, 2, 2) BestRule is: 
+mate2(BK,WK,WR) -: ...[~Equal(BKC,WRC), Equal(BKC,WKC), Corner(WK), Diagonal(WK,WR), ~Adjacent(BK,WR)]
+mate2(0, 3, 3, 3, 1, 1) mate2(0, 3, 3, 3, 2, 2) mate2(1, 3, 3, 3, 1, 1) mate2(2, 3, 0, 3, 2, 1) mate2(3, 3, 0, 3, 1, 2) mate2(3, 3, 0, 3, 2, 1) BestRule is: 
+mate2(BK,WK,WR) -: ...[~Equal(BKC,WRC), ~Equal(WKC,WRC), Edge(WR), Corner(WK), ~Equal(BKR,WKR), Corner(WR), Equal(BKC,WKC)]
+mate2(0, 0, 3, 0, 3, 3) mate2(1, 0, 3, 0, 3, 3) mate2(2, 0, 0, 0, 0, 3) mate2(3, 0, 0, 0, 0, 3) BestRule is: 
+mate2(BK,WK,WR) -: ...[Adjacent(BK,WR), Edge(WR), ~Corner(WR), Equal(BKC,WKC), ~Corner(WK), ~Equal(BKC,WRC)]
+mate2(0, 0, 2, 0, 0, 1) mate2(0, 2, 2, 2, 0, 1) mate2(0, 2, 3, 2, 0, 1) mate2(1, 2, 3, 2, 0, 1) mate2(2, 2, 0, 2, 3, 1) mate2(3, 0, 1, 0, 3, 1) mate2(3, 2, 0, 2, 3, 1) mate2(3, 2, 1, 2, 3, 1) BestRule is: 
+mate2(BK,WK,WR) -: ...[~Equal(BKR,WRR), Adjacent(WK,WR), Corner(WR), ~Diagonal(BK,WR), ~Equal(BKR,WKR), ~Diagonal(BK,WK), Equal(WKC,WRC)]
+mate2(0, 1, 2, 0, 3, 0) mate2(0, 2, 2, 3, 3, 3) mate2(3, 1, 1, 0, 0, 0) mate2(3, 2, 1, 3, 0, 3) BestRule is: 
+mate2(BK,WK,WR) -: ...[~Equal(BKR,WRR), ~Equal(WKC,WRC), Corner(WK), Edge(WR), ~Equal(WKR,WRR), ~Equal(BKR,WKR), ~Diagonal(BK,WR), ~Equal(BKC,WKC), ~Corner(BK), Adjacent(BK,WR)]
+mate2(1, 1, 3, 0, 0, 1) mate2(1, 2, 3, 0, 0, 2) mate2(2, 1, 0, 0, 3, 1) mate2(2, 2, 0, 0, 3, 2) BestRule is: 
+mate2(BK,WK,WR) -: ...[~Equal(BKC,WRC), ~Equal(WKC,WRC), Equal(BKR,WKR), ~Corner(BK), Edge(WK), ~Corner(WK), ~Adjacent(BK,WR)]
+mate2(1, 2, 1, 0, 3, 1) mate2(1, 3, 1, 0, 0, 1) mate2(1, 3, 1, 0, 2, 1) mate2(1, 3, 1, 0, 3, 1) mate2(1, 3, 1, 0, 3, 2) mate2(2, 2, 2, 0, 0, 1) mate2(2, 3, 2, 0, 0, 1) mate2(2, 3, 2, 0, 0, 2) mate2(2, 3, 2, 0, 1, 1) mate2(2, 3, 2, 0, 3, 1) BestRule is: 
+mate2(BK,WK,WR) -: ...[Adjacent(BK,WR), Diagonal(BK,WR), Edge(BK), Equal(WKC,WRC), ~Corner(BK), ~Edge(WK)]
+mate2(0, 1, 2, 2, 1, 2) mate2(0, 2, 2, 1, 1, 1) mate2(3, 1, 1, 2, 2, 2) mate2(3, 2, 1, 1, 2, 1) BestRule is: 
+mate2(BK,WK,WR) -: ...[~Equal(WKC,WRC), Corner(WK), ~Equal(BKR,WRR), Edge(WR), ~Equal(WKR,WRR), ~Adjacent(BK,WR), ~Equal(BKR,WKR), Edge(BK), ~Diagonal(BK,WR), ~Equal(BKC,WKC), Equal(BKC,WRC)]
+mate2(0, 0, 3, 3, 2, 0) mate2(0, 3, 3, 0, 2, 3) BestRule is: 
+mate2(BK,WK,WR) -: ...[~Equal(WKC,WRC), ~Equal(BKC,WRC), Corner(WK), Edge(WR), ~Equal(WKR,WRR), ~Equal(BKR,WKR), ~Equal(BKC,WKC), ~Diagonal(BK,WR), Edge(BK), ~Equal(BKR,WRR)]
+mate2(0, 1, 3, 3, 2, 0) mate2(0, 2, 3, 0, 2, 3) mate2(1, 3, 0, 0, 3, 2) mate2(1, 3, 3, 0, 0, 1) mate2(2, 3, 0, 0, 3, 1) mate2(2, 3, 3, 0, 0, 2) BestRule is: 
+mate2(BK,WK,WR) -: ...[Adjacent(BK,WR), Diagonal(BK,WR), Equal(BKR,WKR), Edge(WR), ~Edge(WK)]
+mate2(1, 3, 1, 1, 0, 2) mate2(2, 3, 2, 1, 3, 2) BestRule is: 
+mate2(BK,WK,WR) -: ...[Adjacent(BK,WR), Edge(WK), Edge(BK), ~Equal(BKR,WRR), Edge(WR), ~Corner(BK), ~Diagonal(BK,WK), ~Equal(BKC,WKC), ~Equal(WKR,WRR), Equal(BKC,WRC)]
+mate2(1, 0, 2, 3, 0, 0) mate2(1, 3, 2, 0, 0, 3) mate2(2, 0, 1, 3, 3, 0) mate2(2, 3, 1, 0, 3, 3) BestRule is: 
+mate2(BK,WK,WR) -: ...[~Equal(BKC,WRC), Diagonal(BK,WK), ~Edge(WK), ~Diagonal(WK,WR), Corner(WR)]
+mate2(0, 0, 2, 2, 0, 3) mate2(0, 3, 2, 1, 0, 0) mate2(3, 0, 1, 2, 3, 3) mate2(3, 3, 1, 1, 3, 0) BestRule is: 
+mate2(BK,WK,WR) -: ...[~Equal(BKC,WRC), Equal(WKR,WRR), ~Equal(BKC,WKC), Corner(BK), Diagonal(BK,WK), ~Corner(WK)]
+mate2(3, 0, 1, 2, 1, 3) mate2(3, 3, 1, 1, 1, 0) BestRule is: 
+mate2(BK,WK,WR) -: ...[~Equal(BKC,WRC), Adjacent(BK,WR), Corner(WK), Edge(WR), ~Corner(WR), ~Equal(BKR,WKR), Equal(WKR,WRR)]
+mate2(1, 0, 0, 3, 0, 1) mate2(2, 0, 3, 3, 3, 1) BestRule is: 
+mate2(BK,WK,WR) -: ...[~Equal(BKC,WRC), ~Equal(WKC,WRC), Adjacent(BK,WR), ~Adjacent(WK,WR), Equal(BKR,WKR), ~Corner(WK), Edge(WR)]
+mate2(1, 3, 1, 0, 0, 2) mate2(2, 3, 2, 0, 3, 2) BestRule is: 
+mate2(BK,WK,WR) -: ...[Adjacent(WK,WR), Corner(WR), Equal(BKC,WKC), ~Equal(WKR,WRR)]
+mate2(0, 1, 2, 1, 3, 0) mate2(0, 2, 2, 2, 3, 3) mate2(3, 1, 1, 1, 0, 0) mate2(3, 2, 1, 2, 0, 3) BestRule is: 
+mate2(BK,WK,WR) -: ...[Corner(WK), Diagonal(WK,WR), Equal(BKR,WKR), Equal(BKC,WRC)]
+mate2(0, 2, 0, 0, 2, 2) mate2(3, 2, 3, 0, 1, 2) BestRule is: 
+mate2(BK,WK,WR) -: ...[~Equal(BKC,WRC), Corner(WK), Adjacent(BK,WR), ~Corner(WR), Edge(WR), ~Edge(BK), Equal(BKR,WRR)]
+mate2(1, 1, 0, 3, 1, 0) mate2(1, 2, 0, 0, 1, 3) BestRule is: 
+mate2(BK,WK,WR) -: ...[~Equal(BKC,WRC), Equal(WKR,WRR), Corner(WR), ~Equal(BKC,WKC), ~Diagonal(BK,WR), ~Corner(WK), ~Diagonal(BK,WK)]
+mate2(1, 0, 0, 2, 0, 3) mate2(1, 3, 0, 1, 0, 0) mate2(2, 0, 3, 2, 3, 3) mate2(2, 3, 3, 1, 3, 0) BestRule is: 
+mate2(BK,WK,WR) -: ...[Diagonal(BK,WR), Adjacent(BK,WR), ~Adjacent(WK,WR), ~Edge(WR), Equal(WKR,WRR), Corner(BK)]
+mate2(0, 0, 1, 3, 1, 1) mate2(3, 0, 2, 3, 2, 1) BestRule is: 
+mate2(BK,WK,WR) -: ...[Corner(WK), Diagonal(BK,WR), Diagonal(WK,WR), ~Adjacent(WK,WR), ~Corner(BK)]
+mate2(0, 2, 3, 3, 1, 1) mate2(3, 2, 0, 3, 2, 1) BestRule is: 
+mate2(BK,WK,WR) -: ...[Corner(BK), Diagonal(BK,WK), Equal(WKC,WRC)]
+mate2(0, 3, 2, 1, 3, 1) mate2(3, 3, 1, 1, 0, 1) BestRule is: 
+mate2(BK,WK,WR) -: ...[Corner(WK), Equal(BKC,WKC), Corner(BK), Edge(WR), ~Equal(BKR,WRR), ~Equal(WKR,WRR)]
+mate2(0, 0, 3, 0, 2, 3) mate2(0, 3, 3, 3, 2, 0) BestRule is: 
+mate2(BK,WK,WR) -: ...[Diagonal(BK,WR), Corner(WK), Edge(WR), Adjacent(BK,WR), Edge(BK), ~Equal(BKR,WKR), ~Equal(BKC,WKC), ~Equal(WKR,WRR)]
+mate2(1, 3, 3, 0, 0, 2) mate2(2, 3, 0, 0, 3, 2) BestRule is: 
+mate2(BK,WK,WR) -: ...[Equal(BKR,WKR), ~Edge(WR), ~Adjacent(WK,WR), Diagonal(BK,WR), ~Corner(BK)]
+mate2(1, 3, 1, 0, 2, 2) BestRule is: 
+mate2(BK,WK,WR) -: [InCheck(*), Adjacent(WK,WR), Edge(WR), Edge(WK)]
+                   [InCheck(*), Adjacent(WK,WR), Adjacent(BK,WR), ~Corner(WK)]
+                   [InCheck(*), ~Adjacent(BK,WR), ~Diagonal(WK,WR), Equal(BKR,WRR), ~Equal(BKC,WKC), Edge(WK), ~Adjacent(WK,WR)]
+                   [Edge(WK), InCheck(*), ~Edge(WR), ~Corner(WK), Adjacent(WK,WR), ~Equal(WKC,WRC)]
+                   [Edge(WK), InCheck(*), ~Corner(WR), Equal(BKR,WRR), ~Edge(BK), ~Corner(WK)]
+                   [Edge(WK), ~Equal(BKR,WRR), ~Corner(WR), Adjacent(WK,WR), ~Equal(BKR,WKR), Equal(WKC,WRC), ~Diagonal(BK,WR)]
+                   [Edge(WK), ~Equal(BKR,WRR), ~Equal(WKC,WRC), ~Adjacent(BK,WR), Corner(BK), ~Edge(WR), ~Equal(BKC,WKC), ~Corner(WK)]
+                   [InCheck(*), Edge(WK), ~Equal(BKC,WKC), ~Adjacent(BK,WR), ~Equal(BKR,WKR), Corner(WR), ~Equal(WKR,WRR)]
+                   [~Corner(WR), ~Equal(BKR,WRR), Edge(WK), Equal(BKC,WKC), ~Corner(BK), ~Corner(WK), Edge(BK)]
+                   [InCheck(*), ~Corner(WR), Diagonal(BK,WK), Equal(BKR,WRR), Corner(WK)]
+                   [~Equal(BKR,WRR), Edge(WK), ~Equal(WKC,WRC), Edge(WR), Equal(WKR,WRR), ~Corner(WR), Adjacent(WK,WR), ~Corner(WK)]
+                   [InCheck(*), ~Corner(WR), Edge(WK), Edge(BK), ~Equal(BKC,WKC), ~Corner(BK), Adjacent(BK,WR), ~Equal(WKC,WRC), ~Corner(WK), ~Equal(BKR,WRR), ~Equal(WKR,WRR)]
+                   [Corner(WK), ~Equal(BKR,WRR), Adjacent(WK,WR), Edge(WR), ~Equal(WKR,WRR)]
+                   [InCheck(*), ~Adjacent(BK,WR), ~Diagonal(WK,WR), Equal(WKC,WRC), ~Edge(WK)]
+                   [~Equal(BKR,WRR), Edge(WK), ~Equal(WKC,WRC), Edge(WR), ~Edge(BK), Corner(WK), ~Equal(BKC,WRC), Diagonal(WK,WR)]
+                   [~Equal(BKR,WRR), Edge(WK), ~Equal(WKC,WRC), Edge(WR), ~Edge(BK), ~Equal(BKC,WRC), ~Corner(WR), Equal(WKR,WRR)]
+                   [InCheck(*), Edge(WK), ~Equal(BKC,WKC), ~Adjacent(BK,WR), Equal(WKR,WRR), Edge(WR), ~Corner(WK)]
+                   [~Equal(BKR,WRR), ~Corner(WR), Corner(BK), ~Adjacent(BK,WR), Diagonal(BK,WR), ~Corner(WK)]
+                   [InCheck(*), Corner(WK), Diagonal(WK,WR), Corner(WR)]
+                   [~Corner(WR), ~Equal(BKR,WRR), Edge(WK), Edge(WR), Corner(BK), ~Diagonal(WK,WR), ~Corner(WK), Equal(BKC,WKC)]
+                   [~Corner(WR), InCheck(*), Edge(WK), Edge(BK), ~Equal(BKC,WKC), Equal(BKR,WRR), ~Edge(WR), ~Equal(WKC,WRC), ~Corner(WK)]
+                   [~Equal(BKR,WRR), ~Corner(WR), Corner(WK), Equal(WKR,WRR), Equal(BKC,WKC), ~Corner(BK)]
+                   [~Equal(BKR,WRR), ~Corner(WR), Corner(WK), Equal(WKR,WRR), Equal(BKC,WRC), ~Adjacent(BK,WR)]
+                   [~Equal(BKR,WRR), ~Corner(WR), Edge(WK), Corner(WK), Corner(BK), Equal(WKC,WRC)]
+                   [~Equal(BKR,WRR), ~Equal(WKC,WRC), Edge(WK), Corner(WK), ~Edge(BK), Diagonal(BK,WR), Edge(WR), ~Adjacent(BK,WR)]
+                   [~Equal(BKR,WRR), ~Equal(WKC,WRC), Edge(WK), ~Equal(WKR,WRR), ~Edge(BK), ~Equal(BKC,WRC), ~Corner(WR), Equal(BKC,WKC), Adjacent(WK,WR)]
+                   [~Equal(BKR,WRR), ~Equal(WKC,WRC), Edge(WK), ~Adjacent(WK,WR), ~Adjacent(BK,WR), Equal(BKC,WKC), ~Corner(WK)]
+                   [~Corner(WR), ~Equal(BKR,WRR), Corner(WK), Adjacent(WK,WR), Diagonal(BK,WK), Equal(WKR,WRR)]
+                   [~Corner(WR), ~Equal(BKR,WRR), Edge(WK), ~Equal(WKR,WRR), ~Equal(WKC,WRC), ~Adjacent(BK,WR), ~Edge(WR), Diagonal(BK,WR), Equal(BKR,WKR)]
+                   [~Corner(WR), ~Equal(BKR,WRR), Edge(WK), ~Equal(WKR,WRR), ~Equal(BKR,WKR), ~Equal(BKC,WKC), Corner(BK), ~Corner(WK), Equal(BKC,WRC), ~Adjacent(BK,WR)]
+                   [~Corner(WR), ~Equal(BKR,WRR), Corner(WK), Adjacent(WK,WR), ~Equal(BKC,WKC), ~Equal(BKR,WKR), Diagonal(BK,WR), Equal(WKR,WRR)]
+                   [~Corner(WR), ~Equal(BKR,WRR), Corner(WK), ~Edge(WR), ~Adjacent(BK,WR), Diagonal(BK,WR)]
+                   [~Corner(WR), ~Equal(BKR,WRR), ~Equal(WKR,WRR), ~Equal(BKR,WKR), Adjacent(WK,WR), ~Equal(BKC,WKC), ~Diagonal(BK,WR), Corner(BK), ~Diagonal(BK,WK), ~Edge(WK)]
+                   [InCheck(*), ~Corner(WR), Corner(WK), ~Diagonal(BK,WK), ~Equal(BKC,WKC), Edge(BK), ~Equal(BKR,WKR), Edge(WR), ~Equal(BKR,WRR)]
+                   [InCheck(*), ~Corner(WR), Edge(WK), Equal(BKR,WRR), ~Equal(BKC,WKC), Diagonal(WK,WR), Edge(BK), Corner(BK)]
+                   [InCheck(*), Adjacent(WK,WR), Corner(BK)]
+                   [Edge(WK), ~Equal(BKC,WRC), ~Equal(WKC,WRC), ~Equal(BKC,WKC), ~Diagonal(BK,WR), Diagonal(WK,WR), ~Equal(BKR,WKR), Edge(BK), Equal(BKR,WRR), Corner(WK), Adjacent(BK,WR)]
+                   [~Equal(BKR,WRR), Edge(WK), ~Equal(WKC,WRC), ~Equal(WKR,WRR), ~Diagonal(BK,WR), Diagonal(WK,WR), ~Equal(BKR,WKR), ~Equal(BKC,WKC), ~Equal(BKC,WRC)]
+                   [Adjacent(BK,WR), Edge(WK), ~Corner(WR), Edge(WR), ~Equal(WKR,WRR), Diagonal(BK,WR), ~Edge(BK), Corner(WK), ~Diagonal(BK,WK)]
+                   [InCheck(*), ~Corner(WR), Edge(WK), ~Equal(BKC,WKC), Equal(BKR,WRR), ~Adjacent(BK,WR), Edge(WR)]
+                   [Adjacent(BK,WR), Edge(WK), ~Corner(WR), Equal(WKC,WRC), Corner(WK)]
+                   [~Equal(BKR,WRR), Edge(WK), ~Equal(WKC,WRC), ~Adjacent(WK,WR), ~Adjacent(BK,WR), Corner(WR), ~Corner(BK), Equal(BKR,WKR)]
+                   [Adjacent(BK,WR), Edge(WK), ~Corner(WR), Edge(WR), ~Corner(WK), ~Equal(WKR,WRR), Corner(BK), ~Equal(BKR,WRR), Equal(BKR,WKR)]
+                   [Adjacent(BK,WR), Edge(WK), ~Corner(WR), ~Edge(BK), ~Equal(BKC,WRC), ~Equal(WKR,WRR), ~Diagonal(WK,WR), Equal(BKR,WKR)]
+                   [Adjacent(BK,WR), Edge(WK), ~Corner(WR), Equal(WKC,WRC), Adjacent(WK,WR), ~Edge(BK)]
+                   [InCheck(*), ~Corner(WR), Corner(WK), Adjacent(WK,WR)]
+                   [~Equal(BKR,WRR), ~Equal(WKC,WRC), Edge(WK), ~Adjacent(WK,WR), ~Adjacent(BK,WR), Equal(WKR,WRR), Corner(WR), ~Corner(WK)]
+                   [~Corner(WR), ~Equal(BKR,WRR), Edge(WK), ~Adjacent(WK,WR), Corner(BK), ~Corner(WK), ~Equal(WKR,WRR), ~Equal(BKR,WKR), Equal(BKC,WRC), Diagonal(WK,WR)]
+                   [~Corner(WR), ~Equal(BKR,WRR), Corner(WK), ~Equal(WKC,WRC), Equal(BKR,WKR), ~Adjacent(BK,WR), Corner(BK), Equal(BKC,WRC)]
+                   [Adjacent(BK,WR), Edge(WK), ~Corner(WR), Edge(WR), ~Equal(BKC,WRC), ~Equal(WKR,WRR), ~Equal(BKC,WKC), Adjacent(WK,WR), ~Equal(BKR,WKR)]
+                   [~Corner(WR), ~Equal(BKR,WRR), Corner(WK), ~Edge(WR), ~Diagonal(WK,WR), ~Edge(BK), Equal(BKC,WRC)]
+                   [~Corner(WR), ~Equal(BKC,WRC), Edge(WK), ~Adjacent(WK,WR), Corner(BK), ~Equal(BKC,WKC), ~Corner(WK), ~Diagonal(WK,WR), ~Adjacent(BK,WR), ~Edge(WR)]
+                   [~Corner(WR), ~Equal(BKC,WRC), Corner(WK), ~Equal(WKC,WRC), ~Diagonal(WK,WR), Diagonal(BK,WK), ~Corner(BK)]
+                   [~Corner(WR), ~Equal(BKC,WRC), Edge(WK), ~Adjacent(WK,WR), Corner(BK), ~Equal(BKC,WKC), ~Corner(WK), ~Equal(WKC,WRC), ~Diagonal(WK,WR), ~Equal(WKR,WRR)]
+                   [InCheck(*), Diagonal(BK,WK), ~Edge(WK), ~Equal(BKR,WRR)]
+                   [Corner(WK), ~Equal(WKC,WRC), ~Equal(BKC,WRC), ~Diagonal(BK,WR), Corner(WR), ~Equal(WKR,WRR)]
+                   [Corner(WK), ~Equal(WKC,WRC), ~Equal(BKC,WRC), ~Diagonal(BK,WR), ~Adjacent(WK,WR), Equal(WKR,WRR), ~Edge(BK)]
+                   [Adjacent(BK,WR), Edge(WK), ~Corner(WR), ~Corner(BK), Equal(BKR,WRR), Corner(WK), Edge(BK), ~Equal(BKC,WKC)]
+                   [~Equal(BKR,WRR), ~Corner(WR), Corner(WK), ~Edge(WR), ~Diagonal(WK,WR), ~Equal(BKR,WKR), ~Corner(BK), Equal(BKC,WKC)]
+                   [~Equal(BKR,WRR), ~Corner(WR), Corner(WK), ~Equal(WKC,WRC), Equal(BKR,WKR), ~Adjacent(BK,WR), ~Equal(BKC,WRC), Diagonal(WK,WR), ~Adjacent(WK,WR)]
+                   [~Equal(BKR,WRR), ~Corner(WR), Corner(WK), ~Equal(WKC,WRC), ~Adjacent(BK,WR), ~Adjacent(WK,WR), Equal(WKR,WRR), Equal(BKC,WKC)]
+                   [Adjacent(BK,WR), Edge(WK), Equal(BKR,WKR), Corner(WR), ~Equal(BKR,WRR)]
+                   [~Corner(WR), ~Equal(BKR,WRR), Corner(WK), ~Equal(WKC,WRC), Equal(BKR,WKR), Edge(WR), ~Corner(BK), ~Equal(BKC,WRC), ~Adjacent(BK,WR)]
+                   [~Corner(WR), ~Equal(BKR,WRR), Corner(WK), ~Edge(WR), ~Diagonal(WK,WR), ~Equal(BKC,WKC), ~Equal(BKR,WKR), Diagonal(BK,WR)]
+                   [~Corner(WR), ~Equal(BKR,WRR), Diagonal(BK,WK), ~Adjacent(BK,WR), ~Edge(WK), ~Edge(WR)]
+                   [InCheck(*), Edge(WK), ~Corner(WR), ~Diagonal(WK,WR), ~Adjacent(BK,WR), Corner(BK), Equal(BKR,WRR)]
+                   [~Equal(BKR,WRR), ~Corner(WR), Edge(WK), ~Adjacent(WK,WR), ~Diagonal(BK,WR), ~Corner(BK), ~Equal(WKC,WRC), Edge(BK), Edge(WR), Equal(WKR,WRR), ~Corner(WK)]
+                   [Adjacent(BK,WR), Edge(WK), ~Corner(WR), Equal(WKC,WRC), ~Edge(WR), ~Equal(BKR,WRR), ~Corner(BK), ~Adjacent(WK,WR)]
+                   [InCheck(*), ~Corner(BK), ~Adjacent(BK,WR), ~Diagonal(WK,WR), Corner(WR), ~Equal(WKR,WRR)]
+                   [~Corner(WR), ~Equal(BKR,WRR), Corner(WK), ~Diagonal(BK,WR), ~Edge(WR), ~Adjacent(WK,WR), ~Adjacent(BK,WR), ~Equal(BKC,WKC), ~Equal(BKR,WKR), Equal(BKC,WRC)]
+                   [~Corner(WR), ~Equal(BKR,WRR), Corner(WK), ~Diagonal(BK,WR), Equal(WKR,WRR)]
+                   [Adjacent(BK,WR), Edge(WK), ~Corner(WR), Edge(WR), ~Corner(WK), ~Equal(WKR,WRR), Diagonal(BK,WR), Diagonal(WK,WR), ~Equal(BKR,WKR)]
+                   [Adjacent(BK,WR), Edge(WK), ~Corner(WR), ~Diagonal(BK,WR), ~Corner(WK), ~Equal(WKR,WRR), Edge(BK), ~Equal(BKR,WRR)]
+                   [~Equal(BKC,WRC), ~Equal(WKC,WRC), Edge(WK), ~Equal(WKR,WRR), ~Corner(BK), Edge(WR), ~Corner(WK), ~Equal(BKC,WKC), ~Diagonal(WK,WR), Adjacent(BK,WR), Equal(BKR,WRR), Diagonal(BK,WK), Corner(WR)]
+                   [~Corner(WR), ~Equal(BKR,WRR), ~Equal(WKR,WRR), ~Corner(BK), ~Equal(WKC,WRC), Edge(WR), Edge(WK), ~Adjacent(BK,WR), Equal(BKC,WKC)]
+                   [~Equal(BKR,WRR), ~Corner(WR), ~Equal(WKR,WRR), ~Corner(BK), ~Equal(WKC,WRC), Edge(WR), Edge(WK), ~Corner(WK), Diagonal(BK,WR), ~Adjacent(BK,WR), ~Equal(BKR,WKR)]
+                   [Adjacent(BK,WR), Edge(WK), ~Corner(WR), ~Corner(BK), Adjacent(WK,WR), Edge(BK), Equal(WKR,WRR)]
+                   [~Equal(BKR,WRR), ~Corner(WR), ~Equal(WKR,WRR), ~Corner(BK), Equal(BKC,WRC), Equal(BKR,WKR), ~Edge(WK)]
+                   [~Equal(BKC,WRC), ~Equal(WKC,WRC), Corner(WK), Corner(WR), ~Equal(BKC,WKC), ~Adjacent(BK,WR)]
+                   [~Corner(WR), ~Equal(BKC,WRC), ~Equal(WKR,WRR), Diagonal(BK,WK), ~Diagonal(BK,WR), Corner(BK), Diagonal(WK,WR)]
+                   [Adjacent(BK,WR), Edge(WK), ~Corner(WR), ~Edge(BK), ~Equal(WKR,WRR), Diagonal(BK,WR), ~Corner(WK), ~Equal(BKR,WKR), ~Equal(BKC,WKC), ~Equal(WKC,WRC)]
+                   [~Corner(WR), InCheck(*), ~Corner(BK), Diagonal(WK,WR), ~Edge(WK), Equal(BKR,WRR)]
+                   [Adjacent(BK,WR), Edge(WK), Equal(BKR,WKR), Corner(WK)]
+                   [~Equal(BKR,WRR), ~Corner(WR), ~Equal(WKR,WRR), ~Corner(BK), Equal(BKC,WRC), ~Adjacent(BK,WR), Edge(WR)]
+                   [~Equal(BKC,WRC), ~Corner(WR), ~Equal(WKR,WRR), ~Corner(BK), ~Equal(BKR,WKR), Adjacent(WK,WR), Adjacent(BK,WR), Edge(WR)]
+                   [~Equal(BKC,WRC), ~Corner(WR), ~Equal(WKR,WRR), Edge(WK), ~Adjacent(WK,WR), ~Diagonal(BK,WR), ~Equal(BKC,WKC), Diagonal(BK,WK), Corner(BK)]
+                   [~Equal(BKC,WRC), ~Corner(WR), ~Equal(WKR,WRR), ~Corner(BK), Edge(WK), ~Diagonal(BK,WR), ~Adjacent(WK,WR), ~Corner(WK), ~Equal(WKC,WRC), ~Equal(BKR,WRR), ~Equal(BKR,WKR)]
+                   [Adjacent(BK,WR), Edge(WK), ~Edge(BK), Diagonal(WK,WR), Diagonal(BK,WK)]
+                   [Adjacent(BK,WR), Edge(WK), ~Corner(WR), Equal(WKC,WRC)]
+                   [~Equal(BKC,WRC), ~Equal(WKC,WRC), Corner(WK), Equal(BKC,WKC), Adjacent(BK,WR)]
+                   [~Equal(BKC,WRC), ~Equal(WKC,WRC), Edge(WK), Corner(WR), ~Equal(BKC,WKC), ~Diagonal(BK,WR), Corner(BK)]
+                   [~Equal(BKR,WRR), Corner(WK), ~Equal(WKC,WRC), Corner(WR), Equal(BKC,WRC)]
+                   [~Equal(BKC,WRC), ~Equal(WKC,WRC), Corner(WK), ~Adjacent(BK,WR), ~Equal(WKR,WRR), ~Equal(BKC,WKC), ~Diagonal(BK,WK), ~Adjacent(WK,WR), ~Edge(WR)]
+                   [~Equal(BKC,WRC), ~Equal(WKC,WRC), Edge(WR), ~Corner(BK), Edge(WK), ~Equal(WKR,WRR), Corner(WR), ~Equal(BKC,WKC)]
+                   [~Corner(WR), ~Equal(BKC,WRC), Edge(WR), Adjacent(WK,WR), ~Edge(WK), ~Diagonal(WK,WR), Corner(BK), ~Diagonal(BK,WK)]
+                   [~Corner(WR), ~Equal(BKC,WRC), Diagonal(WK,WR), ~Corner(BK), ~Equal(BKC,WKC), ~Corner(WK), ~Diagonal(BK,WR), ~Edge(WK), ~Equal(BKR,WKR)]
+                   [~Corner(WR), Adjacent(BK,WR), ~Corner(BK), ~Diagonal(BK,WR), ~Equal(WKC,WRC), Diagonal(WK,WR), ~Adjacent(WK,WR)]
+                   [~Corner(WR), ~Equal(BKC,WRC), Diagonal(BK,WK), Adjacent(BK,WR), ~Adjacent(WK,WR), Edge(BK)]
+                   [Adjacent(WK,WR), Equal(WKC,WRC), ~Equal(BKR,WKR), ~Diagonal(BK,WR), Corner(BK), Equal(BKC,WKC)]
+                   [~Corner(WR), ~Equal(BKR,WRR), Corner(WK), ~Adjacent(BK,WR), ~Equal(WKR,WRR), Corner(BK), Equal(BKR,WKR)]
+                   [Adjacent(WK,WR), ~Corner(BK), ~Edge(WK), ~Diagonal(WK,WR), Edge(WR), ~Equal(BKC,WRC)]
+                   [~Equal(BKR,WRR), Corner(WK), ~Equal(BKR,WKR), ~Equal(WKC,WRC), Edge(WR), ~Equal(WKR,WRR), ~Adjacent(BK,WR), ~Equal(BKC,WKC), Diagonal(BK,WR)]
+                   [Adjacent(BK,WR), ~Edge(BK), Equal(BKR,WKR)]
+                   [~Equal(BKR,WRR), Corner(WK), ~Equal(BKR,WKR), ~Equal(WKC,WRC), Edge(WR), ~Edge(BK), ~Equal(BKC,WRC), ~Diagonal(BK,WK)]
+                   [InCheck(*), ~Edge(WR), ~Adjacent(BK,WR), Equal(WKC,WRC)]
+                   [~Equal(BKR,WRR), Edge(WK), ~Corner(WR), ~Adjacent(WK,WR), ~Diagonal(BK,WR), Equal(WKC,WRC), Edge(BK), Edge(WR)]
+                   [Adjacent(BK,WR), ~Corner(WR), ~Corner(BK), Diagonal(BK,WK), Adjacent(WK,WR), ~Corner(WK)]
+                   [InCheck(*), ~Edge(WR), ~Adjacent(WK,WR), ~Adjacent(BK,WR), ~Corner(WK)]
+                   [Adjacent(BK,WR), ~Corner(WR), ~Corner(BK), ~Diagonal(WK,WR), ~Diagonal(BK,WR), ~Equal(WKC,WRC), ~Equal(BKR,WKR), ~Edge(WR), ~Equal(BKR,WRR), ~Diagonal(BK,WK)]
+                   [~Equal(BKC,WRC), Equal(BKC,WKC), Corner(WK), Diagonal(WK,WR), ~Adjacent(BK,WR)]
+                   [~Equal(BKC,WRC), ~Equal(WKC,WRC), Edge(WR), Corner(WK), ~Equal(BKR,WKR), Corner(WR), Equal(BKC,WKC)]
+                   [Adjacent(BK,WR), Edge(WR), ~Corner(WR), Equal(BKC,WKC), ~Corner(WK), ~Equal(BKC,WRC)]
+                   [~Equal(BKR,WRR), Adjacent(WK,WR), Corner(WR), ~Diagonal(BK,WR), ~Equal(BKR,WKR), ~Diagonal(BK,WK), Equal(WKC,WRC)]
+                   [~Equal(BKR,WRR), ~Equal(WKC,WRC), Corner(WK), Edge(WR), ~Equal(WKR,WRR), ~Equal(BKR,WKR), ~Diagonal(BK,WR), ~Equal(BKC,WKC), ~Corner(BK), Adjacent(BK,WR)]
+                   [~Equal(BKC,WRC), ~Equal(WKC,WRC), Equal(BKR,WKR), ~Corner(BK), Edge(WK), ~Corner(WK), ~Adjacent(BK,WR)]
+                   [Adjacent(BK,WR), Diagonal(BK,WR), Edge(BK), Equal(WKC,WRC), ~Corner(BK), ~Edge(WK)]
+                   [~Equal(WKC,WRC), Corner(WK), ~Equal(BKR,WRR), Edge(WR), ~Equal(WKR,WRR), ~Adjacent(BK,WR), ~Equal(BKR,WKR), Edge(BK), ~Diagonal(BK,WR), ~Equal(BKC,WKC), Equal(BKC,WRC)]
+                   [~Equal(WKC,WRC), ~Equal(BKC,WRC), Corner(WK), Edge(WR), ~Equal(WKR,WRR), ~Equal(BKR,WKR), ~Equal(BKC,WKC), ~Diagonal(BK,WR), Edge(BK), ~Equal(BKR,WRR)]
+                   [Adjacent(BK,WR), Diagonal(BK,WR), Equal(BKR,WKR), Edge(WR), ~Edge(WK)]
+                   [Adjacent(BK,WR), Edge(WK), Edge(BK), ~Equal(BKR,WRR), Edge(WR), ~Corner(BK), ~Diagonal(BK,WK), ~Equal(BKC,WKC), ~Equal(WKR,WRR), Equal(BKC,WRC)]
+                   [~Equal(BKC,WRC), Diagonal(BK,WK), ~Edge(WK), ~Diagonal(WK,WR), Corner(WR)]
+                   [~Equal(BKC,WRC), Equal(WKR,WRR), ~Equal(BKC,WKC), Corner(BK), Diagonal(BK,WK), ~Corner(WK)]
+                   [~Equal(BKC,WRC), Adjacent(BK,WR), Corner(WK), Edge(WR), ~Corner(WR), ~Equal(BKR,WKR), Equal(WKR,WRR)]
+                   [~Equal(BKC,WRC), ~Equal(WKC,WRC), Adjacent(BK,WR), ~Adjacent(WK,WR), Equal(BKR,WKR), ~Corner(WK), Edge(WR)]
+                   [Adjacent(WK,WR), Corner(WR), Equal(BKC,WKC), ~Equal(WKR,WRR)]
+                   [Corner(WK), Diagonal(WK,WR), Equal(BKR,WKR), Equal(BKC,WRC)]
+                   [~Equal(BKC,WRC), Corner(WK), Adjacent(BK,WR), ~Corner(WR), Edge(WR), ~Edge(BK), Equal(BKR,WRR)]
+                   [~Equal(BKC,WRC), Equal(WKR,WRR), Corner(WR), ~Equal(BKC,WKC), ~Diagonal(BK,WR), ~Corner(WK), ~Diagonal(BK,WK)]
+                   [Diagonal(BK,WR), Adjacent(BK,WR), ~Adjacent(WK,WR), ~Edge(WR), Equal(WKR,WRR), Corner(BK)]
+                   [Corner(WK), Diagonal(BK,WR), Diagonal(WK,WR), ~Adjacent(WK,WR), ~Corner(BK)]
+                   [Corner(BK), Diagonal(BK,WK), Equal(WKC,WRC)]
+                   [Corner(WK), Equal(BKC,WKC), Corner(BK), Edge(WR), ~Equal(BKR,WRR), ~Equal(WKR,WRR)]
+                   [Diagonal(BK,WR), Corner(WK), Edge(WR), Adjacent(BK,WR), Edge(BK), ~Equal(BKR,WKR), ~Equal(BKC,WKC), ~Equal(WKR,WRR)]
+                   [Equal(BKR,WKR), ~Edge(WR), ~Adjacent(WK,WR), Diagonal(BK,WR), ~Corner(BK)]
