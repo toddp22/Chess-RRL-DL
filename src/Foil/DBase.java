@@ -567,7 +567,7 @@ public class DBase implements Serializable{
 		Iterator<PredBase> it = tables.iterator();
 
 		while(it.hasNext()){
-			PredBase pb = (PredBase)it.next();
+			PredBase pb = it.next();
 			retStr += pb.toString()+ "\n";
 		} // while more PredBases
 

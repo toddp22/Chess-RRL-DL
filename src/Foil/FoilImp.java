@@ -42,6 +42,8 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.PrintWriter;
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Iterator;
 import java.util.List;
 
 import VI.Board;
@@ -658,29 +660,44 @@ public static void main(String[] args) throws Exception{
 }
 */
 
+public void dump(String fname, Rule r){
+	try{
+		PrintWriter out = new PrintWriter(new FileWriter(fname));
+		out.println(r);
+		out.close();
+	}// try
+	catch (IOException e) {
+	}
+	finally{
+	}
+
+}// dump
+
 // This is main for mate in 2 transform
 public static void main(String[] args) throws Exception{
 
-	String pname = "mate2WJ";
-	DBase J = new DBase("ValueJ.db",pname,8,WHITE);
+	String pname = "mate1WJ";
+	DBase J = new DBase("ValueJ.db",pname,10,WHITE);
 	Predicate target = new Predicate (pname,6);
 	System.out.println("Calculating FOIL");
 	FoilImp F1 = new FoilImp(target,J,true);
     F1.learn();
     System.out.println("\n\n\n");
 	Rule r1 = F1.bestRule;
-
+	F1.dump(pname,r1);
+	
+/*
 	ValueIterator VI = new ValueIterator();
 
 	for(int v=0;v<10;v++){
 		// System.out.println("\nRound: " + (v+1));
 		VI.Iterate();
 	}
+*/
 
+//	transform(VI,r1,.9,State.WHITE,"mate2T");
 
-	transform(VI,r1,.9,State.WHITE,"mate2T");
-
-}	
+}	// main
 
 /**/
 
