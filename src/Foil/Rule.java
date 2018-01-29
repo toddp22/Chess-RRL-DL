@@ -105,12 +105,12 @@ class Rule implements Serializable, Pred{
 		head.release();
 	} // method release
 
-	// This does return a clone
+	// This doesn't return a clone
 	// rather this just creates a predicate of the head
 	// with name and arity
 	public Pred Clone(){
 		Rule r = new Rule(this);
-		r.predRule=true;
+		r.predRule=predRule;
 		return r;
 	} // method Clone
 
@@ -188,6 +188,7 @@ class Rule implements Serializable, Pred{
 	// We also need to test those predicates in the body that are the
 	// equals predicate.
 	public ArrayList<Fact> getPositiveMatches(DBase P, DBase N){
+		//System.out.println(this);
 		ArrayList<Fact> pfacts = P.getMatches(head);
 
 		// System.out.println("The positive matches are: " + pfacts);
@@ -201,6 +202,7 @@ class Rule implements Serializable, Pred{
 			Fact f = (Fact)factIt.next();
 			head.bind(f);
 			// special case for equals.
+			
 			if(!body[ac].specialMatches(head,f)){
 				//pfacts[f] = null;
 				factIt.remove();
@@ -212,10 +214,10 @@ class Rule implements Serializable, Pred{
 												// they need to be evaluated by the
 												// negative database.
 			//else pfacts[f] = null;
-			else factIt.remove();
+			//else factIt.remove();
 			head.release();
 		} // for
-
+		//System.out.println("Matching Facts: " + pfacts);
 		//System.out.println("pfacts: " + pfacts);
 
 		/*
@@ -245,6 +247,8 @@ class Rule implements Serializable, Pred{
 		// get negative matches
 		ArrayList<Fact> nfacts = N.getMatches(head);	// if we don't use the negative database, then we need to enumerate
 																			 	// all possible bindings
+		//System.out.println("Negative Facts" + nfacts);
+		//System.out.println("Number of Negative Facts: "+ nfacts.size());
 		//head.release();
 		if (body[ac] == null) n = nfacts.size();
 		else{
@@ -261,7 +265,7 @@ class Rule implements Serializable, Pred{
 					head.release();
 					continue;
 				}
-				if(P.Matches(body[ac],N)) {
+				else{
 					n ++;
 					// System.out.println(this);
 				}
@@ -341,6 +345,7 @@ class Rule implements Serializable, Pred{
 		} // else
 	} // method addPredicate
 
+/*
 	/*********************************
 		LGG: Example
 			 daughter(mary,ann) <- female(mary),parent(ann,mary)
@@ -357,6 +362,8 @@ class Rule implements Serializable, Pred{
 			LGG with multiple clauses.
 
 	*********************************/
+	
+/*
 	public Rule LGG (Rule r){
 		return LGG(r,new LookupTable(),new ArrayList<String>());
 	} // method LGG
@@ -374,7 +381,7 @@ class Rule implements Serializable, Pred{
 
 		return newR;
 	} // method LGG
-
+*/
 	/************************************************************
 		Method: RLGG
 			Relative Least General Generalization
@@ -602,13 +609,13 @@ class Rule implements Serializable, Pred{
 
 		Iterator<Rule> it = ruleList.iterator();
 		while(it.hasNext()){
-			Rule r1 = (Rule)it.next();
+			//Rule r1 = (Rule)it.next();
 			Iterator<Rule> it2 = ruleList.iterator();
 			while(it2.hasNext()){
-				Rule r2 = (Rule)it2.next();
-				Rule r3 = r1.LGG(r2);
+				//Rule r2 = (Rule)it2.next();
+//				Rule r3 = r1.LGG(r2);
 
-				System.out.println(r3);
+//				System.out.println(r3);
 			} // it2
 		} //it
 

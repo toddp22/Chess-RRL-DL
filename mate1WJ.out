@@ -1,0 +1,36 @@
+mate1WJ(0, 0, 1, 2, 2, 1) mate1WJ(0, 0, 1, 2, 2, 3) mate1WJ(0, 0, 2, 1, 1, 2) mate1WJ(0, 0, 2, 1, 3, 2) 
+mate1WJ(0, 3, 1, 1, 2, 0) mate1WJ(0, 3, 1, 1, 2, 2) mate1WJ(0, 3, 2, 2, 1, 1) mate1WJ(0, 3, 2, 2, 3, 1) 
+mate1WJ(3, 0, 1, 1, 0, 2) mate1WJ(3, 0, 1, 1, 2, 2) mate1WJ(3, 0, 2, 2, 1, 1) mate1WJ(3, 0, 2, 2, 1, 3) 
+mate1WJ(3, 3, 1, 2, 0, 1) mate1WJ(3, 3, 1, 2, 2, 1) mate1WJ(3, 3, 2, 1, 1, 0) mate1WJ(3, 3, 2, 1, 1, 2) 
+mate1WJ(0, 0, 0, 2, 2, 1) mate1WJ(0, 0, 0, 2, 2, 2) mate1WJ(0, 0, 0, 2, 2, 3) mate1WJ(0, 0, 0, 2, 3, 1) 
+mate1WJ(0, 0, 0, 2, 3, 2) mate1WJ(0, 0, 0, 2, 3, 3) mate1WJ(0, 0, 2, 0, 1, 2) mate1WJ(0, 0, 2, 0, 1, 3) 
+mate1WJ(0, 0, 2, 0, 2, 2) mate1WJ(0, 0, 2, 0, 2, 3) mate1WJ(0, 0, 2, 0, 3, 2) mate1WJ(0, 0, 2, 0, 3, 3) 
+mate1WJ(0, 3, 0, 1, 2, 0) mate1WJ(0, 3, 0, 1, 2, 1) mate1WJ(0, 3, 0, 1, 2, 2) mate1WJ(0, 3, 0, 1, 3, 0) 
+mate1WJ(0, 3, 0, 1, 3, 1) mate1WJ(0, 3, 0, 1, 3, 2) mate1WJ(0, 3, 2, 3, 1, 0) mate1WJ(0, 3, 2, 3, 1, 1) 
+mate1WJ(0, 3, 2, 3, 2, 0) mate1WJ(0, 3, 2, 3, 2, 1) mate1WJ(0, 3, 2, 3, 3, 0) mate1WJ(0, 3, 2, 3, 3, 1) 
+mate1WJ(3, 0, 1, 0, 0, 2) mate1WJ(3, 0, 1, 0, 0, 3) mate1WJ(3, 0, 1, 0, 1, 2) mate1WJ(3, 0, 1, 0, 1, 3) 
+mate1WJ(3, 0, 1, 0, 2, 2) mate1WJ(3, 0, 1, 0, 2, 3) mate1WJ(3, 0, 3, 2, 0, 1) mate1WJ(3, 0, 3, 2, 0, 2) 
+mate1WJ(3, 0, 3, 2, 0, 3) mate1WJ(3, 0, 3, 2, 1, 1) mate1WJ(3, 0, 3, 2, 1, 2) mate1WJ(3, 0, 3, 2, 1, 3) 
+mate1WJ(3, 3, 1, 3, 0, 0) mate1WJ(3, 3, 1, 3, 0, 1) mate1WJ(3, 3, 1, 3, 1, 0) mate1WJ(3, 3, 1, 3, 1, 1) 
+mate1WJ(3, 3, 1, 3, 2, 0) mate1WJ(3, 3, 1, 3, 2, 1) mate1WJ(3, 3, 3, 1, 0, 0) mate1WJ(3, 3, 3, 1, 0, 1) 
+mate1WJ(3, 3, 3, 1, 0, 2) mate1WJ(3, 3, 3, 1, 1, 0) mate1WJ(3, 3, 3, 1, 1, 1) mate1WJ(3, 3, 3, 1, 1, 2) 
+mate1WJ(0, 0, 1, 2, 3, 1) mate1WJ(0, 0, 1, 2, 3, 2) mate1WJ(0, 0, 1, 2, 3, 3) mate1WJ(0, 0, 2, 1, 1, 3) 
+mate1WJ(0, 0, 2, 1, 2, 3) mate1WJ(0, 0, 2, 1, 3, 3) mate1WJ(0, 3, 1, 1, 3, 0) mate1WJ(0, 3, 1, 1, 3, 1) 
+mate1WJ(0, 3, 1, 1, 3, 2) mate1WJ(0, 3, 2, 2, 1, 0) mate1WJ(0, 3, 2, 2, 2, 0) mate1WJ(0, 3, 2, 2, 3, 0) 
+mate1WJ(3, 0, 1, 1, 0, 3) mate1WJ(3, 0, 1, 1, 1, 3) mate1WJ(3, 0, 1, 1, 2, 3) mate1WJ(3, 0, 2, 2, 0, 1) 
+mate1WJ(3, 0, 2, 2, 0, 2) mate1WJ(3, 0, 2, 2, 0, 3) mate1WJ(3, 3, 1, 2, 0, 0) mate1WJ(3, 3, 1, 2, 1, 0) 
+mate1WJ(3, 3, 1, 2, 2, 0) mate1WJ(3, 3, 2, 1, 0, 0) mate1WJ(3, 3, 2, 1, 0, 1) mate1WJ(3, 3, 2, 1, 0, 2) 
+mate1WJ(0, 1, 2, 1, 1, 3) mate1WJ(0, 1, 2, 1, 2, 3) mate1WJ(0, 1, 2, 1, 3, 3) mate1WJ(0, 2, 2, 2, 1, 0) 
+mate1WJ(0, 2, 2, 2, 2, 0) mate1WJ(0, 2, 2, 2, 3, 0) mate1WJ(1, 0, 1, 2, 3, 1) mate1WJ(1, 0, 1, 2, 3, 2) 
+mate1WJ(1, 0, 1, 2, 3, 3) mate1WJ(1, 3, 1, 1, 3, 0) mate1WJ(1, 3, 1, 1, 3, 1) mate1WJ(1, 3, 1, 1, 3, 2) 
+mate1WJ(2, 0, 2, 2, 0, 1) mate1WJ(2, 0, 2, 2, 0, 2) mate1WJ(2, 0, 2, 2, 0, 3) mate1WJ(2, 3, 2, 1, 0, 0) 
+mate1WJ(2, 3, 2, 1, 0, 1) mate1WJ(2, 3, 2, 1, 0, 2) mate1WJ(3, 1, 1, 1, 0, 3) mate1WJ(3, 1, 1, 1, 1, 3) 
+mate1WJ(3, 1, 1, 1, 2, 3) mate1WJ(3, 2, 1, 2, 0, 0) mate1WJ(3, 2, 1, 2, 1, 0) mate1WJ(3, 2, 1, 2, 2, 0) 
+mate1WJ(0, 0, 1, 2, 2, 2) mate1WJ(0, 0, 2, 1, 2, 2) mate1WJ(0, 3, 1, 1, 2, 1) mate1WJ(0, 3, 2, 2, 2, 1) 
+mate1WJ(3, 0, 1, 1, 1, 2) mate1WJ(3, 0, 2, 2, 1, 2) mate1WJ(3, 3, 1, 2, 1, 1) mate1WJ(3, 3, 2, 1, 1, 1) 
+BestRule is: 
+mate1WJ(BK,WK,WR) -: [Corner(BK), Relative21(BK,WK), Diagonal(WK,WR)]
+                     [Relative20(BK,WK), Corner(BK), ~Adjacent(WK,WR), ~Equal(BKR,WRR)]
+                     [~Edge(WK), ~Adjacent(WK,WR), ~Equal(BKR,WRR), Corner(BK)]
+                     [~Edge(WK), ~Adjacent(WK,WR), Relative20(BK,WK), ~Equal(BKR,WRR)]
+                     [~Edge(WK), ~Edge(WR), ~Adjacent(BK,WR), Diagonal(BK,WR)]

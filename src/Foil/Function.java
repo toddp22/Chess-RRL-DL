@@ -34,12 +34,12 @@ class Function extends Term {
 		Substitute instances of v
 		for t
 	**********************************/
-	public void substitute (Variable v, Term t){
+/*	public void substitute (Variable v, Term t){
 		for (int i = 0;i< args.length;i++){
 			args[i].substitute(v,t);
 		} // for
 	} // method Substitute
-
+*/
 
 	/****************************************
 		public boolean match(Constant c):

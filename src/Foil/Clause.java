@@ -253,7 +253,7 @@ class Clause implements Serializable{
 				where X = lgg(mary,eve) and Y = lgg(ann,tom)
 
 	*************************************************************************/
-	public Clause LGG (Clause c){
+/*	public Clause LGG (Clause c){
 		LookupTable LT = new LookupTable();  // LGG dictionary (hashtable)
 		ArrayList<String> nameList = new ArrayList<String>();     // Nariable Names
 
@@ -281,16 +281,16 @@ class Clause implements Serializable{
 
 		return newC;
 	} // method LGG
-
+*/
 	/**************************************
 		Method substitute:
 			Substitue occurances of v with t
 	**************************************/
-	public void substitute (Variable v, Term t){
+/*	public void substitute (Variable v, Term t){
 		for (int i = 0;i< predicates.size();i++)
 			((Predicate)predicates.get(i)).substitute(v,t);
 	} // method Substitute
-
+*/
 	public String toString(){
 		String str = "";
 		// str += facts.
@@ -321,7 +321,7 @@ class Clause implements Serializable{
 				System.out.println("p.match(f) = " + p.match(f));
 				stdin.readLine();
 			}*/
-			if (p.Special())
+			if (p.Special())            
 				if (!p.match(f)) return false;
 		} // for
 		//}catch(IOException e){}
@@ -360,8 +360,8 @@ class Clause implements Serializable{
 		System.out.println("p3:" + p3);
 		System.out.println("p4:" + p4);
 
-		Predicate resultP = p1.LGG(p3);
-		System.out.println("LGG(p1,p3) = LGG(" + p1 + "," + p3 + ") = " + resultP);
+//		Predicate resultP = p1.LGG(p3);
+//		System.out.println("LGG(p1,p3) = LGG(" + p1 + "," + p3 + ") = " + resultP);
 
 		c.addPredicate(p1);
 		c.addPredicate(p2);
@@ -373,9 +373,9 @@ class Clause implements Serializable{
 		System.out.println("c:" + c);
 		System.out.println("c1:" + c1);
 
-		Clause resultC = c.LGG(c1);
+	//	Clause resultC = c.LGG(c1);
 		System.out.println("c1:" + c1);
-		System.out.println("LGG(c,c1) = LGG(" + c + ",\n\t\t\t\t\t\t\t\t" + c1 + ") = \n\t\t\t\t\t\t\t\t" + resultC);
+//		System.out.println("LGG(c,c1) = LGG(" + c + ",\n\t\t\t\t\t\t\t\t" + c1 + ") = \n\t\t\t\t\t\t\t\t" + resultC);
 	} // method main
 
 } // class Clause

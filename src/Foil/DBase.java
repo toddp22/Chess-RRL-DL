@@ -290,7 +290,7 @@ public class DBase implements Serializable{
 				int turn = Integer.parseInt(st.nextToken()); // skip first param for now.
 				if (turn != t) {
 					line = in.readLine();
-					continue; // only black's turn for now.
+					continue; // only black's turn for now. ??
 				}
 				int i=0;
 				while(st.hasMoreTokens()){

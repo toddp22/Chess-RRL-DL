@@ -236,13 +236,13 @@ public class Predicate implements Serializable, Pred, Constants{
 		Method substitute:
 			Substitute occurances of v with t
 	***************************************/
-
+/*
 	public void substitute (Variable v, Term t){
 		for (int i = 0;i< args.length;i++){
 			args[i].substitute(v,t);
 		} // for
 	} // method Substitute
-
+*/
 	public Boolean evaluate (DBase D){
 		return D.evaluate(this);
 	} // method evaluate
@@ -335,7 +335,7 @@ public class Predicate implements Serializable, Pred, Constants{
 
 		return true;
 	} // method equals
-
+/*
 	public Predicate LGG (Predicate p){
 		ArrayList<String> names = new ArrayList<String>();
 		return LGG(p,names,new LookupTable());
@@ -349,9 +349,9 @@ public class Predicate implements Serializable, Pred, Constants{
 		ArrayList<String> names = new ArrayList<String>();
 		return LGG(p,names,new LookupTable());
 	} // method LGG
-
+*/
 	// Don't know what to do about the boundbyme stuff.
-	public Predicate LGG (Predicate p,ArrayList<String> nameList,LookupTable LT){
+/*	public Predicate LGG (Predicate p,ArrayList<String> nameList,LookupTable LT){
 		if (p.name != name) return null;
 		if (p.argCount != argCount) return null;
 		if (not != p.not) return null;
@@ -384,7 +384,7 @@ public class Predicate implements Serializable, Pred, Constants{
 		return newP;
 
 	} // method LGG
-
+*/
 
 	public boolean containsVarFrom(Pred p){
 		for(int i=0;i<args.length;i++)
@@ -467,8 +467,8 @@ public class Predicate implements Serializable, Pred, Constants{
 
 		//String[] names = {"x"};
 
-		Predicate resultP = p1.LGG(p3);
-		System.out.println("LGG(p1,p3) = LGG(" + p1 + "," + p3 + ") = " + resultP);
+//		Predicate resultP = p1.LGG(p3);
+//		System.out.println("LGG(p1,p3) = LGG(" + p1 + "," + p3 + ") = " + resultP);
 	} // method main
 
 } // class Predicate
@@ -495,7 +495,7 @@ class SpecialPredicate extends Predicate{
 
 
 
-// method Special
+// method 
 
 	private void init(){
 		for (int i=0;i<args.length/2;i++){
@@ -504,6 +504,10 @@ class SpecialPredicate extends Predicate{
 	} // method init
 
 
+	/*****************************************************************************
+	 * boolean Special()
+	 * why does this alwayse return true?
+	 *****************************************************************************/
 	public boolean Special(){
 		return true;
 	}
@@ -603,8 +607,17 @@ class SpecialPredicate extends Predicate{
 		// System.out.println("Calling match in " + name);
 		try {
 			checkArgs();
-			if(not)	return !SpecialArgs();
-			else return SpecialArgs();
+			if(not)	{
+//				System.out.print("Not: ");
+//				System.out.println("current Fact: " + f);
+				boolean retval = !SpecialArgs();
+//				System.out.println("Return Value: " + retval);
+				return retval;
+			}
+			else {
+				//System.out.println("current Fact: " + f);
+				return SpecialArgs();
+			}
 		} // if Equal
 
 		catch (UnboundArgumentException e){
@@ -648,9 +661,14 @@ class EqualPredicate extends SpecialPredicate{
 	} // method Clone
 
 	public boolean SpecialArgs(){
-		// System.out.println("Checking EqualArgs for: " + this);
+//		System.out.println("Checking EqualArgs for: " + this);
+//		System.out.println("First Arg is: " + ((Variable)args[0]).binding);
+//		System.out.println("Second Arg is: " + ((Variable)args[0]).binding);
 
-	 	return ((Variable)args[0]).binding.equals(((Variable)args[1]).binding);
+	 	
+	 	boolean retval = ((Variable)args[0]).binding.equals(((Variable)args[1]).binding);
+//	 	System.out.println("Return Value is:" + retval);
+	 	return retval;
 	} // method EqualArgs
 
 } // class EqualPredicate
@@ -861,13 +879,13 @@ class DistancePredicate extends SpecialPredicate{
 	public DistancePredicate(DistancePredicate p){
 		super(p);
 	}
-
+/*
 	private void init(){
 		for (int i=0;i<args.length/2;i++){
 			constraints[i] = new VarConstraint(new int[] {LOC});
 		} // for
 	} // method init
-
+*/
 	public Pred Clone() {
 		return new DistancePredicate(this);
 	} // method Clone
