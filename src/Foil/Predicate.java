@@ -12,7 +12,7 @@ class UnboundArgumentException extends Exception{
 } // class UnboundArgumentException
 
 public class Predicate implements Serializable, Pred, Constants{
-	public static final String[] specialNames = {"Equal","Corner","Edge","Adjacent","Distance"};
+	public static final String[] specialNames = {"Equal","Corner","Edge","Adjacent","Distance","DuplicateRookRow"};
 	public static final long serialVersionUID = 0;
 
 	public Term[] args;
@@ -44,7 +44,7 @@ public class Predicate implements Serializable, Pred, Constants{
 		for(int i=0;i<arity;i++){
 			boundByMe[i] = false;
 			if (i%2 == 0)
-				constraints[i/2] = new VarConstraint(new int[0]);
+				constraints[i/2] = new VarConstraint(new int[0]); //?? why new int[0] ??
 		} // for
 
 	} // method init
@@ -513,8 +513,9 @@ class SpecialPredicate extends Predicate{
 	}
 
 	public ArrayList<Pred> permute(ArrayList<Variable> varList){
-		if (args.length >= 4) return permute4(varList);
+		if (args.length == 4) return permute4(varList);
 		// printConstraints();
+		if (args.length == 6) return permute6(varList);
 
 		ArrayList<Pred> retList = new ArrayList<Pred>();
 		for(int i=0;i<varList.size();i++)
@@ -539,6 +540,37 @@ class SpecialPredicate extends Predicate{
 
 		return retList;
 	} // method permute
+	
+	public ArrayList<Pred> permute6(ArrayList<Variable> varList){
+		ArrayList<Pred> retList = new ArrayList<Pred>();
+		Variable v1 = (Variable)varList.get(0);
+		Variable v2 = (Variable)varList.get(1);
+		Variable v3 = (Variable)varList.get(2);
+		Variable v4 = (Variable)varList.get(3);
+		Variable v5 = (Variable)varList.get(4);
+		Variable v6 = (Variable)varList.get(5);
+		Pred cp = Clone();
+		cp.addTerm(v1);
+		cp.addTerm(v2);
+		cp.addTerm(v3);
+		cp.addTerm(v4);
+		cp.addTerm(v5);
+		cp.addTerm(v6);
+		retList.add(cp);
+		if (includeNegative) {
+			Pred cp2 = Clone();
+			cp2.addTerm(v1);
+			cp2.addTerm(v2);
+			cp2.addTerm(v3);
+			cp2.addTerm(v4);
+			cp2.addTerm(v5);
+			cp2.addTerm(v6);
+			cp2.negate();
+			retList.add(cp2);
+		}
+		
+		return retList;
+	}
 
 	public ArrayList<Pred> permute4(ArrayList<Variable> varList){
 		// printConstraints();
@@ -944,3 +976,62 @@ class LTPredicate extends SpecialPredicate{
 
 } // class LTPredicate
 
+class DupRookRowPredicate extends SpecialPredicate{
+	public static final long serialVersionUID = 0;
+	//private enum PieceType {WKR,WKC,BKR,BKC,WRR,WRC};
+	
+	public DupRookRowPredicate(){
+		super("DuplicateRookRow",6);
+	} // constructor DuplicateRookPredicate
+
+	public DupRookRowPredicate(DupRookRowPredicate p){
+		super(p);
+	}
+
+	public Pred Clone() {
+		return new DupRookRowPredicate(this);
+	} // method Clone
+
+	public boolean SpecialArgs(){
+		// System.out.println("Checking DupRookArgs for: " + this);
+		int [] Args = new int[6];
+		
+		try {
+			// get Integer value for args
+			for (int i=0;i<6;i++) {
+				Args[i] = Integer.parseInt(((Variable)args[i]).binding.toString());
+			} // for
+		}
+		catch (NumberFormatException e){
+			System.out.println("Invalid Argument for DupRookRowPredicate");
+			System.exit(0);
+			return false;
+		}
+
+		//Rows
+		if (Args[2]==Args[4]) return false;
+		if (Args[1]==Args[5]){                                        
+			if(Args[2] < Args[4]){                                                                                                          
+				if(Args[0] < Args[4]) return false;
+			}
+			if(Args[2] > Args[4])
+				if (Args[0] > Args[4]) return false;
+		}
+		
+		//Columns
+		if (Args[3]==Args[5]) return false;
+		if (Args[0]==Args[4]){                                        
+			if(Args[3] < Args[5]){                                                                                                          
+				if(Args[1] < Args[5]) return false;
+			}
+			if(Args[3] > Args[5])
+				if (Args[1] > Args[5]) return false;
+		}
+	 	return (true);                                                                                                                
+	 	                                                                                                        
+	} // method DupRookRowPredicate
+
+} // class DupRookRowPredicate
+
+//in FoilImp
+//add ps.Add(new DupRookRowPredicate());

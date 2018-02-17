@@ -117,10 +117,6 @@ public class Fact implements Serializable{
 	} // method match
 
 
-	public boolean equals (Object o){
-		return(o instanceof Fact && equals((Fact)o));
-	} // method equals
-
 	public boolean equals(Fact f){
 	//System.out.print("Comparing: " + this);
 	// System.out.println(" and " + f.name);

@@ -39,8 +39,8 @@ public class Constant extends Term implements Serializable{
 		return name.equals(s);
 	} // method equals
 
-	public boolean equals (Object o){
-		return(o instanceof Constant && ((Constant) o).name.equals(name));  // What is this doing?
+	public boolean equals (Constant c){
+		return c.name.equals(name);  // What is this doing?
 	} // method equals
 
 	public Term LGG(Term t,String[] nameList){
