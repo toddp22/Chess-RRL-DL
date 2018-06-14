@@ -42,6 +42,8 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.PrintWriter;
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Iterator;
 import java.util.List;
 
 import VI.Board;
@@ -103,6 +105,7 @@ public class FoilImp implements Constants{
 
 		// Always have the special Predicates
 //		if (x != -1)
+		ps.Add(new DupRookRowPredicate());
 		ps.Add(new EqualPredicate());
 		// ps.Add(new LTPredicate());
 		ps.Add(new CornerPredicate());
@@ -112,12 +115,15 @@ public class FoilImp implements Constants{
 		ps.Add(new RelativePredicate(2,1));
 		ps.Add(new RelativePredicate(2,0));
 	
+	
 		// Add the Old Rule
 		// if(Debug)	{
 			//System.out.println("Adding Old Rules");
+/*
 			for (int i=0;i<OldRules.size();i++){
 				ps.Add((Pred)OldRules.get(i));
 			}
+*/
 			//System.out.println(OldRules);
 		//}// if
 	} // method getPredicateSet
@@ -272,8 +278,16 @@ public class FoilImp implements Constants{
 			// System.out.println(rules[i]);
 		}
 	} // method generateRules()
+	
+	
+	/************************************************************************************************
+	 * Creates the newBestRule
+	 * input conditions: bestRule must be defined.
+	 * @return Rule
+	 * @throws IOException
+	 ************************************************************************************************/
 
-	public Rule testRules() throws IOException{
+	public Rule testRules(PrintWriter out) throws IOException{
 
 
 		/* Algroithm
@@ -283,8 +297,7 @@ public class FoilImp implements Constants{
 				Unbound variables may match any constant.
 		 Foil_Gain(t,p1,n1,p0,n0)
 		*/
-
-		bestRule.calcEntropy(CurD,CurN);
+		bestRule.calcEntropy(CurD,CurN,out);
 
 		Rule newBestRule = bestRule;
 		Rule r;
@@ -292,27 +305,29 @@ public class FoilImp implements Constants{
 		double gain;
 		for (int i = 0;i< rules.length;i++){
 			r = rules[i];
-  		//if(Debug) System.out.println("Rule: # " + i + ": " + r);
+			if(Debug) out.print("Rule: # " + i + ": " + r);
 
-			r.calcEntropy(CurD,CurN);
-			gain = bestRule.Foil_Gain(r,CurD,CurN);
+			r.calcEntropy(CurD,CurN,out);
+			if(Debug) out.println(" Entropy = " + r.entropy);
+			gain = bestRule.Foil_Gain(r,CurD,CurN,out);
 
-			//if (Debug) System.out.println("Gain is: " + gain);
+			if (Debug) System.out.println("Gain is: " + gain);
 			if (gain > bestgain){
 				bestgain = gain;
 				newBestRule = rules[i];
 			} // if
-		}// for
-
+		}// f
+		out.close();
 
 
 		//out.close();
+//		System.out.println("newBestRule: " + newBestRule  );
 		return newBestRule;
 	} // method testRules()
 
 	public void moveCovered() throws IOException{
 		//BufferedReader stdin = new BufferedReader(new InputStreamReader (System.in));
-		ArrayList<Fact> flist= bestRule.getPositiveMatches(D,N);
+		ArrayList<Fact> flist= bestRule.getMatches(D);
 		//System.out.println(flist.size());
 	  	//System.out.println("Covered Facts: ");
 		if (flist == null) return;    //!!! CHECK THIS !!!!// 
@@ -344,7 +359,7 @@ public class FoilImp implements Constants{
 	    assignToTarget();
 		System.out.println("Target Predicate: " + target);
 		Rule newBestRule = null;
-
+		PrintWriter out = new PrintWriter(new FileWriter("entropy.dat"));
 		while (true){
 			CurD = D;
 			CurN = N;
@@ -353,8 +368,8 @@ public class FoilImp implements Constants{
 				genCandidatePreds();
 //				System.out.println("Generating Rules");
 				generateRules();
-//				System.out.println("Testing Rules");
-				newBestRule = testRules();
+				//System.out.println("Testing Rules");
+				newBestRule = testRules(out);
 				//System.out.println("NewBestRule is: ");
 				//System.out.println(newBestRule);
 				//out.println("NewBestRule is: ");
@@ -372,8 +387,9 @@ public class FoilImp implements Constants{
 			moveCovered();
 			bestRule.newActiveClause();
 
-			List<Fact> flist = bestRule.getPositiveMatches(D,N);
+			List<Fact> flist = bestRule.getMatches(D);
 			if (flist.size() == 0) break;
+			
 
 		} // while no more facts.
 
@@ -395,7 +411,8 @@ public class FoilImp implements Constants{
 } // method learn
 
 	public FoilImp(Predicate target,DBase D,boolean getOldRules)throws IOException{
-		Debug = getOldRules;
+		//Debug = getOldRules;
+		Debug = true;
 		this.target = target;
 		fname = target.name;
 		this.D = D;
@@ -658,6 +675,19 @@ public static void main(String[] args) throws Exception{
 }
 */
 
+public void dump(String fname, Rule r){
+	try{
+		PrintWriter out = new PrintWriter(new FileWriter(fname));
+		out.println(r);
+		out.close();
+	}// try
+	catch (IOException e) {
+	}
+	finally{
+	}
+
+}// dump
+
 // This is main for mate in 2 transform
 public static void main(String[] args) throws Exception{
 
@@ -669,18 +699,20 @@ public static void main(String[] args) throws Exception{
     F1.learn();
     System.out.println("\n\n\n");
 	Rule r1 = F1.bestRule;
-
+	F1.dump(pname,r1);
+	
+/*
 	ValueIterator VI = new ValueIterator();
 
 	for(int v=0;v<10;v++){
 		// System.out.println("\nRound: " + (v+1));
 		VI.Iterate();
 	}
+*/
 
+//	transform(VI,r1,.9,State.WHITE,"mate2T");
 
-	transform(VI,r1,.9,State.WHITE,"mate2T");
-
-}	
+}	// main
 
 /**/
 

@@ -1,0 +1,5 @@
+mate1WJ(BK,WK,WR) -: [Corner(BK), Relative21(BK,WK), Diagonal(WK,WR)]
+                     [Relative20(BK,WK), Corner(BK), ~Adjacent(WK,WR), ~Equal(BKR,WRR)]
+                     [~Edge(WK), ~Adjacent(WK,WR), ~Equal(BKR,WRR), Corner(BK)]
+                     [~Edge(WK), ~Adjacent(WK,WR), Relative20(BK,WK), ~Equal(BKR,WRR)]
+                     [~Edge(WK), ~Edge(WR), ~Adjacent(BK,WR), Diagonal(BK,WR)]

@@ -11,7 +11,7 @@ import java.util.Collection;
 import java.util.Hashtable;
 import java.util.Iterator;
 import java.util.List;
-import java.util.Map;
+//import java.util.Map;
 import java.util.StringTokenizer;
 
 
@@ -26,10 +26,10 @@ class PredBase implements Serializable{
 	int arity = 0;          // number of parameters
 	ArrayList<Fact> facts = null;      // the facts in the database.
 	boolean useIndex=false; // Use the index or not.
-	Hashtable<Constant,ArrayList<Fact>>[] index = null;		// The index for each of the parameters
+	//Hashtable<Constant,ArrayList<Fact>>[] index = null;		// The index for each of the parameters
 
 	boolean fullPrint = true;  // print the full table or not in: toString()
-	boolean indexPrint = false; // print the index or not in: toString()
+	//boolean indexPrint = false; // print the index or not in: toString()
 
 	public PredBase(String name,int arity){
 		this.name = name;
@@ -38,6 +38,14 @@ class PredBase implements Serializable{
 		facts = new ArrayList<Fact>();
 	} // constructor PredBase
 
+	
+/********************************************************************************/
+/**	createIndex 															   **/
+/** Use is unknown 															   **/
+/** Complicated and the hashtable for the index is not paramaterized correctly  */
+/********************************************************************************/
+	
+/*
 	public void createIndex(){
 		useIndex = true;
 		index = new Hashtable[arity];
@@ -52,7 +60,8 @@ class PredBase implements Serializable{
 		} // while
 
 	}// public void createIndex
-
+*/
+	
 /*	public int numPositiveFacts(){
 		int num = 0;
 		for(int j=0;j<facts.size();j++){
@@ -73,7 +82,7 @@ class PredBase implements Serializable{
 		entry in the facts List. (I'm not sure I need to.)
 	*****************************************************/
 
-	private void updateIndex(Fact f){
+/*	private void updateIndex(Fact f){
 		if (!useIndex) return;
 
 		for (int i=0;i<arity;i++){
@@ -85,13 +94,13 @@ class PredBase implements Serializable{
 			argIndex.add(f);
 		} // update index for each parameter
 	} // method updateIndex
-
+*/
 	public void insert(Fact f){
 		if (f.name != name) return;
 		if (f.args.length != arity) return;
 
 		if(!facts.contains(f))facts.add(f);
-		if(useIndex) updateIndex(f);
+	//	if(useIndex) updateIndex(f);
 	} // method insert
 
 	public void remove(Fact f){
@@ -100,6 +109,7 @@ class PredBase implements Serializable{
 
 		if(facts.contains(f))facts.remove(f);
 
+		/*
 		if (useIndex){
 
 			for (int i=0;i<arity;i++){
@@ -112,6 +122,7 @@ class PredBase implements Serializable{
 			} // for each parameter
 
 		} // if useIndex
+		*/
 
 	} // method
 
@@ -123,7 +134,7 @@ class PredBase implements Serializable{
 	} // method contains
 
 	public ArrayList<Fact> getMatches(Pred p){
-		if (useIndex) return getMatchesWithIndex(p);
+		//if (useIndex) return getMatchesWithIndex(p);
 
 		ArrayList<Fact> matches = new ArrayList<Fact>();
 		Iterator<Fact> it = facts.iterator();
@@ -137,7 +148,7 @@ class PredBase implements Serializable{
 
 	}// getMatches
 
-
+/*
 	public ArrayList<Fact> getMatchesWithIndex(Pred p){
 			int bestIndex = p.argCount();
 			Constant key=null;
@@ -192,7 +203,7 @@ class PredBase implements Serializable{
 			return matches;
 	} // getMatchesWithIndex
 
-
+*/
 	public String toString(){
 		String retStr = "";
 		retStr += "PredBase: " + name + ": (" + arity + ")\n";
@@ -208,6 +219,7 @@ class PredBase implements Serializable{
 			} //while
 		} // if fullPrint
 
+/*
 		if (indexPrint && useIndex){
 			retStr += "\n";
 			retStr += "index:\n";
@@ -223,18 +235,16 @@ class PredBase implements Serializable{
 			} // for each argument
 
 		} // if indexPrint
-
+*/
 		return retStr;
 	} // method toString
-
-
 
 	public void dump(PrintWriter out){
 		if(out == null) return;
 
 		Iterator<Fact> it = facts.iterator();
 		while (it.hasNext()) {
-				out.println((Fact)it.next());
+				out.println(it.next());
 		} // while more facts
 	} // method dump
 
@@ -253,7 +263,7 @@ class PredBase implements Serializable{
 public class DBase implements Serializable{
 
 	public static final long serialVersionUID = 0;
-	Hashtable pMap = new Hashtable();
+	Hashtable<String, PredBase> pMap = new Hashtable<String,PredBase>();
 	boolean useIndex = true;
 
 	public DBase(){
@@ -280,7 +290,7 @@ public class DBase implements Serializable{
 				int turn = Integer.parseInt(st.nextToken()); // skip first param for now.
 				if (turn != t) {
 					line = in.readLine();
-					continue; // only black's turn for now.
+					continue; // only black's turn for now. ??
 				}
 				int i=0;
 				while(st.hasMoreTokens()){
@@ -298,14 +308,15 @@ public class DBase implements Serializable{
 				}
 				line = in.readLine();
 			} // while
-
+			in.close();
 		} // try
 		catch (FileNotFoundException e){
 			System.out.println("File Not Found Exception in reading file");
-		}
+		} // file not found exception
 		catch (IOException e){
 			System.out.println("IO Exception in reading file");
-		}
+		} // IO Exception
+		
 
 	} // constructor Database
 
@@ -315,13 +326,11 @@ public class DBase implements Serializable{
 		pb.remove(f);
 
 	} // method remove
-
-
 	/*********************************************************
-		method LGG:
-			return the cross Product LGG of entire database.
+	method LGG:
+	return the cross Product LGG of entire database.
 	*********************************************************/
-
+	/*
 	public Clause LGG(){
 		return LGG(new LookupTable(),new ArrayList<String>());
 	} // method LGG
@@ -354,7 +363,7 @@ public class DBase implements Serializable{
 		return c;
 	} // method LGG
 
-
+*/
 	public Boolean evaluate(Predicate p){
 		if(p == null) return new Boolean(false);
 
@@ -371,19 +380,11 @@ public class DBase implements Serializable{
 		else return new Boolean(false);
 	} // method evaluate
 
-
-
-	/**
-		evaluate: Function f
-		This needs to be completed.
-
-		Not supported right now.
-	*/
-	public Constant evaluate(Function f){
+/*	public Constant evaluate(Function f){
 
 		return null;
 	} // method evaluate
-
+*/
 
 	public void insert(Fact f){
 		// determine which predBase the fact should go in.
@@ -392,7 +393,7 @@ public class DBase implements Serializable{
 		// insert if necessary.
 		if (pb == null){
 			pb = new PredBase(f.name,f.args.length);
-			if (useIndex) pb.createIndex();
+			// if (useIndex) pb.createIndex();      /* create index is currently not used */
 			pMap.put(f.name,pb);
 		} // if no predbase
 
@@ -483,8 +484,8 @@ public class DBase implements Serializable{
 	public List<Fact> getFacts(){
 		List<Fact> allFacts = new ArrayList<Fact>();
 
-		Collection preds = pMap.values();
-		Iterator it = preds.iterator();
+		Collection<PredBase> preds = pMap.values();
+		Iterator<PredBase> it = preds.iterator();
 		while(it.hasNext()){
 			PredBase pb = (PredBase)it.next();
 			List<Fact> facts = pb.facts;
@@ -501,8 +502,8 @@ public class DBase implements Serializable{
 		DBase N = new DBase();
 		//Fact f = null;
 
-		Collection preds = pMap.values();
-		Iterator it = preds.iterator();
+		Collection<PredBase> preds = pMap.values();
+		Iterator<PredBase> it = preds.iterator();
 		while(it.hasNext()){
 			PredBase pb = (PredBase)it.next();
 			List<Fact> facts = pb.facts;
@@ -555,18 +556,18 @@ public class DBase implements Serializable{
 	public boolean contains(Fact f){
 		if (f == null || f.name==null)return false;
 
-		PredBase pb = (PredBase)pMap.get(f.name);
+		PredBase pb = (PredBase) pMap.get(f.name);
 		if (pb == null) return false;
 		else return pb.contains(f);
 	} // method contains
 
 	public String toString(){
 		String retStr = "";
-		Collection tables = pMap.values();
-		Iterator it = tables.iterator();
+		Collection<PredBase> tables = pMap.values();
+		Iterator<PredBase> it = tables.iterator();
 
 		while(it.hasNext()){
-			PredBase pb = (PredBase)it.next();
+			PredBase pb = it.next();
 			retStr += pb.toString()+ "\n";
 		} // while more PredBases
 
@@ -578,8 +579,8 @@ public class DBase implements Serializable{
 	try{
 		PrintWriter out = new PrintWriter(new FileWriter(fname));
 
-		Collection preds = pMap.values();
-		Iterator it = preds.iterator();
+		Collection<PredBase> preds = pMap.values();
+		Iterator<PredBase> it = preds.iterator();
 		while(it.hasNext()){
 			((PredBase)it.next()).dump(out);
 		}// while more predicates

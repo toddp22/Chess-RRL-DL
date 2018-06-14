@@ -1,6 +1,9 @@
 package Foil;
 // class Rule
 
+import java.io.IOException;
+import java.io.PrintWriter;
+
 /*
 	Ways to speed things up.
 	1. If we know that  Checkmate(x,y,z,w,v,u) -: Equal:(x,v)
@@ -105,12 +108,12 @@ class Rule implements Serializable, Pred{
 		head.release();
 	} // method release
 
-	// This does return a clone
+	// This doesn't return a clone
 	// rather this just creates a predicate of the head
 	// with name and arity
 	public Pred Clone(){
 		Rule r = new Rule(this);
-		r.predRule=true;
+		r.predRule=predRule;
 		return r;
 	} // method Clone
 
@@ -187,64 +190,55 @@ class Rule implements Serializable, Pred{
 
 	// We also need to test those predicates in the body that are the
 	// equals predicate.
-	public ArrayList<Fact> getPositiveMatches(DBase P, DBase N){
-		ArrayList<Fact> pfacts = P.getMatches(head);
+	public ArrayList<Fact> getMatches(DBase D){
+		//System.out.println(this);
+		ArrayList<Fact> facts = D.getMatches(head);
 
 		// System.out.println("The positive matches are: " + pfacts);
-		int count = 0;
-		if (body[ac] == null) return pfacts;
+		//int count = 0;
+		if (body[ac] == null) return facts;
 
-		Iterator<Fact> factIt = pfacts.iterator();
+		Iterator<Fact> factIt = facts.iterator();
 
 		while(factIt.hasNext()){
 		// for(int f=0;f<pfacts.length;f++){
 			Fact f = (Fact)factIt.next();
 			head.bind(f);
 			// special case for equals.
+			
 			if(!body[ac].specialMatches(head,f)){
-				//pfacts[f] = null;
+				//facts[f] = null;
 				factIt.remove();
 				head.release();
 				continue;
 			}
-			if(P.Matches(body[ac],N)) count ++; // We have a conceptual problem here.
-												// If terms in the body are negative
-												// they need to be evaluated by the
-												// negative database.
-			//else pfacts[f] = null;
-			else factIt.remove();
 			head.release();
 		} // for
-
+		//System.out.println("Matching Facts: " + pfacts);
 		//System.out.println("pfacts: " + pfacts);
 
-		/*
-		int j = 0;
-		Fact[] temp = new Fact[count];
-		for(int i = 0;i<pfacts.length;i++)
-			if(pfacts[i] != null) temp[j++] = pfacts[i];
-
-		return temp;
-		*/
-		return pfacts;
+		return facts;
 	} // method getPositiveMatches
 
-	public void calcEntropy(DBase P, DBase N){
+	public void calcEntropy(DBase P, DBase N, PrintWriter out) throws IOException{
 		int p = 0;
 		int n = 0;
 		// get positive matches
-		ArrayList<Fact> pfacts = getPositiveMatches(P,N);
+		ArrayList<Fact> pfacts = getMatches(P);
 		p = pfacts.size();
-		//System.out.println("#Positive Matches = " + p);
-
+		System.out.println(this);
+		out.println("#Positive Matches = " + p);
+		out.println(pfacts);
 		if(p <= 0){
 			entropy = -1;
 			return;
 		} // if
 
 		// get negative matches
-		ArrayList<Fact> nfacts = N.getMatches(head);	// if we don't use the negative database, then we need to enumerate
-																			 	// all possible bindings
+		ArrayList<Fact> nfacts = getMatches(N);	// if we don't use the negative database, then we need to enumerate
+		//ArrayList<Fact>	nfacts = D.getNegativeMatches(P,N);																 	// all possible bindings
+		out.println("Negative Facts" + nfacts);
+		out.println("Number of Negative Facts: "+ nfacts.size());
 		//head.release();
 		if (body[ac] == null) n = nfacts.size();
 		else{
@@ -261,7 +255,7 @@ class Rule implements Serializable, Pred{
 					head.release();
 					continue;
 				}
-				if(P.Matches(body[ac],N)) {
+				else{
 					n ++;
 					// System.out.println(this);
 				}
@@ -271,7 +265,7 @@ class Rule implements Serializable, Pred{
 		// System.out.print("p = " + p + ", n = " + n + "   ");
 		entropy = -1 * log2((double)p/(p+n));
 		if(entropy == 0.0) entropy = 0.0;  // Silly thing to do to not have java print -0.0
-		// System.out.println("entropy = " + entropy);
+		System.out.println("entropy = " + entropy);
 	} // method calcEntropy
 
 	public Rule(){
@@ -341,6 +335,7 @@ class Rule implements Serializable, Pred{
 		} // else
 	} // method addPredicate
 
+/*
 	/*********************************
 		LGG: Example
 			 daughter(mary,ann) <- female(mary),parent(ann,mary)
@@ -357,6 +352,8 @@ class Rule implements Serializable, Pred{
 			LGG with multiple clauses.
 
 	*********************************/
+	
+/*
 	public Rule LGG (Rule r){
 		return LGG(r,new LookupTable(),new ArrayList<String>());
 	} // method LGG
@@ -374,7 +371,7 @@ class Rule implements Serializable, Pred{
 
 		return newR;
 	} // method LGG
-
+*/
 	/************************************************************
 		Method: RLGG
 			Relative Least General Generalization
@@ -387,7 +384,7 @@ class Rule implements Serializable, Pred{
 			return new Rule.
 
 	************************************************************/
-
+/*
 	public Rule RLGG(Rule r,DBase Pos){
 
 		if (r.body[ac] != null || body[ac] != null) return null;
@@ -404,7 +401,7 @@ class Rule implements Serializable, Pred{
 
 		return newR;
 	} // method RLGG
-
+*/
 	public void ijDeterminant(int i,int j){
 		if (head == null || body[ac] == null) return;
 		ArrayList<String> varList = head.termNames();
@@ -418,8 +415,8 @@ class Rule implements Serializable, Pred{
 
 	public int getT(Rule newR,DBase P,DBase N){
 		// get covered facts from both "this" and newR.
-		List<Fact> pfacts = getPositiveMatches(P,N);
-		List<Fact> npfacts = newR.getPositiveMatches(P,N);
+		List<Fact> pfacts = getMatches(P);
+		List<Fact> npfacts = newR.getMatches(P);
 
 		int count = 0;
 
@@ -431,20 +428,20 @@ class Rule implements Serializable, Pred{
 				if(f1.equals(f2)) {
 					count ++;
 					break;
-				} // if
+				} // if 
 			}// for
 		} // for
 
 		return count;
 	} // method getT
 
-	public double Foil_Gain(Rule newR,DBase P, DBase N){
+	public double Foil_Gain(Rule newR,DBase P, DBase N, PrintWriter out) throws IOException{
 		// figure out what t is
 		int t = getT(newR,P,N);
-		if (entropy == NOT_DEFINED) calcEntropy(P,N);
-		if (newR.entropy == NOT_DEFINED) newR.calcEntropy(P,N);
+		if (entropy == NOT_DEFINED) calcEntropy(P,N,out);
+		if (newR.entropy == NOT_DEFINED) newR.calcEntropy(P,N,out);
 		if (newR.entropy == -1) t = 0;
-		// System.out.println("Gain is: " + (t * (entropy - newR.entropy)));
+		//System.out.println("Gain is: " + (t * (entropy - newR.entropy)));
 		return t * (entropy - newR.entropy);
 
 	} // method Foil_Gain
@@ -602,13 +599,13 @@ class Rule implements Serializable, Pred{
 
 		Iterator<Rule> it = ruleList.iterator();
 		while(it.hasNext()){
-			Rule r1 = (Rule)it.next();
+			//Rule r1 = (Rule)it.next();
 			Iterator<Rule> it2 = ruleList.iterator();
 			while(it2.hasNext()){
-				Rule r2 = (Rule)it2.next();
-				Rule r3 = r1.LGG(r2);
+				//Rule r2 = (Rule)it2.next();
+//				Rule r3 = r1.LGG(r2);
 
-				System.out.println(r3);
+//				System.out.println(r3);
 			} // it2
 		} //it
 

@@ -12,7 +12,7 @@ class UnboundArgumentException extends Exception{
 } // class UnboundArgumentException
 
 public class Predicate implements Serializable, Pred, Constants{
-	public static final String[] specialNames = {"Equal","Corner","Edge","Adjacent","Distance"};
+	public static final String[] specialNames = {"Equal","Corner","Edge","Adjacent","Distance","DuplicateRookRow"};
 	public static final long serialVersionUID = 0;
 
 	public Term[] args;
@@ -44,7 +44,7 @@ public class Predicate implements Serializable, Pred, Constants{
 		for(int i=0;i<arity;i++){
 			boundByMe[i] = false;
 			if (i%2 == 0)
-				constraints[i/2] = new VarConstraint(new int[0]);
+				constraints[i/2] = new VarConstraint(new int[0]); //?? why new int[0] ??
 		} // for
 
 	} // method init
@@ -236,13 +236,13 @@ public class Predicate implements Serializable, Pred, Constants{
 		Method substitute:
 			Substitute occurances of v with t
 	***************************************/
-
+/*
 	public void substitute (Variable v, Term t){
 		for (int i = 0;i< args.length;i++){
 			args[i].substitute(v,t);
 		} // for
 	} // method Substitute
-
+*/
 	public Boolean evaluate (DBase D){
 		return D.evaluate(this);
 	} // method evaluate
@@ -335,7 +335,7 @@ public class Predicate implements Serializable, Pred, Constants{
 
 		return true;
 	} // method equals
-
+/*
 	public Predicate LGG (Predicate p){
 		ArrayList<String> names = new ArrayList<String>();
 		return LGG(p,names,new LookupTable());
@@ -349,9 +349,9 @@ public class Predicate implements Serializable, Pred, Constants{
 		ArrayList<String> names = new ArrayList<String>();
 		return LGG(p,names,new LookupTable());
 	} // method LGG
-
+*/
 	// Don't know what to do about the boundbyme stuff.
-	public Predicate LGG (Predicate p,ArrayList<String> nameList,LookupTable LT){
+/*	public Predicate LGG (Predicate p,ArrayList<String> nameList,LookupTable LT){
 		if (p.name != name) return null;
 		if (p.argCount != argCount) return null;
 		if (not != p.not) return null;
@@ -384,7 +384,7 @@ public class Predicate implements Serializable, Pred, Constants{
 		return newP;
 
 	} // method LGG
-
+*/
 
 	public boolean containsVarFrom(Pred p){
 		for(int i=0;i<args.length;i++)
@@ -467,8 +467,8 @@ public class Predicate implements Serializable, Pred, Constants{
 
 		//String[] names = {"x"};
 
-		Predicate resultP = p1.LGG(p3);
-		System.out.println("LGG(p1,p3) = LGG(" + p1 + "," + p3 + ") = " + resultP);
+//		Predicate resultP = p1.LGG(p3);
+//		System.out.println("LGG(p1,p3) = LGG(" + p1 + "," + p3 + ") = " + resultP);
 	} // method main
 
 } // class Predicate
@@ -495,7 +495,7 @@ class SpecialPredicate extends Predicate{
 
 
 
-// method Special
+// method 
 
 	private void init(){
 		for (int i=0;i<args.length/2;i++){
@@ -504,13 +504,18 @@ class SpecialPredicate extends Predicate{
 	} // method init
 
 
+	/*****************************************************************************
+	 * boolean Special()
+	 * why does this alwayse return true?
+	 *****************************************************************************/
 	public boolean Special(){
 		return true;
 	}
 
 	public ArrayList<Pred> permute(ArrayList<Variable> varList){
-		if (args.length >= 4) return permute4(varList);
+		if (args.length == 4) return permute4(varList);
 		// printConstraints();
+		if (args.length == 6) return permute6(varList);
 
 		ArrayList<Pred> retList = new ArrayList<Pred>();
 		for(int i=0;i<varList.size();i++)
@@ -535,6 +540,37 @@ class SpecialPredicate extends Predicate{
 
 		return retList;
 	} // method permute
+	
+	public ArrayList<Pred> permute6(ArrayList<Variable> varList){
+		ArrayList<Pred> retList = new ArrayList<Pred>();
+		Variable v1 = (Variable)varList.get(0);
+		Variable v2 = (Variable)varList.get(1);
+		Variable v3 = (Variable)varList.get(2);
+		Variable v4 = (Variable)varList.get(3);
+		Variable v5 = (Variable)varList.get(4);
+		Variable v6 = (Variable)varList.get(5);
+		Pred cp = Clone();
+		cp.addTerm(v1);
+		cp.addTerm(v2);
+		cp.addTerm(v3);
+		cp.addTerm(v4);
+		cp.addTerm(v5);
+		cp.addTerm(v6);
+		retList.add(cp);
+		if (includeNegative) {
+			Pred cp2 = Clone();
+			cp2.addTerm(v1);
+			cp2.addTerm(v2);
+			cp2.addTerm(v3);
+			cp2.addTerm(v4);
+			cp2.addTerm(v5);
+			cp2.addTerm(v6);
+			cp2.negate();
+			retList.add(cp2);
+		}
+		
+		return retList;
+	}
 
 	public ArrayList<Pred> permute4(ArrayList<Variable> varList){
 		// printConstraints();
@@ -603,8 +639,17 @@ class SpecialPredicate extends Predicate{
 		// System.out.println("Calling match in " + name);
 		try {
 			checkArgs();
-			if(not)	return !SpecialArgs();
-			else return SpecialArgs();
+			if(not)	{
+//				System.out.print("Not: ");
+//				System.out.println("current Fact: " + f);
+				boolean retval = !SpecialArgs();
+//				System.out.println("Return Value: " + retval);
+				return retval;
+			}
+			else {
+				//System.out.println("current Fact: " + f);
+				return SpecialArgs();
+			}
 		} // if Equal
 
 		catch (UnboundArgumentException e){
@@ -648,9 +693,14 @@ class EqualPredicate extends SpecialPredicate{
 	} // method Clone
 
 	public boolean SpecialArgs(){
-		// System.out.println("Checking EqualArgs for: " + this);
+//		System.out.println("Checking EqualArgs for: " + this);
+//		System.out.println("First Arg is: " + ((Variable)args[0]).binding);
+//		System.out.println("Second Arg is: " + ((Variable)args[0]).binding);
 
-	 	return ((Variable)args[0]).binding.equals(((Variable)args[1]).binding);
+	 	
+	 	boolean retval = ((Variable)args[0]).binding.equals(((Variable)args[1]).binding);
+//	 	System.out.println("Return Value is:" + retval);
+	 	return retval;
 	} // method EqualArgs
 
 } // class EqualPredicate
@@ -861,13 +911,13 @@ class DistancePredicate extends SpecialPredicate{
 	public DistancePredicate(DistancePredicate p){
 		super(p);
 	}
-
+/*
 	private void init(){
 		for (int i=0;i<args.length/2;i++){
 			constraints[i] = new VarConstraint(new int[] {LOC});
 		} // for
 	} // method init
-
+*/
 	public Pred Clone() {
 		return new DistancePredicate(this);
 	} // method Clone
@@ -926,3 +976,62 @@ class LTPredicate extends SpecialPredicate{
 
 } // class LTPredicate
 
+class DupRookRowPredicate extends SpecialPredicate{
+	public static final long serialVersionUID = 0;
+	//private enum PieceType {WKR,WKC,BKR,BKC,WRR,WRC};
+	
+	public DupRookRowPredicate(){
+		super("DuplicateRookRow",6);
+	} // constructor DuplicateRookPredicate
+
+	public DupRookRowPredicate(DupRookRowPredicate p){
+		super(p);
+	}
+
+	public Pred Clone() {
+		return new DupRookRowPredicate(this);
+	} // method Clone
+
+	public boolean SpecialArgs(){
+		// System.out.println("Checking DupRookArgs for: " + this);
+		int [] Args = new int[6];
+		
+		try {
+			// get Integer value for args
+			for (int i=0;i<6;i++) {
+				Args[i] = Integer.parseInt(((Variable)args[i]).binding.toString());
+			} // for
+		}
+		catch (NumberFormatException e){
+			System.out.println("Invalid Argument for DupRookRowPredicate");
+			System.exit(0);
+			return false;
+		}
+
+		//Rows
+		if (Args[2]==Args[4]) return false;
+		if (Args[1]==Args[5]){                                        
+			if(Args[2] < Args[4]){                                                                                                          
+				if(Args[0] < Args[4]) return false;
+			}
+			if(Args[2] > Args[4])
+				if (Args[0] > Args[4]) return false;
+		}
+		
+		//Columns
+		if (Args[3]==Args[5]) return false;
+		if (Args[0]==Args[4]){                                        
+			if(Args[3] < Args[5]){                                                                                                          
+				if(Args[1] < Args[5]) return false;
+			}
+			if(Args[3] > Args[5])
+				if (Args[1] > Args[5]) return false;
+		}
+	 	return (true);                                                                                                                
+	 	                                                                                                        
+	} // method DupRookRowPredicate
+
+} // class DupRookRowPredicate
+
+//in FoilImp
+//add ps.Add(new DupRookRowPredicate());

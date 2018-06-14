@@ -34,12 +34,12 @@ class Function extends Term {
 		Substitute instances of v
 		for t
 	**********************************/
-	public void substitute (Variable v, Term t){
+/*	public void substitute (Variable v, Term t){
 		for (int i = 0;i< args.length;i++){
 			args[i].substitute(v,t);
 		} // for
 	} // method Substitute
-
+*/
 
 	/****************************************
 		public boolean match(Constant c):
@@ -53,12 +53,12 @@ class Function extends Term {
 		// Double check this method.
 		// This function (if fully bound could equal the constant c as defined in database D);
 
-		if (D != null)
-		   return c.equals(D.evaluate(this));
+//		if (D != null)
+//		   return c.equals(D.evaluate(this));
 
 		return false;
 	} // method Match
-
+	
 	public boolean match (Variable v){
 		if(v.bound()) return match(v.binding);
 		else return true;

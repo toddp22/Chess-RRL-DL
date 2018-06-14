@@ -96,20 +96,20 @@ abstract class Term implements Serializable{
 		Substutute occurances of v with t
 		Not used.
 	*/
-	public abstract void substitute (Variable v,Term t);
+//	public abstract void substitute (Variable v,Term t);
 	/**
 		LGG
 			Least General Generalization
 	*/
-	public abstract Term LGG(Term t);
+//	public abstract Term LGG(Term t);
 	/**
 		LGG:
 			NameList: Used to define variables that are already in use.
 			If a variable is returned, then it will be unique with
 			respect to NameList
 	*/
-	public abstract Term LGG(Term t,String[] NameList);
-	public abstract Term LGG(Term t,ArrayList<String> NameList);
+//	public abstract Term LGG(Term t,String[] NameList);
+//	public abstract Term LGG(Term t,ArrayList<String> NameList);
 
 } // class term
 
